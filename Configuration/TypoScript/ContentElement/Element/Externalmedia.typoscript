@@ -1,0 +1,17 @@
+tt_content.external_media =< lib.contentElementWithHeader
+tt_content.external_media {
+  fields {
+    content {
+      fields {
+        source = TEXT
+        source {
+          field = external_media_source
+        }
+        ratio = TEXT
+        ratio {
+          field = external_media_ratio
+        }
+      }
+    }
+  }
+}

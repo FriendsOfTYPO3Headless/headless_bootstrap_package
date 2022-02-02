@@ -1,0 +1,59 @@
+tt_content.menu_card_list =< lib.contentElementWithHeader
+tt_content.menu_card_list {
+  fields {
+    content {
+      fields {
+        items = TEXT
+        items {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+            20 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+            20 {
+              special = list
+              special.value.field = pages
+              includeNotInMenu = 1
+              as = menuItem
+
+              dataProcessing {
+                10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                10 {
+                    references.fieldName = thumbnail
+                    if {
+                        isTrue = {$plugin.bootstrap_package_contentelements.menu_card.thumbnail.enable}
+                    }
+                    as = thumbnail
+                }
+                1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
+                1628754217 {
+                  iconSet.field = nav_icon_set
+                  iconIdentifier.field = nav_icon_identifier
+                  iconFileFieldName = nav_icon
+                  as = nav_icon
+
+                  if {
+                    isTrue = {$plugin.bootstrap_package_contentelements.menu_card.icon.enable}
+                  }
+                }
+              }
+            }
+
+            90 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+            90 {
+                if {
+                    isTrue.field = accessibility_bypass
+                }
+                table = tt_content
+                pidInList = this
+                orderBy = sorting
+                max = 1
+                where {
+                    dataWrap = colPos = {field:colPos} AND sorting > {field:sorting}
+                }
+                as = nextContentElement
+            }
+          }
+        }
+      }
+    }
+  }
+}

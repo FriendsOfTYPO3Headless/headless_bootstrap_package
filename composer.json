@@ -1,0 +1,32 @@
+{
+  "name": "friendsoftypo3headless/headless-bootstrap-package",
+  "type": "typo3-cms-extension",
+  "description": "This extension provides integration with bootstrap_package to output content from TYPO3 in JSON format.",
+  "keywords": [
+    "TYPO3",
+    "headless",
+    "pwa",
+    "json",
+    "bootstrap_package"
+  ],
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "require": {
+    "typo3/cms-core": "^11.5",
+    "bk2k/bootstrap-package": "^12.0.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "FriendsOfTYPO3Headless\\HeadlessBootstrapPackage\\": "Classes/"
+    }
+  },
+  "suggest": {
+    "friendsoftypo3/headless": "^2.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "headless_bootstrap_package"
+    }
+  }
+}

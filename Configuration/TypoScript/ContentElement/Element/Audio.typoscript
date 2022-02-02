@@ -1,0 +1,19 @@
+tt_content.audio =< lib.contentElementWithHeader
+tt_content.audio {
+  fields {
+    content {
+      fields {
+        audios = JSON
+        audios {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+            10 {
+              references.fieldName = assets
+              as = files
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+tt_content.quote =< tt_content.text
+tt_content.quote {
+  fields {
+    content {
+      fields {
+        quote_link = TEXT
+        quote_link {
+          field = quote_link
+        }
+        quote_source = TEXT
+        quote_source{
+          field = quote_source
+        }
+      }
+    }
+  }
+}

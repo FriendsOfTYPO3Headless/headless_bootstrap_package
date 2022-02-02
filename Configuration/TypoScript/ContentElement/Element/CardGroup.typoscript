@@ -1,0 +1,43 @@
+tt_content.card_group =< lib.contentElementWithHeader
+tt_content.card_group {
+  fields {
+    content {
+      fields {
+        items = TEXT
+        items {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+            20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+            20 {
+              table = tx_bootstrappackage_card_group_item
+              pidInList.field = pid
+              where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+              }
+              orderBy = sorting
+              as = group_item
+
+              dataProcessing {
+                10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                10 {
+                  references.fieldName = image
+                  as = image
+                }
+                1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
+                1628754217 {
+                  iconSet.field = link_icon_set
+                  iconIdentifier.field = link_icon_identifier
+                  iconFileFieldName = link_icon
+                    as = linkIcon
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+tt_content.accordion =< lib.contentElementWithHeader
+tt_content.accordion {
+  fields {
+    content {
+      fields {
+        accordionItems = TEXT
+        accordionItems {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+            20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+            20 {
+              table = tx_bootstrappackage_accordion_item
+              pidInList.field = pid
+              where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+              }
+              orderBy = sorting
+              as = accordion_item
+              dataProcessing {
+                10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                10 {
+                  references.fieldName = media
+                  as = media
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+tt_content.timeline =< lib.contentElementWithHeader
+tt_content.timeline {
+  fields {
+    content {
+      fields {
+        timelineItems = TEXT
+        timelineItems {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+            10 {
+              table = tx_bootstrappackage_timeline_item
+              pidInList.field = pid
+              where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+              }
+              orderBy.stdWrap.cObject = TEXT
+              orderBy.stdWrap.cObject {
+                  data = flexform:pi_flexform:sorting
+                  ifEmpty.cObject = TEXT
+                  ifEmpty.cObject {
+                      value.current = 1
+                      ifEmpty = date desc
+                  }
+              }
+              as = timeline_item
+              dataProcessing {
+                20 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                20 {
+                    references.fieldName = image
+                    as = image
+                }
+                1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
+                1628754217 {
+                    iconSet.field = icon_set
+                    iconIdentifier.field = icon_identifier
+                    iconFileFieldName = icon_file
+                    as = icon
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

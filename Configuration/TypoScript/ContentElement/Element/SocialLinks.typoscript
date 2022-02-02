@@ -1,0 +1,19 @@
+tt_content.social_links =< lib.contentElementWithHeader
+tt_content.social_links {
+  fields {
+    content {
+      fields {
+        items = TEXT
+        items {
+          dataProcessing {
+            1 = BK2K\BootstrapPackage\DataProcessing\ConstantsProcessor
+            1 {
+              as = socialmedia
+              key = page.theme.socialmedia
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+tt_content.textteaser =< tt_content.text
+tt_content.textteaser {
+  fields {
+    content {
+      fields {
+        teaser = TEXT
+        teaser {
+          field = teaser
+        }
+      }
+    }
+  }
+}

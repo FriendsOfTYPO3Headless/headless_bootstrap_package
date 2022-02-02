@@ -1,0 +1,53 @@
+tt_content.texticon =< tt_content.text
+tt_content.texticon {
+  fields {
+    content {
+      fields {
+        icon = JSON
+        icon {
+          fields {
+            position = TEXT
+            position {
+              field = icon_position
+            }
+            type = TEXT
+            type {
+              field = icon_type
+            }
+            size = TEXT
+            size {
+              field = icon_size
+            }
+            color = TEXT
+            color {
+              field = icon_color
+            }
+            background = TEXT
+            background {
+              field = icon_background
+            }
+            set = TEXT
+            set {
+              field = icon_set
+            }
+            icon = TEXT
+            icon {
+              field = icon
+            }
+
+            file = JSON
+            file {
+              dataProcessing {
+                20 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                20 {
+                  references.fieldName = icon_file
+                  as = file
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

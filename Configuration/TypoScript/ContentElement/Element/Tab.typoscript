@@ -1,0 +1,33 @@
+tt_content.tab =< lib.contentElementWithHeader
+tt_content.tab {
+  fields {
+    content {
+      fields {
+        tabItems = TEXT
+        tabItems {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+            20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+            20 {
+              table = tx_bootstrappackage_tab_item
+              pidInList.field = pid
+              where {
+                data = field:uid
+                intval = 1
+                wrap = tt_content=|
+              }
+              orderBy = sorting
+              as = accordion_item
+              dataProcessing {
+                10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                10 {
+                  references.fieldName = media
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

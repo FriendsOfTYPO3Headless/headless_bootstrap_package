@@ -1,0 +1,44 @@
+tt_content.menu_thumbnail_list =< lib.contentElementWithHeader
+tt_content.menu_thumbnail_list {
+  fields {
+    content {
+      fields {
+        items = TEXT
+        items {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+            20 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+            20 {
+              special = list
+              special.value.field = pages
+              includeNotInMenu = 1
+              as = menu_item
+
+              dataProcessing {
+                10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                10 {
+                  references.fieldName = thumbnail
+                }
+              }
+            }
+
+            90 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+            90 {
+              if {
+                isTrue.field = accessibility_bypass
+              }
+              table = tt_content
+              pidInList = this
+              orderBy = sorting
+              max = 1
+              where {
+                dataWrap = colPos = {field:colPos} AND sorting > {field:sorting}
+              }
+              as = nextContentElement
+            }
+          }
+        }
+      }
+    }
+  }
+}

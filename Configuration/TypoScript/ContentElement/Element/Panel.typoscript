@@ -1,0 +1,13 @@
+tt_content.panel =< tt_content.text
+tt_content.panel {
+  fields {
+    content {
+      fields {
+        panel_class = TEXT
+        panel_class {
+          field = panel_class
+        }
+      }
+    }
+  }
+}
