@@ -1,4 +1,4 @@
-# TYPO3 Extension "bootstrap_package" - Provides fluid templates to render proper JSON from EXT:ke_search
+# TYPO3 Extension "headless_bootstrap_package" - Provides TypoScript definitions for proper JSON output from EXT:bootstrap_package content elements
 This extension provides integration to headless extension with "EXT:bootstrap_package" extension.
 
 ## Requirements
