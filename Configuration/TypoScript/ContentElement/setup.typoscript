@@ -17,6 +17,8 @@
 @import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/Accordion.typoscript'
 @import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/CardGroup.typoscript'
 @import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/Carousel.typoscript'
+@import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/CarouselSmall.typoscript'
+@import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/CarouselFullscreen.typoscript'
 @import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/ExternalMedia.typoscript'
 @import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/IconGroup.typoscript'
 @import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/ListGroup.typoscript'

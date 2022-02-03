@@ -2,8 +2,7 @@
 ### CONTENT ELEMENT SETTINGS                   ###
 ### Shared settings for TYPO3 content elements ###
 ##################################################
-lib.contentElement = FLUIDTEMPLATE
-lib.contentElement {
+lib.contentElementWithHeader {
 
     ##########################
     ### DATA PREPROCESSING ###

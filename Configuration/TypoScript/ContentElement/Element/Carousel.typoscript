@@ -3,12 +3,21 @@ tt_content.carousel {
   fields {
     content {
       fields {
-        // TODO: Karussell Optionen (pi_flexform) fehlen noch
-        carouselItems = TEXT
-        carouselItems {
+        pi_flexform = TEXT
+        pi_flexform {
           dataProcessing {
-            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
-            20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+            10 {
+              as = pi_flexform
+            }
+          }
+        }
+
+        items = TEXT
+        items {
+          dataProcessing {
+            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+            20 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\DatabaseQueryProcessor
             20 {
               table = tx_bootstrappackage_carousel_item
               pidInList.field = pid
@@ -17,25 +26,36 @@ tt_content.carousel {
                 intval = 1
                 wrap = tt_content=|
               }
+              overrideFields {
+                link = TEXT
+                link {
+                  field = link
+                  htmlSpecialChars = 1
+                  typolink {
+                    parameter {
+                      field = link
+                    }
+                    returnLast = result
+                  }
+                }
+              }
               orderBy = sorting
-              as = carousel_item
+              as = records
 
               dataProcessing {
-                10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
-                10 {
+                30 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                30 {
                   references.fieldName = background_image
-                  as = backgroundImage
+                  as = background_image
                 }
-                20 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
-                20 {
+                40 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                40 {
                   references.fieldName = image
                   as = images
                 }
-                //  TODO: background_image_options wird noch nicht richtig ausgegeben
-                30 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
-                30 {
+                1532633187 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+                1532633187 {
                   fieldName = background_image_options
-                  as = backgroundImageOptions
                 }
               }
             }
