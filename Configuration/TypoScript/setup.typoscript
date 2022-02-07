@@ -1,1 +1,2 @@
-@import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/Element/*.typoscript'
+@import 'EXT:headless_bootstrap_package/Configuration/TypoScript/ContentElement/setup.typoscript'
+@import 'EXT:headless_bootstrap_package/Configuration/TypoScript/Lib/*.typoscript'

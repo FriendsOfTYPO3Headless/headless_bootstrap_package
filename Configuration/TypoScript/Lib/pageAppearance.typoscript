@@ -1,0 +1,93 @@
+lib.pageAppearance {
+  fields {
+    pageContentRows = USER_INT
+    pageContentRows {
+      userFunc = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Utility\BackendLayoutSerializer->serialize
+      data = levelfield:-2,backend_layout_next_level,slide
+    }
+  }
+}
+
+# todo: Add documentation
+# Example result of the above:
+#pageContentRows": [
+#      {
+#        "type": "row",
+#        "tag": "div",
+#        "children": [
+#          {
+#            "type": "col",
+#            "contentColPos": "colPos3",
+#            "colPos": "3",
+#            "size": 12,
+#            "tag": "div"
+#          }
+#        ]
+#      },
+#      {
+#        "type": "row",
+#        "tag": "div",
+#        "children": [
+#          {
+#            "type": "col",
+#            "contentColPos": "colPos8",
+#            "colPos": "8",
+#            "size": 12,
+#            "tag": "div"
+#          }
+#        ]
+#      },
+#      {
+#        "type": "row",
+#        "tag": "div",
+#        "children": [
+#          {
+#            "type": "col",
+#            "contentColPos": "",
+#            "colPos": "0",
+#            "size": 12,
+#            "tag": "div"
+#          }
+#        ]
+#      },
+#      {
+#        "type": "row",
+#        "tag": "div",
+#        "children": [
+#          {
+#            "type": "col",
+#            "contentColPos": "colPos9",
+#            "colPos": "9",
+#            "size": 12,
+#            "tag": "div"
+#          }
+#        ]
+#      },
+#      {
+#        "type": "row",
+#        "tag": "div",
+#        "children": [
+#          {
+#            "type": "col",
+#            "contentColPos": "colPos10",
+#           "colPos": "10",
+#            "size": 4,
+#            "tag": "div"
+#          },
+#          {
+#            "type": "col",
+#            "contentColPos": "colPos11",
+#            "colPos": "11",
+#            "size": 4,
+#            "tag": "div"
+#          },
+#          {
+#            "type": "col",
+#            "contentColPos": "colPos12",
+#            "colPos": "12",
+#            "size": 4,
+#            "tag": "div"
+#          }
+#        ]
+#      }
+#    ]

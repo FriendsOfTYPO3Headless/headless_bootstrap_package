@@ -1,0 +1,30 @@
+lib.appearance {
+  fields {
+    backgroundColor = TEXT
+    backgroundColor {
+      field = background_color_class
+    }
+
+    backgroundImage = TEXT
+    backgroundImage {
+      dataProcessing {
+        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+        10 {
+          references.fieldName = background_image
+          as = files
+        }
+      }
+    }
+
+    backgroundImageOptions = TEXT
+    backgroundImageOptions {
+      dataProcessing {
+        10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+        10 {
+          fieldName = background_image_options
+          as = options
+        }
+      }
+    }
+  }
+}

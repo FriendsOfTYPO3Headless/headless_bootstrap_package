@@ -13,4 +13,4 @@ and then, include TypoScript template, and you are ready to go.
 ### Developers involved in the project
 
 - Sven Petersen (DAUSKONZEPT GmbH && HardAnders GbR)
-- Niels Seelhöfer
+- [Niels Seelhöfer](https://github.com/derseeli) ([TRIXIE Heimtierbedarf GmbH & Co. KG](https://www.trixie.de) && [Datenanker](https://www.datenanker.com))

@@ -1,0 +1,23 @@
+lib.contentElementWithHeader {
+  fields {
+    content {
+      fields {
+        date = TEXT
+        date {
+          field = date
+          //TODO: Format from typoscript constants
+          strftime = %d.%m.%Y
+          if {
+            isGreaterThan.field = date
+            value = 0
+          }
+        }
+
+        _localizedUid = TEXT
+        _localizedUid {
+          field = _LOCALIZED_UID
+        }
+      }
+    }
+  }
+}

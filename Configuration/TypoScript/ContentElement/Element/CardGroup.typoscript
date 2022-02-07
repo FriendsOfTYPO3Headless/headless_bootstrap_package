@@ -8,6 +8,7 @@ tt_content.card_group {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
             20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+
             20 {
               table = tx_bootstrappackage_card_group_item
               pidInList.field = pid
@@ -30,8 +31,7 @@ tt_content.card_group {
                   iconSet.field = link_icon_set
                   iconIdentifier.field = link_icon_identifier
                   iconFileFieldName = link_icon
-                    as = linkIcon
-                  }
+                  as = linkIcon
                 }
               }
             }
@@ -41,3 +41,4 @@ tt_content.card_group {
     }
   }
 }
+

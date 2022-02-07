@@ -1,0 +1,23 @@
+TCEFORM {
+  tt_content {
+    imageorient {
+      removeItems = 1,2,9,10,17,18,125,126
+    }
+
+    file_folder {
+      disabled = 1
+    }
+
+    filelink_sorting {
+      disabled = 1
+    }
+
+    file_collections {
+      disabled = 1
+    }
+
+    filelink_sorting_direction {
+      disabled = 1
+    }
+  }
+}
