@@ -2,13 +2,12 @@ lib.pageAppearance {
   fields {
     pageContentRows = USER_INT
     pageContentRows {
-      userFunc = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Utility\BackendLayoutSerializer->serialize
+      userFunc = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Serializer\BackendLayoutSerializer->serialize
       data = levelfield:-2,backend_layout_next_level,slide
     }
   }
 }
 
-# todo: Add documentation
 # Example result of the above:
 #pageContentRows": [
 #      {
