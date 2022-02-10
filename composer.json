@@ -9,13 +9,23 @@
     "json",
     "bootstrap_package"
   ],
+  "authors": [
+    {
+      "name": "Niels Seelhöfer",
+      "role": "Developer"
+    },
+    {
+      "name": "Sven Petersen",
+      "role": "Developer"
+    }
+  ],
   "license": [
     "GPL-2.0-or-later"
   ],
   "require": {
     "typo3/cms-core": "^11.5",
-    "bk2k/bootstrap-package": "^12.0.4",
-    "friendsoftypo3headless/headless-navigations": "^1.0"
+    "friendsoftypo3/headless": "^2.0 || ^3.0",
+    "bk2k/bootstrap-package": "^12.0.4"
   },
   "autoload": {
     "psr-4": {
@@ -23,7 +33,7 @@
     }
   },
   "suggest": {
-    "friendsoftypo3/headless": "^2.0"
+    "friendsoftypo3headless/headless-navigations": "^1.0"
   },
   "extra": {
     "typo3/cms": {
