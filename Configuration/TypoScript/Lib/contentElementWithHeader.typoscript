@@ -5,8 +5,7 @@ lib.contentElementWithHeader {
         date = TEXT
         date {
           field = date
-          //TODO: Format from typoscript constants
-          strftime = %d.%m.%Y
+          strftime = {$dateformat}
           if {
             isGreaterThan.field = date
             value = 0
