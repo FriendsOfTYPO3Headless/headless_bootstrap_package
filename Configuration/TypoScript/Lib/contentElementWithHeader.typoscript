@@ -5,7 +5,6 @@ lib.contentElementWithHeader {
         date = TEXT
         date {
           field = date
-          strftime = {$dateformat}
           if {
             isGreaterThan.field = date
             value = 0
