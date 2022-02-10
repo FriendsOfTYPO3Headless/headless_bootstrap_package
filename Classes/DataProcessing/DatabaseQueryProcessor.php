@@ -1,5 +1,5 @@
 <?php
-//TODO: waiting for typo3_headless release. Should be in there
+
 /*
  * This file is part of the "headless_bootstrap_package" Extension for TYPO3 CMS.
  *
@@ -59,7 +59,9 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
  * }
  *
  * where "as" means the variable to be containing the result-set from the DB query.
- s*/
+ *
+ * @deprecated Will be in EXT:headless in the next release.
+ */
 class DatabaseQueryProcessor implements DataProcessorInterface
 {
     /**
