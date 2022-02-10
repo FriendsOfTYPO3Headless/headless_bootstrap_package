@@ -8,11 +8,3 @@
  */
 
 defined('TYPO3') or die();
-
-call_user_func(function () {
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-        'headless_bootstrap_package',
-        'Configuration/TsConfig/Page/TCEFORM.tsconfig',
-        'Headless Bootstrap Package: TCEFORM'
-    );
-});
