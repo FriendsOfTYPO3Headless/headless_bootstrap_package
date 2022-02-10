@@ -7,12 +7,12 @@
  * LICENSE.md file that was distributed with this source code.
  */
 
-defined('TYPO3') or die('Access denied.');
+defined('TYPO3') or die();
 
-// Register PageTS
-
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-    'headless_bootstrap_package',
-    'Configuration/TsConfig/Page/TCEFORM.tsconfig',
-    'Headless Bootstrap Package: TCEFORM'
-);
+call_user_func(function () {
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+        'headless_bootstrap_package',
+        'Configuration/TsConfig/Page/TCEFORM.tsconfig',
+        'Headless Bootstrap Package: TCEFORM'
+    );
+});
