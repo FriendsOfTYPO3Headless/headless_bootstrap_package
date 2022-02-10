@@ -1,5 +1,5 @@
 <?php
-
+//TODO: waiting for typo3_headless release. Should be in there
 /*
  * This file is part of the "headless_bootstrap_package" Extension for TYPO3 CMS.
  *
