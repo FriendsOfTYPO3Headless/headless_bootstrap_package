@@ -3,6 +3,15 @@ tt_content.carousel_small {
   fields {
     content {
       fields {
+        pi_flexform = TEXT
+        pi_flexform {
+          dataProcessing {
+            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+            10 {
+              as = pi_flexform
+            }
+          }
+        }
         items = TEXT
         items {
           dataProcessing {
