@@ -3,6 +3,7 @@ tt_content.carousel_fullscreen {
   fields {
     content {
       fields {
+        pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
             10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
