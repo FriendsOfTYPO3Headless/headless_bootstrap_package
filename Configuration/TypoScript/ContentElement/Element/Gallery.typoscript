@@ -3,6 +3,32 @@ tt_content.gallery {
   fields {
     content {
       fields {
+        imageorient = TEXT
+        imageorient {
+          field = imageorient
+        }
+
+        imagecols = TEXT
+        imagecols {
+          field = imagecols
+        }
+
+        aspectRatio = TEXT
+        aspectRatio {
+          field = aspect_ratio
+        }
+
+        itemsPerPage = TEXT
+        itemsPerPage {
+          field = items_per_page
+        }
+
+        imageZoom = TEXT
+        image_zoom {
+          field = image_zoom
+        }
+
+        // todo rename to items?
         images = TEXT
         images {
           dataProcessing {
@@ -13,6 +39,7 @@ tt_content.gallery {
               sorting.field = filelink_sorting
               as = images
             }
+
             20 = BK2K\BootstrapPackage\DataProcessing\FileFilterProcessor
             20 {
               predefinedList = image

@@ -3,6 +3,7 @@ tt_content.timeline {
   fields {
     content {
       fields {
+        // todo rename to "options" and relocate?
         pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
@@ -12,6 +13,8 @@ tt_content.timeline {
             }
           }
         }
+
+        // todo rename to "items"?
         timelineItems = TEXT
         timelineItems {
           dataProcessing {
@@ -24,28 +27,31 @@ tt_content.timeline {
                 intval = 1
                 wrap = tt_content=|
               }
+
               orderBy.stdWrap.cObject = TEXT
               orderBy.stdWrap.cObject {
-                  data = flexform:pi_flexform:sorting
-                  ifEmpty.cObject = TEXT
-                  ifEmpty.cObject {
-                      value.current = 1
-                      ifEmpty = date desc
-                  }
+                data = flexform:pi_flexform:sorting
+                ifEmpty.cObject = TEXT
+                ifEmpty.cObject {
+                  value.current = 1
+                  ifEmpty = date desc
+                }
               }
+
               as = timeline_item
               dataProcessing {
                 20 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
                 20 {
-                    references.fieldName = image
-                    as = image
+                  references.fieldName = image
+                  as = image
                 }
+
                 1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
                 1628754217 {
-                    iconSet.field = icon_set
-                    iconIdentifier.field = icon_identifier
-                    iconFileFieldName = icon_file
-                    as = icon
+                  iconSet.field = icon_set
+                  iconIdentifier.field = icon_identifier
+                  iconFileFieldName = icon_file
+                  as = icon
                 }
               }
             }

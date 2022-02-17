@@ -3,12 +3,20 @@ tt_content.quote {
   fields {
     content {
       fields {
-        quote_link = TEXT
-        quote_link {
-          field = quote_link
+        quoteLink = TEXT
+        quoteLink {
+          htmlSpecialChars = 1
+          typolink {
+            parameter {
+              field = quote_link
+            }
+
+            returnLast = result
+          }
         }
-        quote_source = TEXT
-        quote_source{
+
+        quoteSource = TEXT
+        quoteSource {
           field = quote_source
         }
       }

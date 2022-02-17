@@ -1,8 +1,14 @@
-tt_content.listgroup =< lib.contentElementWithHeader
-tt_content.listgroup {
+tt_content.bullets =< lib.contentElementWithHeader
+tt_content.bullets {
   fields {
     content {
       fields {
+        bulletsType = TEXT
+        bulletsType {
+          field = bullets_type
+          intval = 1
+        }
+
         bodytext = TEXT
         bodytext {
           field = bodytext

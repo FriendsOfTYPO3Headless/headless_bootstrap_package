@@ -3,6 +3,7 @@ tt_content.menu_thumbnail_dir {
   fields {
     content {
       fields {
+        // todo rename to "options" and relocate?
         pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
@@ -12,6 +13,7 @@ tt_content.menu_thumbnail_dir {
             }
           }
         }
+
         items = TEXT
         items {
           dataProcessing {
@@ -29,11 +31,13 @@ tt_content.menu_thumbnail_dir {
                 }
               }
             }
+
             90 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
             90 {
               if {
                 isTrue.field = accessibility_bypass
               }
+
               table = tt_content
               pidInList = this
               orderBy = sorting
@@ -41,6 +45,7 @@ tt_content.menu_thumbnail_dir {
               where {
                 dataWrap = colPos = {field:colPos} AND sorting > {field:sorting}
               }
+
               as = nextContentElement
             }
           }

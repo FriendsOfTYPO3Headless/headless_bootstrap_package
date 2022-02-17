@@ -3,6 +3,7 @@ tt_content.card_group {
   fields {
     content {
       fields {
+        // todo rename to "options" and relocate?
         pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
@@ -12,12 +13,12 @@ tt_content.card_group {
             }
           }
         }
+
         items = TEXT
         items {
           dataProcessing {
-            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
-            20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
-
+            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+            20 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\DatabaseQueryProcessor
             20 {
               table = tx_bootstrappackage_card_group_item
               pidInList.field = pid
@@ -26,6 +27,21 @@ tt_content.card_group {
                 intval = 1
                 wrap = tt_content=|
               }
+
+              overrideFields {
+                link = TEXT
+                link {
+                  htmlSpecialChars = 1
+                  typolink {
+                    parameter {
+                      field = link
+                    }
+
+                    returnLast = result
+                  }
+                }
+              }
+
               orderBy = sorting
               as = group_item
 
@@ -35,6 +51,7 @@ tt_content.card_group {
                   references.fieldName = image
                   as = image
                 }
+
                 1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
                 1628754217 {
                   iconSet.field = link_icon_set

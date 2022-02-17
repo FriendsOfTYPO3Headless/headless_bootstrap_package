@@ -3,6 +3,12 @@ tt_content.menu_card_dir {
   fields {
     content {
       fields {
+        readmoreLabel = TEXT
+        readmoreLabel {
+          field = readmore_label
+        }
+
+        // todo rename to "options" and relocate?
         pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
@@ -12,6 +18,7 @@ tt_content.menu_card_dir {
             }
           }
         }
+
         items = TEXT
         items {
           dataProcessing {
@@ -31,6 +38,7 @@ tt_content.menu_card_dir {
                     isTrue = {$plugin.bootstrap_package_contentelements.menu_card.thumbnail.enable}
                   }
                 }
+
                 1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
                 1628754217 {
                   iconSet.field = nav_icon_set
@@ -43,11 +51,13 @@ tt_content.menu_card_dir {
                 }
               }
             }
+
             90 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
             90 {
               if {
                 isTrue.field = accessibility_bypass
               }
+
               table = tt_content
               pidInList = this
               orderBy = sorting
@@ -55,6 +65,7 @@ tt_content.menu_card_dir {
               where {
                 dataWrap = colPos = {field:colPos} AND sorting > {field:sorting}
               }
+
               as = nextContentElement
             }
           }

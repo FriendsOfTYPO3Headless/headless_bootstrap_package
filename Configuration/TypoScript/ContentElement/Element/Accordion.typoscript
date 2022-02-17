@@ -3,6 +3,7 @@ tt_content.accordion {
   fields {
     content {
       fields {
+        // todo rename to "options" and relocate?
         pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
@@ -12,6 +13,8 @@ tt_content.accordion {
             }
           }
         }
+
+        // todo rename to items?
         accordionItems = TEXT
         accordionItems {
           dataProcessing {
@@ -25,6 +28,7 @@ tt_content.accordion {
                 intval = 1
                 wrap = tt_content=|
               }
+
               orderBy = sorting
               as = accordion_item
               dataProcessing {

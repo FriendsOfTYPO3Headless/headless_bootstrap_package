@@ -1,17 +1,18 @@
 tt_content.icon_group =< lib.contentElementWithHeader
 tt_content.icon_group {
   fields {
+    flexform = TEXT
+    flexform {
+      dataProcessing {
+        10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+        10 {
+          as = flexform
+        }
+      }
+    }
+
     content {
       fields {
-        pi_flexform = TEXT
-        pi_flexform {
-          dataProcessing {
-            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
-            10 {
-              as = pi_flexform
-            }
-          }
-        }
         items = TEXT
         items {
           dataProcessing {
@@ -25,6 +26,7 @@ tt_content.icon_group {
                 intval = 1
                 wrap = tt_content=|
               }
+
               orderBy = sorting
               as = icon
               dataProcessing {

@@ -3,6 +3,40 @@ tt_content.csv {
   fields {
     content {
       fields {
+        tableDelimiter = TEXT
+        tableDelimiter {
+          field = table_delimiter
+        }
+
+        tableEnclosure = TEXT
+        tableEnclosure {
+          field = table_enclosure
+        }
+
+        tableLayout {
+          fields {
+            cols = TEXT
+            cols {
+              field = cols
+            }
+
+            tableClass = TEXT
+            tableClass {
+              field = table_class
+            }
+
+            tableHeaderPosition = TEXT
+            tableHeaderPosition {
+              field = table_header_position
+            }
+
+            tableTfoot = TEXT
+            tableTfoot {
+              field = table_tfoot
+            }
+          }
+        }
+
         data = TEXT
         data {
           dataProcessing {
@@ -13,10 +47,12 @@ tt_content.csv {
               fieldDelimiter.char.cObject {
                 field = table_delimiter
               }
+
               fieldEnclosure.char.cObject = TEXT
               fieldEnclosure.char.cObject {
                 field = table_enclosure
               }
+
               maximumColumns.field = cols
               as = file
             }

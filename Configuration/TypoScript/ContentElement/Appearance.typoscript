@@ -1,5 +1,10 @@
 lib.appearance {
   fields {
+    frameLayout = TEXT
+    frameLayout {
+      field = frame_layout
+    }
+
     backgroundColor = TEXT
     backgroundColor {
       field = background_color_class
@@ -25,6 +30,16 @@ lib.appearance {
           as = options
         }
       }
+    }
+
+    sectionIndex = TEXT
+    sectionIndex {
+      field = sectionIndex
+    }
+
+    linkToTop = TEXT
+    linkToTop {
+      field = linkToTop
     }
   }
 }

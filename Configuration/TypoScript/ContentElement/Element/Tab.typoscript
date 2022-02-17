@@ -3,6 +3,7 @@ tt_content.tab {
   fields {
     content {
       fields {
+        // todo rename to "options" and relocate?
         pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
@@ -12,7 +13,9 @@ tt_content.tab {
             }
           }
         }
-        tabItems = TEXT
+
+        // todo rename to "items"?
+        items = TEXT
         tabItems {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
@@ -25,8 +28,10 @@ tt_content.tab {
                 intval = 1
                 wrap = tt_content=|
               }
+
               orderBy = sorting
               as = accordion_item
+
               dataProcessing {
                 10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
                 10 {

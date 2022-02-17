@@ -3,6 +3,7 @@ tt_content.carousel {
   fields {
     content {
       fields {
+        // todo rename to "options" and relocate?
         pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
@@ -12,6 +13,7 @@ tt_content.carousel {
             }
           }
         }
+
         items = TEXT
         items {
           dataProcessing {
@@ -25,19 +27,21 @@ tt_content.carousel {
                 intval = 1
                 wrap = tt_content=|
               }
+
               overrideFields {
                 link = TEXT
                 link {
-                  field = link
                   htmlSpecialChars = 1
                   typolink {
                     parameter {
                       field = link
                     }
+
                     returnLast = result
                   }
                 }
               }
+
               orderBy = sorting
               as = records
 
@@ -47,11 +51,13 @@ tt_content.carousel {
                   references.fieldName = background_image
                   as = background_image
                 }
+
                 40 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
                 40 {
                   references.fieldName = image
                   as = images
                 }
+
                 1532633187 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
                 1532633187 {
                   fieldName = background_image_options

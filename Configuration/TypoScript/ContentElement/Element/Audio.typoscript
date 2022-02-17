@@ -3,8 +3,8 @@ tt_content.audio {
   fields {
     content {
       fields {
-        audios = JSON
-        audios {
+        items = JSON
+        items {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
             10 {

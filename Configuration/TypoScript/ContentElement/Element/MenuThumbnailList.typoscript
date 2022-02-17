@@ -3,6 +3,7 @@ tt_content.menu_thumbnail_list {
   fields {
     content {
       fields {
+        // todo rename to "options" and relocate?
         pi_flexform = TEXT
         pi_flexform {
           dataProcessing {
@@ -12,6 +13,7 @@ tt_content.menu_thumbnail_list {
             }
           }
         }
+
         items = TEXT
         items {
           dataProcessing {
@@ -36,6 +38,7 @@ tt_content.menu_thumbnail_list {
               if {
                 isTrue.field = accessibility_bypass
               }
+
               table = tt_content
               pidInList = this
               orderBy = sorting
@@ -43,6 +46,7 @@ tt_content.menu_thumbnail_list {
               where {
                 dataWrap = colPos = {field:colPos} AND sorting > {field:sorting}
               }
+
               as = nextContentElement
             }
           }

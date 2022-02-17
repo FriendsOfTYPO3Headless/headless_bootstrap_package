@@ -3,8 +3,8 @@ tt_content.panel {
   fields {
     content {
       fields {
-        panel_class = TEXT
-        panel_class {
+        panelClass = TEXT
+        panelClass {
           field = panel_class
         }
       }
