@@ -1,0 +1,25 @@
+tt_content.gallery =< lib.contentElementWithHeader
+tt_content.gallery {
+  fields {
+    content {
+      fields {
+        images = TEXT
+        images {
+          dataProcessing {
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+            10 {
+              references.fieldName = image
+              folders.field = file_folder
+              sorting.field = filelink_sorting
+              as = images
+            }
+            20 = BK2K\BootstrapPackage\DataProcessing\FileFilterProcessor
+            20 {
+              predefinedList = image
+            }
+          }
+        }
+      }
+    }
+  }
+}
