@@ -28,9 +28,8 @@ tt_content.gallery {
           field = image_zoom
         }
 
-        // todo rename to items?
-        images = TEXT
-        images {
+        items = TEXT
+        items {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
             10 {

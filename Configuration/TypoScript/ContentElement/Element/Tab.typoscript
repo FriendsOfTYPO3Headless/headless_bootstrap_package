@@ -14,9 +14,8 @@ tt_content.tab {
           }
         }
 
-        // todo rename to "items"?
         items = TEXT
-        tabItems {
+        items {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
             20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor

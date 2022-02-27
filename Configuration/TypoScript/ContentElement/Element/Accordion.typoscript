@@ -14,9 +14,8 @@ tt_content.accordion {
           }
         }
 
-        // todo rename to items?
-        accordionItems = TEXT
-        accordionItems {
+        items = TEXT
+        items {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
             20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
