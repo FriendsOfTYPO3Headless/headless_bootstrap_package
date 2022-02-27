@@ -12,7 +12,10 @@ Install extension using composer\
 
 and then, include TypoScript template, and you are ready to go.
 
-### Developers involved in the project
+## Credits
+A special thanks goes to [TRIXIE Heimtierbedarf GmbH & Co. KG](https://www.trixie.de), which is sponsoring development of this extension.
+
+## Developers involved in the project
 
 - [Sven Petersen](https://github.com/svenpet90) ([DAUSKONZEPT GmbH](https:///www.dauskonzept.de) && [HardAnders GbR](https://www.hardanders.de))
 - [Niels Seelhöfer](https://github.com/derseeli) ([TRIXIE Heimtierbedarf GmbH & Co. KG](https://www.trixie.de) && [Datenanker](https://www.datenanker.com))
