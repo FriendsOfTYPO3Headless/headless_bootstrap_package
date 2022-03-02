@@ -17,7 +17,7 @@ tt_content.card_group {
         items {
           dataProcessing {
             10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
-            20 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\DatabaseQueryProcessor
+            20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
             20 {
               table = tx_bootstrappackage_card_group_item
               pidInList.field = pid
