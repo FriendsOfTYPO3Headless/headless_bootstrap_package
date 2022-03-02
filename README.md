@@ -1,3 +1,5 @@
+*EXPERIMENTAL* This extension is currently still in development and not yet stable. It is likely to change, or even change drastically.
+
 # TYPO3 Extension "headless_bootstrap_package" - Provides TypoScript definitions for proper JSON output from EXT:bootstrap_package content elements
 This extension provides integration to headless extension with "[EXT:bootstrap_package](https://github.com/benjaminkott/bootstrap_package)" extension.
 
