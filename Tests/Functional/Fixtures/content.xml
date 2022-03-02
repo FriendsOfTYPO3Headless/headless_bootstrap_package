@@ -15,9 +15,7 @@
         <subheader>SubHeader</subheader>
         <header_layout>1</header_layout>
         <header_position>2</header_position>
-        <bodytext><![CDATA[
-<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>
-        ]]></bodytext>
+        <bodytext>Lorem ipsum dolor sit amet</bodytext>
 
         <panel_class>secondary</panel_class>
         <background_color_class>primary</background_color_class>

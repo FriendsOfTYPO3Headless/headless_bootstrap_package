@@ -33,7 +33,17 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($categories, $contentElement['categories'], 'categories mismatch');
     }
 
-    protected function checkAppearanceFields($contentElement, $layout = 'default', $frameClass = 'default', $spaceBefore = '', $spaceAfter = '')
+    protected function checkAppearanceFields(
+        $contentElement,
+        $layout = 'default',
+        $frameClass = 'default',
+        $spaceBefore = '',
+        $spaceAfter = '',
+        $frameLayout = '',
+        $backgroundColor = '',
+        $sectionIndex = '',
+        $linkToTop = ''
+    )
     {
         $contentElementAppearance = $contentElement['appearance'];
 
@@ -41,6 +51,11 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($frameClass, $contentElementAppearance['frameClass'], 'frameClass mismatch');
         self::assertEquals($spaceBefore, $contentElementAppearance['spaceBefore'], 'spaceBefore mismatch');
         self::assertEquals($spaceAfter, $contentElementAppearance['spaceAfter'], 'spaceAfter mismatch');
+
+        self::assertEquals($frameLayout, $contentElementAppearance['frameLayout'], 'frameLayout mismatch');
+        self::assertEquals($backgroundColor, $contentElementAppearance['backgroundColor'], 'backgroundColor mismatch');
+        self::assertEquals($sectionIndex, $contentElementAppearance['sectionIndex'], 'sectionIndex mismatch');
+        self::assertEquals($linkToTop, $contentElementAppearance['linkToTop'], 'linkToTop mismatch');
     }
 
     protected function checkHeaderFields($contentElement, $header = '', $subheader = '', $headerLayout = 0, $headerPosition= '')

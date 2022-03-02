@@ -27,6 +27,8 @@ abstract class BaseTest extends FunctionalTestCase
     protected $testExtensionsToLoad = [
         'typo3conf/ext/headless',
         'typo3conf/ext/bootstrap_package',
+        'typo3conf/ext/headless_bootstrap_package',
+
     ];
 
     /**

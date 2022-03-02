@@ -26,9 +26,13 @@ class PanelElementTest extends BaseContentTypeTest
 
         $contentElement = $fullTree['content']['colPos0'][0];
 
-        $this->checkDefaultContentFields($contentElement, 1, 1, 'test', 0);
-        $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter');
+        // content element specific tests
+        self::assertEquals($contentElement['content']['panelClass'], 'secondary', 'panelClass mismatch');
+        self::assertEquals($contentElement['content']['bodytext'], 'Lorem ipsum dolor sit amet', 'bodytext mismatch');
+
+        // general tests
+        $this->checkDefaultContentFields($contentElement, 1, 1, 'panel', 0);
+        $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
         $this->checkHeaderFields($contentElement, 'Header', 'SubHeader', 1, 2);
-        $this->checkHeaderFieldsLink($contentElement, 't3://page?uid=2 _blank LinkClass LinkTitle parameter=999', '/page1?parameter=999&amp;cHash=', '_blank');
     }
 }
