@@ -1,19 +1,18 @@
 tt_content.menu_thumbnail_list =< lib.contentElementWithHeader
 tt_content.menu_thumbnail_list {
   fields {
+    flexform = TEXT
+    flexform {
+      dataProcessing {
+        10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+        10 {
+          as = flexform
+        }
+      }
+    }
+
     content {
       fields {
-        // todo rename to "options" and relocate?
-        pi_flexform = TEXT
-        pi_flexform {
-          dataProcessing {
-            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
-            10 {
-              as = pi_flexform
-            }
-          }
-        }
-
         items = TEXT
         items {
           dataProcessing {
