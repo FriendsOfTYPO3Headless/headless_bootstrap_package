@@ -17,7 +17,7 @@ tt_content.carousel {
         items {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
-            20 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\DatabaseQueryProcessor
+            20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
             20 {
               table = tx_bootstrappackage_carousel_item
               pidInList.field = pid
