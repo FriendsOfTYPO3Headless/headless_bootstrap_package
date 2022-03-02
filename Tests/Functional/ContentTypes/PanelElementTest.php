@@ -16,7 +16,7 @@ class PanelElementTest extends BaseContentTypeTest
 {
     public function testHeaderContentElement()
     {
-        $response = $this->executeFrontendRequest(
+        $response = $this->executeFrontendSubRequest(
             new InternalRequest('https://website.local/')
         );
 
@@ -27,8 +27,9 @@ class PanelElementTest extends BaseContentTypeTest
         $contentElement = $fullTree['content']['colPos0'][0];
 
         // content element specific tests
-        self::assertEquals($contentElement['content']['panelClass'], 'secondary', 'panelClass mismatch');
-        self::assertEquals($contentElement['content']['bodytext'], 'Lorem ipsum dolor sit amet', 'bodytext mismatch');
+        $contentElementContent = $contentElement['content'];
+        self::assertEquals($contentElementContent['panelClass'], 'secondary', 'panelClass mismatch');
+        self::assertEquals($contentElementContent['bodytext'], 'Lorem ipsum dolor sit amet', 'bodytext mismatch');
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 1, 1, 'panel', 0);

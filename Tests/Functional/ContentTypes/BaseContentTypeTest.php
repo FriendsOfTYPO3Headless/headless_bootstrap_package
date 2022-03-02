@@ -51,7 +51,6 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($frameClass, $contentElementAppearance['frameClass'], 'frameClass mismatch');
         self::assertEquals($spaceBefore, $contentElementAppearance['spaceBefore'], 'spaceBefore mismatch');
         self::assertEquals($spaceAfter, $contentElementAppearance['spaceAfter'], 'spaceAfter mismatch');
-
         self::assertEquals($frameLayout, $contentElementAppearance['frameLayout'], 'frameLayout mismatch');
         self::assertEquals($backgroundColor, $contentElementAppearance['backgroundColor'], 'backgroundColor mismatch');
         self::assertEquals($sectionIndex, $contentElementAppearance['sectionIndex'], 'sectionIndex mismatch');
