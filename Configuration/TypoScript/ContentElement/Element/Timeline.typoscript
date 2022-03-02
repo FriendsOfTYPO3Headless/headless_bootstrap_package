@@ -4,7 +4,7 @@ tt_content.timeline {
     flexform = TEXT
     flexform {
       dataProcessing {
-        10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+        10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
         10 {
           as = flexform
         }

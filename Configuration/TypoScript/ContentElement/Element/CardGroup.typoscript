@@ -4,7 +4,7 @@ tt_content.card_group {
     flexform = TEXT
     flexform {
       dataProcessing {
-        10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+        10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
         10 {
           as = flexform
         }
@@ -16,7 +16,7 @@ tt_content.card_group {
         items = TEXT
         items {
           dataProcessing {
-            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
             20 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\DatabaseQueryProcessor
             20 {
               table = tx_bootstrappackage_card_group_item

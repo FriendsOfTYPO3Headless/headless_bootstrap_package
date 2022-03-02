@@ -4,7 +4,7 @@ tt_content.carousel {
     flexform = TEXT
     flexform {
       dataProcessing {
-        10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+        10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
         10 {
           as = flexform
         }
@@ -16,7 +16,7 @@ tt_content.carousel {
         items = TEXT
         items {
           dataProcessing {
-            10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+            10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
             20 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\DatabaseQueryProcessor
             20 {
               table = tx_bootstrappackage_carousel_item
@@ -57,7 +57,7 @@ tt_content.carousel {
                   as = images
                 }
 
-                1532633187 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FlexFormProcessor
+                1532633187 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
                 1532633187 {
                   fieldName = background_image_options
                 }
