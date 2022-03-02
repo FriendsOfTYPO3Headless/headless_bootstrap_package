@@ -3,3 +3,4 @@
 Build/testing-docker/.env
 composer.lock
 Tests/Functional/.phpunit.result.cache
+.php-version
