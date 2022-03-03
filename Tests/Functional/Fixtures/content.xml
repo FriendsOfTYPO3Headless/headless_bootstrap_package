@@ -41,7 +41,6 @@
         <linkToTop>1</linkToTop>
         <categories>1</categories>
     </tt_content>
-
     <tt_content>
         <uid>2</uid>
         <pid>1</pid>
@@ -100,7 +99,6 @@
         <linkToTop>1</linkToTop>
         <categories>1</categories>
     </tt_content>
-
     <tt_content>
         <uid>3</uid>
         <pid>1</pid>
@@ -152,6 +150,65 @@
         <categories>1</categories>
     </tt_content>
 
+    <tt_content>
+        <uid>4</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>timeline</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="sorting">
+                                <value index="vDEF">asc</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+        <tx_bootstrappackage_timeline_item>2</tx_bootstrappackage_timeline_item>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">blur</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+        <categories>1</categories>
+    </tt_content>
+
     <tx_bootstrappackage_accordion_item>
         <uid>1</uid>
         <pid>1</pid>
@@ -165,7 +222,6 @@
         <imagecols>2</imagecols>
         <image_zoom>0</image_zoom>
     </tx_bootstrappackage_accordion_item>
-
     <tx_bootstrappackage_accordion_item>
         <uid>2</uid>
         <pid>1</pid>
@@ -179,6 +235,47 @@
         <imagecols>2</imagecols>
         <image_zoom>0</image_zoom>
     </tx_bootstrappackage_accordion_item>
+
+    <tx_bootstrappackage_timeline_item>
+        <uid>1</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>4</tt_content>
+        <date>1234567890</date>
+        <header>Header</header>
+        <bodytext>
+            <![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
+        </bodytext>
+        <icon_file>0</icon_file>
+        <image>0</image>
+        <icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</icon_set>
+        <icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/android-note.svg</icon_identifier>
+    </tx_bootstrappackage_timeline_item>
+    <tx_bootstrappackage_timeline_item>
+        <uid>2</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>4</tt_content>
+        <date>1234567890</date>
+        <header>Header</header>
+        <bodytext>
+            <![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
+        </bodytext>
+        <icon_file>0</icon_file>
+        <image>1</image>
+    </tx_bootstrappackage_timeline_item>
+    <tx_bootstrappackage_timeline_item>
+        <uid>3</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>4</tt_content>
+        <date>1234567890</date>
+        <header>Header</header>
+        <bodytext>
+            <![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
+        </bodytext>
+        <icon_file>1</icon_file>
+    </tx_bootstrappackage_timeline_item>
 
     <sys_category>
         <uid>1</uid>
@@ -228,6 +325,14 @@
     <sys_category_record_mm>
         <tablenames>tt_content</tablenames>
         <uid_foreign>3</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- Timeline Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>4</uid_foreign>
         <uid_local>2</uid_local>
         <fieldname>categories</fieldname>
     </sys_category_record_mm>
@@ -307,6 +412,39 @@
         <uid_foreign>3</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Timeline Background Image -->
+    <sys_file_reference>
+        <uid>6</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>4</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- TimelineItem Image -->
+    <sys_file_reference>
+        <uid>7</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>2</uid_foreign>
+        <tablenames>tx_bootstrappackage_timeline_item</tablenames>
+        <fieldname>image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- TimelineItem Icon File -->
+    <sys_file_reference>
+        <uid>8</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>3</uid_foreign>
+        <tablenames>tx_bootstrappackage_timeline_item</tablenames>
+        <fieldname>icon_file</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
 </dataset>

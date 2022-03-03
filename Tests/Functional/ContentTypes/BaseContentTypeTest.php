@@ -129,6 +129,8 @@ abstract class BaseContentTypeTest extends BaseTest
     {
         $fileReferenceData = $contentElement[$fieldname];
 
+        self::assertIsArray($fileReferenceData);
+
         foreach ($fileReferenceData as $data) {
             $this->checkGalleryFile($data, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
         }

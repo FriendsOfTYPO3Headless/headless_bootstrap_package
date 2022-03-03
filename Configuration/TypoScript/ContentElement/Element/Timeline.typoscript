@@ -49,7 +49,7 @@ tt_content.timeline {
                   iconSet.field = icon_set
                   iconIdentifier.field = icon_identifier
                   iconFileFieldName = icon_file
-                  as = icon
+                  as = icon_file
                 }
               }
             }

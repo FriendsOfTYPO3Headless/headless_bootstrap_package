@@ -92,7 +92,6 @@
     "ci:php:lint": "find *.php Classes Configuration Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
     "ci:php:stan": "phpstan --no-progress",
     "ci:test": [
-      "@ci:phplint",
       "@ci:php:cs-fixer",
       "@ci:test:functional"
     ],

@@ -29,7 +29,8 @@ class AccordionElementTest extends BaseContentTypeTest
 
         // content element specific tests
         self::assertEquals(1, $contentElement['flexform']['default_element'], 'flexform default_element mismatch');
-        $this->checkAccordtionItems($contentElement);
+        self::assertEquals('1234567890', $contentElement['content']['date'], 'date mismatch');
+        $this->checkItems($contentElement);
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 2, 1, 'accordion', 0, 'SysCategory2Title');
@@ -39,7 +40,7 @@ class AccordionElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'blur');
     }
 
-    private function checkAccordtionItems(array $contentElement): void
+    private function checkItems(array $contentElement): void
     {
         self::assertTrue(isset($contentElement['content']['items']), 'items not set');
         self::assertIsArray($contentElement['content']['items']);
