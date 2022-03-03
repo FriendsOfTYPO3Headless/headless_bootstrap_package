@@ -94,7 +94,6 @@
     "ci:test": [
       "@ci:phplint",
       "@ci:php:cs-fixer",
-      "@ci:test:unit",
       "@ci:test:functional"
     ],
     "ci:test:functional": [
