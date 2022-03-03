@@ -13,9 +13,8 @@ tt_content.tab {
 
     content {
       fields {
-        // todo rename to "items"?
-        tabItems = TEXT
-        tabItems {
+        items = TEXT
+        items {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
             20 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
