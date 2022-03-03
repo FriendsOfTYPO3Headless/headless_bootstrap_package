@@ -58,7 +58,7 @@ jobs:
       matrix:
         command:
           - "yaml:lint"
-          - "ts:lint"
+#          - "ts:lint"
           - "php:cs-fixer"
         php-version:
           - 7.4
