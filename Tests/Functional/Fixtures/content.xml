@@ -207,7 +207,6 @@
         <linkToTop>1</linkToTop>
         <categories>1</categories>
     </tt_content>
-
     <tt_content>
         <uid>5</uid>
         <pid>1</pid>
@@ -238,6 +237,51 @@
                             </field>
                             <field index="filter">
                                 <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+
+    <tt_content>
+        <uid>6</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>audio</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <subheader>Subheader</subheader>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <assets>1</assets>
+
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">blur</value>
                             </field>
                         </language>
                     </sheet>
@@ -390,6 +434,20 @@
         <fieldname>categories</fieldname>
     </sys_category_record_mm>
 
+    <!-- Audio Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>6</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>6</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
     <sys_file>
         <uid>1</uid>
         <pid>0</pid>
@@ -413,6 +471,31 @@
         <title>MetadataTitle</title>
         <width>18</width>
         <height>16</height>
+    </sys_file_metadata>
+
+    <sys_file>
+        <uid>2</uid>
+        <pid>0</pid>
+        <storage>0</storage>
+        <type>3</type>
+        <identifier>/typo3conf/ext/headless_bootstrap_package/Tests/Functional/Fixtures/audio.mp3</identifier>
+        <identifier_hash>d23c2039c9a5e377520b4b38dcaf2fd35a7abf9e</identifier_hash>
+        <folder_hash>19669f1e02c2f16705ec7587044c66443be70725</folder_hash>
+        <extension>mp3</extension>
+        <mime_type>audio/mpeg</mime_type>
+        <name>audio.mp3</name>
+        <sha1>de4313583c2aed23e0428c7b32c4d4fc0eb43d02</sha1>
+        <size>63528</size>
+        <creation_date>1646344612</creation_date>
+        <modification_date>1646344612</modification_date>
+    </sys_file>
+    <sys_file_metadata>
+        <uid>2</uid>
+        <pid>0</pid>
+        <file>2</file>
+        <title>MetadataTitle</title>
+        <width>0</width>
+        <height>0</height>
     </sys_file_metadata>
 
     <!-- Panel Background Image -->
@@ -450,8 +533,8 @@
     <sys_file_reference>
         <uid>4</uid>
         <pid>1</pid>
-        <uid_local>2</uid_local>
-        <uid_foreign>1</uid_foreign>
+        <uid_local>1</uid_local>
+        <uid_foreign>2</uid_foreign>
         <tablenames>tx_bootstrappackage_accordion_item</tablenames>
         <fieldname>media</fieldname>
         <autoplay>1</autoplay>
@@ -509,6 +592,28 @@
         <uid_foreign>5</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Audio Background Image -->
+    <sys_file_reference>
+        <uid>10</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>6</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Audio Assets  -->
+    <sys_file_reference>
+        <uid>11</uid>
+        <pid>1</pid>
+        <uid_local>2</uid_local>
+        <uid_foreign>6</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>assets</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
 </dataset>
