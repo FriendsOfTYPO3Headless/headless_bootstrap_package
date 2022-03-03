@@ -9,12 +9,13 @@
 
 declare(strict_types=1);
 
-use FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Test\Functional\ContentTypes\BaseContentTypeTest;
+namespace FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Tests\Functional\ContentTypes;
+
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
 class PanelElementTest extends BaseContentTypeTest
 {
-    public function testHeaderContentElement()
+    public function testHeaderContentElement(): void
     {
         $response = $this->executeFrontendSubRequest(
             new InternalRequest('https://website.local/')
@@ -27,13 +28,14 @@ class PanelElementTest extends BaseContentTypeTest
         $contentElement = $fullTree['content']['colPos0'][0];
 
         // content element specific tests
-        $contentElementContent = $contentElement['content'];
-        self::assertEquals($contentElementContent['panelClass'], 'secondary', 'panelClass mismatch');
-        self::assertEquals($contentElementContent['bodytext'], 'Lorem ipsum dolor sit amet', 'bodytext mismatch');
+        self::assertEquals('secondary', $contentElement['content']['panelClass'], 'panelClass mismatch');
+        self::assertEquals('Lorem ipsum dolor sit amet', $contentElement['content']['bodytext'], 'bodytext mismatch');
 
         // general tests
-        $this->checkDefaultContentFields($contentElement, 1, 1, 'panel', 0);
+        $this->checkDefaultContentFields($contentElement, 1, 1, 'panel', 0, 'SysCategory1Title,SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
-        $this->checkHeaderFields($contentElement, 'Header', 'SubHeader', 1, 2);
+        $this->checkHeaderFields($contentElement, 'Header', '', 1, '');
+        $this->checkBackgroundImageField($contentElement);
+        $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 }

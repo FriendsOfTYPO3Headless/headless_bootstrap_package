@@ -31,7 +31,7 @@ class IconsDataProcessor extends BaseIconsDataProcessor
             return $processedData;
         }
 
-        switch (get_class($icon)) {
+        switch (\get_class($icon)) {
             case FileIcon::class:
                 $icon = [
                     'name' => $icon->getName(),

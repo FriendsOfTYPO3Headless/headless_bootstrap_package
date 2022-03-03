@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the "headless" Extension for TYPO3 CMS.
+ * This file is part of the "headless_bootstrap_package" Extension for TYPO3 CMS.
  *
  * For the full copyright and license information, please read the
  * LICENSE.md file that was distributed with this source code.
@@ -11,11 +11,7 @@ declare(strict_types=1);
 
 namespace FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Tests\Functional;
 
-use JsonSchema\SchemaStorage;
-use JsonSchema\Uri\UriRetriever;
-use JsonSchema\Validator;
 use TYPO3\CMS\Core\Core\Environment;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 abstract class BaseTest extends FunctionalTestCase
@@ -28,7 +24,6 @@ abstract class BaseTest extends FunctionalTestCase
         'typo3conf/ext/headless',
         'typo3conf/ext/bootstrap_package',
         'typo3conf/ext/headless_bootstrap_package',
-
     ];
 
     /**
@@ -61,45 +56,6 @@ abstract class BaseTest extends FunctionalTestCase
         file_put_contents($siteConfigDir . '/config.yaml', "rootPageId: 1\nbase: /\nbaseVariants: { }\nlanguages: { }\nroutes: { }\n");
     }
 
-    /**
-     * @param string $jsonString
-     * @param string $jsonSchemaFile
-     */
-    protected function assertJsonSchema($jsonString, $jsonSchemaFile)
-    {
-        $data = json_decode($jsonString);
-
-        $retriever = new UriRetriever();
-        $schema = $retriever->retrieve(
-            'file://' . $jsonSchemaFile
-        );
-        $refResolver = new SchemaStorage($retriever);
-        $refResolver->resolveRef(
-            $schema,
-            'file://' . $jsonSchemaFile
-        );
-        $validator = new Validator();
-        $validator->check($data, $schema);
-        if (false === $validator->isValid()) {
-            foreach ($validator->getErrors() as $error) {
-                self::fail(sprintf('Property "%s" is not valid: %s in %s', $error['property'], $error['message'], $jsonString));
-            }
-        } else {
-            self::assertTrue(true);
-        }
-    }
-
-    /**
-     * Defines the path where the json schema files are located.
-     *
-     * @return string
-     */
-    public function getJsonSchemaPath()
-    {
-        $extensionPath = ExtensionManagementUtility::extPath('headless');
-        return $extensionPath . '/Tests/Functional/json-schema/';
-    }
-
     protected function checkDefaultContentFields($contentElement, $id, $pid, $type, $colPos = 0, $categories = '')
     {
         self::assertEquals($id, $contentElement['id'], 'id mismatch');
@@ -119,8 +75,7 @@ abstract class BaseTest extends FunctionalTestCase
         $backgroundColor = '',
         $sectionIndex = '',
         $linkToTop = ''
-    )
-    {
+    ): void {
         $contentElementAppearance = $contentElement['appearance'];
 
         self::assertEquals($layout, $contentElementAppearance['layout'], 'layout mismatch');

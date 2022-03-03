@@ -27,7 +27,11 @@ class CsvFileProcessor extends BaseCsvFileProcessor
         $processedFilesData = $filesProcessor->process(
             $cObj,
             $contentObjectConfiguration,
-            ['references.' => ['fieldName' => 'media']],
+            [
+                'references.' => [
+                    'fieldName' => 'media',
+                ],
+            ],
             []
         );
 

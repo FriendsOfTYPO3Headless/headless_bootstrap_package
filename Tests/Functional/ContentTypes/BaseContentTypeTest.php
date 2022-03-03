@@ -9,9 +9,9 @@
 
 declare(strict_types=1);
 
-namespace FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Test\Functional\ContentTypes;
+namespace FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Tests\Functional\ContentTypes;
 
-use FriendsOfTypo3Headless\HeadlessBootstrapPackage\Tests\Functional\BaseTest;
+use FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Tests\Functional\BaseTest;
 
 abstract class BaseContentTypeTest extends BaseTest
 {
@@ -25,7 +25,7 @@ abstract class BaseContentTypeTest extends BaseTest
         $this->importDataSet(__DIR__ . '/../Fixtures/content.xml');
     }
 
-    protected function checkDefaultContentFields($contentElement, $id, $pid, $type, $colPos = 0, $categories = '')
+    protected function checkDefaultContentFields($contentElement, $id, $pid, $type, $colPos = 0, $categories = ''): void
     {
         self::assertEquals($id, $contentElement['id'], 'id mismatch');
         self::assertEquals($type, $contentElement['type'], 'type mismatch');
@@ -43,8 +43,7 @@ abstract class BaseContentTypeTest extends BaseTest
         $backgroundColor = '',
         $sectionIndex = '',
         $linkToTop = ''
-    )
-    {
+    ): void {
         $contentElementAppearance = $contentElement['appearance'];
 
         self::assertEquals($layout, $contentElementAppearance['layout'], 'layout mismatch');
@@ -57,7 +56,7 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($linkToTop, $contentElementAppearance['linkToTop'], 'linkToTop mismatch');
     }
 
-    protected function checkHeaderFields($contentElement, $header = '', $subheader = '', $headerLayout = 0, $headerPosition= '')
+    protected function checkHeaderFields($contentElement, $header = '', $subheader = '', $headerLayout = 0, $headerPosition = ''): void
     {
         $contentElementContent = $contentElement['content'];
 
@@ -68,7 +67,7 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertTrue(isset($contentElementContent['headerLink']), 'headerLink not set');
     }
 
-    protected function checkHeaderFieldsLink($contentElement, $link, $urlPrefix, $target)
+    protected function checkHeaderFieldsLink($contentElement, $link, $urlPrefix, $target): void
     {
         $contentElementHeaderFieldsLink = $contentElement['content']['headerLink'];
 
@@ -78,7 +77,7 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($target, $contentElementHeaderFieldsLink['target'], 'target mismatch');
     }
 
-    protected function checkGalleryContentFields($contentElement)
+    protected function checkGalleryContentFields($contentElement): void
     {
         self::assertEquals(600, $contentElement['content']['gallery']['width'], 'width mismatch');
         self::assertEquals(10, $contentElement['content']['gallery']['columnSpacing'], 'columnSpacing mismatch');
@@ -104,10 +103,10 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertIsArray($contentElement['content']['gallery']['rows'][1]['columns'], 'rows.columns not set');
         self::assertCount(1, $contentElement['content']['gallery']['rows'][1]['columns'], 'rows.columns count mismatch');
 
-        $this->checkGalleryFile($contentElement['content']['gallery']['rows'][1]['columns'][1], '/typo3conf/ext/headless/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
+        $this->checkGalleryFile($contentElement['content']['gallery']['rows'][1]['columns'][1], '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
     }
 
-    protected function checkGalleryFile($fileElement, $originalUrl, $mimeType, $title, $width, $height, $autoplay)
+    protected function checkGalleryFile($fileElement, $originalUrl, $mimeType, $title, $width, $height, $autoplay): void
     {
         self::assertTrue(isset($fileElement['publicUrl']), 'publicUrl not set');
 
@@ -124,5 +123,31 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertIsArray($fileElement['properties']['cropDimensions'], 'properties cropDimensions not set');
         self::assertEquals($width, $fileElement['properties']['cropDimensions']['width'], 'properties cropDimensions width mismatch');
         self::assertEquals($height, $fileElement['properties']['cropDimensions']['height'], 'properties cropDimensions height mismatch');
+    }
+
+    public function checkFileReferencesField($contentElement, $fieldname): void
+    {
+        $fileReferenceData = $contentElement[$fieldname];
+
+        foreach ($fileReferenceData as $data) {
+            $this->checkGalleryFile($data, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
+        }
+    }
+
+    public function checkBackgroundImageField($contentElement): void
+    {
+        $backgroundImage = $contentElement['appearance']['backgroundImage'][0];
+
+        $this->checkGalleryFile($backgroundImage, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
+    }
+
+    public function checkBackgroundImageOptions(array $contentElement, string $parallax, string $fade, string $filter): void
+    {
+        $options = $contentElement['appearance']['backgroundImageOptions'];
+
+        self::assertTrue(isset($contentElement['appearance']['backgroundImageOptions']), 'backgroundImageOptions not set');
+        self::assertEquals($parallax, $options['parallax'], 'property parallax mismatch');
+        self::assertEquals($fade, $options['fade'], 'property fade mismatch');
+        self::assertEquals($filter, $options['filter'], 'property filter mismatch');
     }
 }
