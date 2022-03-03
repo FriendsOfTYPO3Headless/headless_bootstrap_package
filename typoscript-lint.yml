@@ -1,0 +1,21 @@
+paths:
+  - ./Configuration
+
+filePatterns:
+  - "*.typoscript"
+
+sniffs:
+  - class: Indentation
+    parameters:
+      useSpaces: true
+      indentPerLevel: 2
+  - class: RepeatingRValue
+    parameters:
+      allowedRightValues:
+        - TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor
+        - TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+        - FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+        - FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+        - FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+        - FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
+        - FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
