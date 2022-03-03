@@ -13,9 +13,8 @@ tt_content.timeline {
 
     content {
       fields {
-        // todo rename to "items"?
-        timelineItems = TEXT
-        timelineItems {
+        items = TEXT
+        items {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
             10 {
