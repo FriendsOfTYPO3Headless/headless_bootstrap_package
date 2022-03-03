@@ -60,6 +60,7 @@ abstract class BaseContentTypeTest extends BaseTest
     {
         $contentElementContent = $contentElement['content'];
 
+        self::assertIsArray($contentElementContent);
         self::assertEquals($header, $contentElementContent['header'], 'header mismatch');
         self::assertEquals($subheader, $contentElementContent['subheader'], 'subheader mismatch');
         self::assertEquals($headerLayout, $contentElementContent['headerLayout'], 'headerLayout mismatch');

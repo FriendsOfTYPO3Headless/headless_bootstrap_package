@@ -149,7 +149,6 @@
         <linkToTop>1</linkToTop>
         <categories>1</categories>
     </tt_content>
-
     <tt_content>
         <uid>4</uid>
         <pid>1</pid>
@@ -207,6 +206,46 @@
         <sectionIndex>1</sectionIndex>
         <linkToTop>1</linkToTop>
         <categories>1</categories>
+    </tt_content>
+
+    <tt_content>
+        <uid>5</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>quote</CType>
+        <colPos>0</colPos>
+        <quote_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</quote_link>
+        <quote_source>A super wise and reliable source</quote_source>
+        <bodytext>Lorem ipsum dolor sit amet</bodytext>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
     </tt_content>
 
     <tx_bootstrappackage_accordion_item>
@@ -337,6 +376,20 @@
         <fieldname>categories</fieldname>
     </sys_category_record_mm>
 
+    <!-- Quote Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>5</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>5</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
     <sys_file>
         <uid>1</uid>
         <pid>0</pid>
@@ -445,6 +498,17 @@
         <uid_foreign>3</uid_foreign>
         <tablenames>tx_bootstrappackage_timeline_item</tablenames>
         <fieldname>icon_file</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Quote Background Image -->
+    <sys_file_reference>
+        <uid>9</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>5</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
 </dataset>
