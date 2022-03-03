@@ -1,5 +1,3 @@
-#tt_content.media  < tt_content.textmedia
-#tt_content.media.fields.content.fields.bodytext >
 tt_content.media =< lib.contentElementWithHeader
 tt_content.media {
   fields {
