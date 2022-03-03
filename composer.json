@@ -40,7 +40,8 @@
     "seld/jsonlint": "^1.8",
     "symfony/yaml": "^5.3",
     "typo3/cms-form": "10.*.*@dev || 11.*.*@dev",
-    "typo3/testing-framework": "^6"
+    "typo3/testing-framework": "^6",
+    "ext-json": "*"
   },
   "autoload": {
     "psr-4": {

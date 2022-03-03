@@ -23,7 +23,7 @@ class AccordionElementTest extends BaseContentTypeTest
 
         self::assertEquals(200, $response->getStatusCode());
 
-        $fullTree = json_decode((string)$response->getBody(), true);
+        $fullTree = \json_decode((string)$response->getBody(), true);
 
         $contentElement = $fullTree['content']['colPos0'][1];
 
@@ -31,6 +31,7 @@ class AccordionElementTest extends BaseContentTypeTest
         self::assertEquals(1, $contentElement['flexform']['default_element'], 'flexform default_element mismatch');
         self::assertEquals('1234567890', $contentElement['content']['date'], 'date mismatch');
         $this->checkItems($contentElement);
+        $this->checkTypolinkField($contentElement['content']['headerLink']);
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 2, 1, 'accordion', 0, 'SysCategory2Title');

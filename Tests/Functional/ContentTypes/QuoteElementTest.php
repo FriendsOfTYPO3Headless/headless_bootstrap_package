@@ -30,14 +30,23 @@ class QuoteElementTest extends BaseContentTypeTest
         // content element specific tests
         self::assertEquals('A super wise and reliable source', $contentElement['content']['quoteSource'], 'quote_source mismatch');
         self::assertIsArray($contentElement['content']['quoteLink'], 'quote_link not an array');
-        self::assertEquals('/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42', $contentElement['content']['quoteLink']['href'], 'quoteLink href mismatch');
         self::assertEquals('Lorem ipsum dolor sit amet', $contentElement['content']['bodytext'], 'bodytext mismatch');
+        $this->checkTypolinkField($contentElement['content']['quoteLink']);
+        $this->checkDisabledFields($contentElement);
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 5, 1, 'quote', 0, 'SysCategory1Title,SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
-        $this->checkHeaderFields($contentElement, '', '', 0, '', false);
         $this->checkBackgroundImageField($contentElement);
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
+    }
+
+    private function checkDisabledFields($contentElement): void
+    {
+        self::assertArrayNotHasKey('header', $contentElement['content']);
+        self::assertArrayNotHasKey('subheader', $contentElement['content']);
+        self::assertArrayNotHasKey('headerLayout', $contentElement['content']);
+        self::assertArrayNotHasKey('headerLink', $contentElement['content']);
+        self::assertArrayNotHasKey('headerPosition', $contentElement['content']);
     }
 }

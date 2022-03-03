@@ -1,4 +1,4 @@
-tt_content.quote =< lib.contentElementWithHeader
+tt_content.quote < lib.contentElementWithHeader
 tt_content.quote {
   fields {
     content {
@@ -23,6 +23,12 @@ tt_content.quote {
         bodytext {
           field = bodytext
         }
+
+        header >
+        subheader >
+        headerLink >
+        headerLayout >
+        headerPosition >
       }
     }
   }
