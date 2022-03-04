@@ -13,7 +13,7 @@ namespace FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Tests\Functional\Conte
 
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
-class BulletsElementTest extends BaseContentTypeTest
+class TextteaserElementTest extends BaseContentTypeTest
 {
     public function testHeaderContentElement(): void
     {
@@ -25,15 +25,14 @@ class BulletsElementTest extends BaseContentTypeTest
 
         $fullTree = json_decode((string)$response->getBody(), true);
 
-        $contentElement = $fullTree['content']['colPos0'][2];
+        $contentElement = $fullTree['content']['colPos0'][8];
 
         // content element specific tests
-        self::assertEquals(1, $contentElement['content']['bulletsType'], 'bulletsType mismatch');
-        self::assertEquals('1234567890', $contentElement['content']['date'], 'date mismatch');
-        self::assertCount(4, $contentElement['content']['bodytext']);
+        self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $contentElement['content']['bodytext']);
+        self::assertEquals('Some teaser text', $contentElement['content']['teaser']);
 
         // general tests
-        $this->checkDefaultContentFields($contentElement, 3, 1, 'bullets', 0, 'SysCategory1Title,SysCategory2Title');
+        $this->checkDefaultContentFields($contentElement, 9, 1, 'textteaser', 0, 'SysCategory1Title,SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
         $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 'center');
         $this->checkTypolinkField($contentElement['content']['headerLink']);

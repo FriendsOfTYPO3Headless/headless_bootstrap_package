@@ -1,4 +1,4 @@
-tt_content.panel =< tt_content.text
+tt_content.panel < lib.contentElementWithHeader
 tt_content.panel {
   fields {
     content {
@@ -7,6 +7,15 @@ tt_content.panel {
         panelClass {
           field = panel_class
         }
+
+        bodytext = TEXT
+        bodytext {
+          field = bodytext
+        }
+
+        subheader >
+        headerPosition >
+        headerLink >
       }
     }
   }

@@ -37,8 +37,8 @@ tt_content.csv {
           }
         }
 
-        data = TEXT
-        data {
+        media = TEXT
+        media {
           dataProcessing {
             10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\CsvFileProcessor
             10 {

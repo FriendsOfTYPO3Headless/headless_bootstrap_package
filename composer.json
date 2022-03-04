@@ -41,7 +41,8 @@
     "seld/jsonlint": "^1.8",
     "symfony/yaml": "^5.3",
     "typo3/cms-form": "10.*.*@dev || 11.*.*@dev",
-    "typo3/testing-framework": "^6"
+    "typo3/testing-framework": "^6",
+    "ext-json": "*"
   },
   "autoload": {
     "psr-4": {
@@ -117,6 +118,7 @@
       "rm -rf .Build",
       "rm -rf .github",
       "rm -rf Tests",
+      "rm -rf Resources",
       "rm .editorconfig",
       "rm .gitattributes",
       "rm .php-cs-fixer.php",

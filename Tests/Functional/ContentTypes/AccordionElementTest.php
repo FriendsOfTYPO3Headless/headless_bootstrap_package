@@ -23,7 +23,7 @@ class AccordionElementTest extends BaseContentTypeTest
 
         self::assertEquals(200, $response->getStatusCode());
 
-        $fullTree = json_decode((string)$response->getBody(), true);
+        $fullTree = \json_decode((string)$response->getBody(), true);
 
         $contentElement = $fullTree['content']['colPos0'][1];
 
@@ -36,6 +36,7 @@ class AccordionElementTest extends BaseContentTypeTest
         $this->checkDefaultContentFields($contentElement, 2, 1, 'accordion', 0, 'SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
         $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 1);
+        $this->checkTypolinkField($contentElement['content']['headerLink']);
         $this->checkBackgroundImageField($contentElement);
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'blur');
     }
