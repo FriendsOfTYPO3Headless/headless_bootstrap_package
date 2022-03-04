@@ -30,6 +30,7 @@ class PanelElementTest extends BaseContentTypeTest
         // content element specific tests
         self::assertEquals('secondary', $contentElement['content']['panelClass'], 'panelClass mismatch');
         self::assertEquals('Lorem ipsum dolor sit amet', $contentElement['content']['bodytext'], 'bodytext mismatch');
+        $this->checkDisabledFields($contentElement);
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 1, 1, 'panel', 0, 'SysCategory1Title,SysCategory2Title');
@@ -37,5 +38,12 @@ class PanelElementTest extends BaseContentTypeTest
         $this->checkHeaderFields($contentElement, 'Header', '', 1, '');
         $this->checkBackgroundImageField($contentElement);
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
+    }
+
+    private function checkDisabledFields($contentElement): void
+    {
+        self::assertArrayNotHasKey('subheader', $contentElement['content']);
+        self::assertArrayNotHasKey('headerPosition', $contentElement['content']);
+        self::assertArrayNotHasKey('headerLink', $contentElement['content']);
     }
 }

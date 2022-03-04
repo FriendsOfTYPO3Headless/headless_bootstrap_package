@@ -31,12 +31,12 @@ class AccordionElementTest extends BaseContentTypeTest
         self::assertEquals(1, $contentElement['flexform']['default_element'], 'flexform default_element mismatch');
         self::assertEquals('1234567890', $contentElement['content']['date'], 'date mismatch');
         $this->checkItems($contentElement);
-        $this->checkTypolinkField($contentElement['content']['headerLink']);
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 2, 1, 'accordion', 0, 'SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
         $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 1);
+        $this->checkTypolinkField($contentElement['content']['headerLink']);
         $this->checkBackgroundImageField($contentElement);
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'blur');
     }

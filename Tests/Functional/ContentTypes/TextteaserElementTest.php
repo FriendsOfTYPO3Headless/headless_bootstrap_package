@@ -35,6 +35,7 @@ class TextteaserElementTest extends BaseContentTypeTest
         $this->checkDefaultContentFields($contentElement, 9, 1, 'textteaser', 0, 'SysCategory1Title,SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
         $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 'center');
+        $this->checkTypolinkField($contentElement['content']['headerLink']);
         $this->checkBackgroundImageField($contentElement);
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'blur');
     }
