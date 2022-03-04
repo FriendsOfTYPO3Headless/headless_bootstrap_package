@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1646326329">
-  <project timestamp="1646326329">
+<coverage generated="1646403593">
+  <project timestamp="1646403593">
     <file name="/home/runner/work/headless_bootstrap_package/headless_bootstrap_package/Classes/DataProcessing/CsvFileProcessor.php">
       <class name="FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\CsvFileProcessor" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
