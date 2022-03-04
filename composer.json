@@ -23,6 +23,7 @@
     "GPL-2.0-or-later"
   ],
   "require": {
+    "php": "^7.4 || ^8.0",
     "typo3/cms-core": "^11.5",
     "friendsoftypo3/headless": "^3.0.3",
     "bk2k/bootstrap-package": "^12.0.4"
@@ -117,6 +118,7 @@
       "rm -rf .Build",
       "rm -rf .github",
       "rm -rf Tests",
+      "rm -rf Resources",
       "rm .editorconfig",
       "rm .gitattributes",
       "rm .php-cs-fixer.php",
