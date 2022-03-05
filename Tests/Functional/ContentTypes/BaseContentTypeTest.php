@@ -125,11 +125,12 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($height, $fileElement['properties']['cropDimensions']['height'], 'properties cropDimensions height mismatch');
     }
 
-    public function checkFileReferencesField($contentElement, $fieldname): void
+    public function checkFileReferencesField($contentElement, $fieldname, $numberOfExpectedFiles = 1): void
     {
         $fileReferenceData = $contentElement[$fieldname];
 
         self::assertIsArray($fileReferenceData);
+        self::assertEquals($numberOfExpectedFiles, count($fileReferenceData));
 
         foreach ($fileReferenceData as $data) {
             $this->checkGalleryFile($data, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
