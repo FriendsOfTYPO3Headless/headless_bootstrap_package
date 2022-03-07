@@ -1,3 +1,5 @@
+![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2.svg)
+
 *EXPERIMENTAL* This extension is currently still in development and not yet stable. It is likely to change, or even change drastically.
 
 [![TYPO3 11](https://img.shields.io/badge/TYPO3-11-orange.svg)](https://get.typo3.org/version/11)
