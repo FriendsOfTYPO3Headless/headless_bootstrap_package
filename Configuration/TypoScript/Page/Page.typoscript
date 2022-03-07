@@ -1,3 +1,4 @@
+[{$page.bootstrapPackage.constantsIncluded} == 1]
 page {
   10 {
     fields {
@@ -7,3 +8,4 @@ page {
     }
   }
 }
+[GLOBAL]
