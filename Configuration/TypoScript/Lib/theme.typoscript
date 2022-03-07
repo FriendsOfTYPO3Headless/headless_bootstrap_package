@@ -1,0 +1,277 @@
+lib.theme = JSON
+lib.theme {
+  fields {
+    googleFont = JSON
+    googleFont {
+      fields {
+        enable = TEXT
+        enable.value = {$page.theme.googleFont.enable}
+
+        font = TEXT
+        font.value = {$page.theme.googleFont.font}
+
+        weight = TEXT
+        weight.value = {$page.theme.googleFont.weight}
+      }
+    }
+
+    navigation = JSON
+    navigation {
+      fields {
+        style = TEXT
+        style.value = {$page.theme.navigation.style}
+
+        type = TEXT
+        type.value = {$page.theme.navigation.type}
+
+        icon {
+          fields {
+            enable = TEXT
+            enable.value = {$page.theme.navigation.icon.enable}
+            width = TEXT
+            width.value = {$page.theme.navigation.icon.width}
+            height = TEXT
+            height.value = {$page.theme.navigation.icon.height}
+          }
+        }
+
+        dropdown = JSON
+        dropdown {
+          fields {
+            icon = JSON
+            icon {
+              fields {
+                enable = TEXT
+                enable.value = {$page.theme.navigation.dropdown.icon.enable}
+
+                width = TEXT
+                width.value = {$page.theme.navigation.dropdown.icon.width}
+
+                height = TEXT
+                height.value = {$page.theme.navigation.dropdown.icon.height}
+              }
+            }
+          }
+        }
+      }
+    }
+
+    subnavigation = JSON
+    subnavigation {
+      fields {
+        icon = JSON
+        icon {
+          fields {
+            enable = TEXT
+            enable.value = {$page.theme.subnavigation.icon.enable}
+
+            width = TEXT
+            width.value = {$page.theme.subnavigation.icon.width}
+
+            height = TEXT
+            height.value = {$page.theme.subnavigation.icon.height}
+          }
+        }
+      }
+    }
+
+    breadcrumb = JSON
+    breadcrumb {
+      fields {
+        enable = TEXT
+        enable.value = {$page.theme.breadcrumb.enable}
+
+        enableLevel = TEXT
+        enableLevel.value = {$page.theme.breadcrumb.enableLevel}
+
+        icon = JSON
+        icon {
+          fields {
+            enable = TEXT
+            enable.value = {$page.theme.breadcrumb.icon.enable}
+
+            width = TEXT
+            width.value = {$page.theme.breadcrumb.icon.width}
+
+            height = TEXT
+            height.value = {$page.theme.breadcrumb.icon.height}
+          }
+        }
+      }
+    }
+
+    meta = JSON
+    meta {
+      fields {
+        enable = TEXT
+        enable.value = {$page.theme.meta.enable}
+
+        navigationValue = TEXT
+        navigationValue.value = {$page.theme.meta.navigationValue}
+
+        navigationType = TEXT
+        navigationType.value = {$page.theme.meta.navigationType}
+
+        includeNotInMenu = TEXT
+        includeNotInMenu.value = {$page.theme.meta.includeNotInMenu}
+      }
+    }
+
+    language = JSON
+    language {
+      fields {
+        enable = TEXT
+        enable.value = {$page.theme.language.enable}
+
+        languageValue = TEXT
+        languageValue.value = {$page.theme.language.languageValue}
+      }
+    }
+
+    socialmedia = JSON
+    socialmedia {
+      fields {
+        enable = TEXT
+        enable.value = {$page.theme.socialmedia.enable}
+
+        channels = JSON
+        channels {
+          fields {
+            facebook = JSON
+            facebook {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.facebook.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.facebook.url}
+              }
+            }
+
+            twitter = JSON
+            twitter {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.twitter.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.twitter.url}
+              }
+            }
+
+            instagram = JSON
+            instagram {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.instagram.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.instagram.url}
+              }
+            }
+
+            github = JSON
+            github {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.github.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.github.url}
+              }
+            }
+
+            googleplus = JSON
+            googleplus {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.googleplus.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.googleplus.url}
+              }
+            }
+
+            linkedin = JSON
+            linkedin {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.linkedin.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.linkedin.url}
+              }
+            }
+
+            xing = JSON
+            xing {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.xing.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.xing.url}
+              }
+            }
+
+            youtube = JSON
+            youtube {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.youtube.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.youtube.url}
+              }
+            }
+
+            vk = JSON
+            vk {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.vk.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.vk.url}
+              }
+            }
+
+            vimeo = JSON
+            vimeo {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.vimeo.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.vimeo.url}
+              }
+            }
+
+            rss = JSON
+            rss {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.rss.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.rss.url}
+              }
+            }
+          }
+        }
+      }
+    }
+
+    copyright = JSON
+    copyright {
+      fields {
+        enable = TEXT
+        enable.value = {$page.theme.copyright.enable}
+
+        text = TEXT
+        text.value = {$page.theme.copyright.text}
+
+      }
+    }
+  }
+}

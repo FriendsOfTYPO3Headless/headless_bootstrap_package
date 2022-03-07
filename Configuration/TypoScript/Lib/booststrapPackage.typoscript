@@ -1,0 +1,9 @@
+lib.bootstrapPackage = JSON
+lib.bootstrapPackage {
+  fields {
+    logo =< lib.logo
+    favicon =< lib.favicon
+    theme =< lib.theme
+    tracking =< lib.tracking
+  }
+}

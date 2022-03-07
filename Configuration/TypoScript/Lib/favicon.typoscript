@@ -1,0 +1,7 @@
+lib.favicon = JSON
+lib.favicon {
+  fields {
+    file = TEXT
+    file.value = {$page.favicon.file}
+  }
+}

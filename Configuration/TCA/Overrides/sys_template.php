@@ -12,7 +12,13 @@ defined('TYPO3') or die();
 call_user_func(function () {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         'headless_bootstrap_package',
-        'Configuration/TypoScript/ContentElement',
+        'Configuration/TypoScript',
         'Headless Boostrap Package'
+    );
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        'headless_bootstrap_package',
+        'Configuration/TypoScript/BoostrapPackage',
+        'Headless Boostrap Package: Boostrap Package Constants'
     );
 });

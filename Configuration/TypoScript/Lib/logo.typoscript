@@ -1,0 +1,22 @@
+lib.logo = JSON
+lib.logo {
+  fields {
+    file = TEXT
+    file.value = {$page.logo.file}
+
+    fileInverted = TEXT
+    fileInverted.value = {$page.logo.fileInverted}
+
+    height = TEXT
+    height.value = {$page.logo.height}
+
+    width = TEXT
+    width.value = {$page.logo.width}
+
+    alt = TEXT
+    alt.value = {$page.logo.alt}
+
+    linktitle = TEXT
+    linktitle.value = {$page.logo.linktitle}
+  }
+}
