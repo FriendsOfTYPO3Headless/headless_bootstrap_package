@@ -40,7 +40,7 @@ abstract class BaseTest extends FunctionalTestCase
             [
                 'constants' => [
                     'EXT:headless/Configuration/TypoScript/constants.typoscript',
-                    'EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript',
+                    'EXT:headless_bootstrap_package/Configuration/TypoScript/BootstrapPackage/constants.typoscript',
                     'EXT:headless_bootstrap_package/Configuration/TypoScript/constants.typoscript',
                     'EXT:headless_bootstrap_package/Tests/Functional/Fixtures/bootstrap_package/Configuration/TypoScript/constants.typoscript',
                 ],
