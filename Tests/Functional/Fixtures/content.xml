@@ -529,7 +529,6 @@
         <sectionIndex>1</sectionIndex>
         <linkToTop>1</linkToTop>
     </tt_content>
-
     <tt_content>
         <uid>12</uid>
         <pid>1</pid>
@@ -544,6 +543,69 @@
         <subheader>Subheader</subheader>
         <pages>1</pages>
         <readmore_label>Read more</readmore_label>
+        <accessibility_bypass>1</accessibility_bypass>
+        <accessibility_bypass_text>Skip navigation</accessibility_bypass_text>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="align">
+                                <value index="vDEF">left</value>
+                            </field>
+                            <field index="columns">
+                                <value index="vDEF">2</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+
+    <tt_content>
+        <uid>13</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>menu_thumbnail_list</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <pages>2,3,4</pages>
         <accessibility_bypass>1</accessibility_bypass>
         <accessibility_bypass_text>Skip navigation</accessibility_bypass_text>
         <pi_flexform>
@@ -881,6 +943,20 @@
         <fieldname>categories</fieldname>
     </sys_category_record_mm>
 
+    <!-- MenuThumbnailList Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>13</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>13</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
     <sys_file>
         <uid>1</uid>
         <pid>0</pid>
@@ -1169,6 +1245,17 @@
         <pid>1</pid>
         <uid_local>1</uid_local>
         <uid_foreign>12</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- MenuThumbnailList backgroundimage -->
+    <sys_file_reference>
+        <uid>21</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>13</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
         <autoplay>1</autoplay>
