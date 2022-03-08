@@ -15,7 +15,7 @@ use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
 class TimelineElementTest extends BaseContentTypeTest
 {
-    public function testHeaderContentElement(): void
+    public function testTimelineContentElement(): void
     {
         $response = $this->executeFrontendSubRequest(
             new InternalRequest('https://website.local/')

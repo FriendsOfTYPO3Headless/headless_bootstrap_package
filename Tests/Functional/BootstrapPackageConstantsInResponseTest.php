@@ -13,7 +13,7 @@ namespace FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Tests\Functional;
 
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
-class PageResponseTest extends BaseTest
+class BootstrapPackageConstantsInResponseTest extends BaseTest
 {
     public function testBootstrapPackageConstants(): void
     {
