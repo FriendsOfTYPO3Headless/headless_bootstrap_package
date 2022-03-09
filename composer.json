@@ -55,7 +55,8 @@
     }
   },
   "suggest": {
-    "friendsoftypo3headless/headless-navigations": "^1.0"
+    "friendsoftypo3headless/headless-navigations": "^1.0",
+    "friendsoftypo3headless/headless-backendlayouts": "^1.0"
   },
   "config": {
     "preferred-install": {

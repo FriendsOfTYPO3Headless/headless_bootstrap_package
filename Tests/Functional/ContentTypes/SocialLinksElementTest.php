@@ -15,7 +15,7 @@ use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
 class SocialLinksElementTest extends BaseContentTypeTest
 {
-    public function testHeaderContentElement(): void
+    public function testSocialLinksContentElement(): void
     {
         $response = $this->executeFrontendSubRequest(
             new InternalRequest('https://website.local/')

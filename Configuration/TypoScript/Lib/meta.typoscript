@@ -1,0 +1,22 @@
+lib.meta = JSON
+lib.meta {
+  fields {
+    viewport = TEXT
+    viewport.value = {$page.meta.viewport}
+
+    robots = TEXT
+    robots.value = {$page.meta.robots}
+
+    appleMobileWebAppCapable = TEXT
+    appleMobileWebAppCapable.value = {$page.meta.apple-mobile-web-app-capable}
+
+    compatible = TEXT
+    compatible.value = {$page.meta.compatible}
+
+    google = TEXT
+    google.value = {$page.meta.google}
+
+    googlSiteVerification = TEXT
+    googlSiteVerification.value = {$page.meta.google-site-verification}
+  }
+}
