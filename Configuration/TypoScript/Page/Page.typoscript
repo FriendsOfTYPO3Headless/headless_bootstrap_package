@@ -1,0 +1,11 @@
+[{$page.bootstrapPackage.constantsIncluded} == 1]
+page {
+  10 {
+    fields {
+      bootstrapPackage =< lib.bootstrapPackage
+      # Add bootstrap_package meta constants to existing page.meta data
+      meta =< lib.meta
+    }
+  }
+}
+[GLOBAL]

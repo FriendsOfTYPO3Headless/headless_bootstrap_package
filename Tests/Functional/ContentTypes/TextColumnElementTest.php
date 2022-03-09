@@ -15,7 +15,7 @@ use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
 class TextColumnElementTest extends BaseContentTypeTest
 {
-    public function testHeaderContentElement(): void
+    public function testTextcolumnContentElement(): void
     {
         $response = $this->executeFrontendSubRequest(
             new InternalRequest('https://website.local/')

@@ -1,0 +1,12 @@
+lib.tracking = JSON
+lib.tracking {
+  fields {
+    google = JSON
+    google {
+      fields {
+        trackingID = TEXT
+        trackingID.value = {$page.tracking.google.trackingID}
+      }
+    }
+  }
+}

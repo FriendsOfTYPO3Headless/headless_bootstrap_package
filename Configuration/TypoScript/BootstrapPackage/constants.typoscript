@@ -1,0 +1,4 @@
+@import 'EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript'
+
+# Do not remove this line.
+page.bootstrapPackage.constantsIncluded = 1
