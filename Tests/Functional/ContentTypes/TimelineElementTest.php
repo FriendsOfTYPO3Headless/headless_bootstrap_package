@@ -44,53 +44,14 @@ class TimelineElementTest extends BaseContentTypeTest
     {
         self::assertTrue(isset($contentElement['content']['items']), 'items not set');
         self::assertIsArray($contentElement['content']['items']);
-        self::assertEquals(3, count($contentElement['content']['items']));
+        self::assertEquals(1, count($contentElement['content']['items']));
 
-        $itemTestConfig = $this->getItemsTestConfig();
-
-        foreach ($contentElement['content']['items'] as $key => $item) {
-            $assertConfig = $itemTestConfig[$key];
-
+        foreach ($contentElement['content']['items'] as $item) {
+            self::assertEquals('2022-03-10 12:00:00', $item['date']);
             self::assertEquals('Header', $item['header'], 'accordion item: header mismatch');
-            self::assertStringContainsString('<a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999', $item['bodytext']);
+            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
 
-            self::assertEquals($assertConfig['icon_set'], $item['icon_set'], 'icon_set mismatch');
-            self::assertEquals($assertConfig['icon_identifier'], $item['icon_identifier'], 'icon_identifier mismatch');
-
-            if ($assertConfig['icon_file']) {
-                self::assertEquals('ext_icon.gif', $item['icon_file']['name'], 'name mismatch');
-                self::assertEquals('/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', $item['icon_file']['previewImage'], 'previewImage mismatch');
-                self::assertEquals(16, $item['icon_file']['height'], 'height mismatch');
-                self::assertEquals(16, $item['icon_file']['width'], 'width mismatch');
-            }
-
-            if ($assertConfig['image']) {
-                $this->checkFileReferencesField($item, 'image');
-            }
+            $this->checkFileReferencesField($item, 'image');
         }
-    }
-
-    private function getItemsTestConfig(): array
-    {
-        return [
-            [
-                'image' => 0,
-                'icon_file' => 0,
-                'icon_set' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/',
-                'icon_identifier' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg',
-            ],
-            [
-                'image' => 1,
-                'icon_file' => 0,
-                'icon_set' => '',
-                'icon_identifier' => '',
-            ],
-            [
-                'image' => 0,
-                'icon_file' => 1,
-                'icon_set' => '',
-                'icon_identifier' => '',
-            ],
-        ];
     }
 }

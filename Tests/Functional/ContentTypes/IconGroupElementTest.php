@@ -56,9 +56,9 @@ class IconGroupElementTest extends BaseContentTypeTest
             self::assertEquals('Subheader', $item['subheader']);
             self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
             $this->checkTypoLinkField($item['link']);
+
             self::assertEquals('EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/', $item['iconSet']);
             self::assertEquals('EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/beaker.svg', $item['iconIdentifier']);
-
             self::assertCount(4, $item['icon']);
             self::assertEquals('typo3conf/ext/bootstrap_package/Resources/Public/Images/Icons/Ionicons/beaker.svg', $item['icon']['previewImage']);
             self::assertEquals('beaker', $item['icon']['name']);

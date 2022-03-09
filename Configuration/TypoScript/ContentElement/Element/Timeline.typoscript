@@ -25,7 +25,6 @@ tt_content.timeline {
                 intval = 1
                 wrap = tt_content=|
               }
-
               orderBy.stdWrap.cObject = TEXT
               orderBy.stdWrap.cObject {
                 data = flexform:pi_flexform:sorting
@@ -35,6 +34,8 @@ tt_content.timeline {
                   ifEmpty = date desc
                 }
               }
+
+              fields < lib.timelineItem
 
               as = timeline_item
               dataProcessing {
@@ -49,7 +50,7 @@ tt_content.timeline {
                   iconSet.field = icon_set
                   iconIdentifier.field = icon_identifier
                   iconFileFieldName = icon_file
-                  as = icon_file
+                  as = icon
                 }
               }
             }

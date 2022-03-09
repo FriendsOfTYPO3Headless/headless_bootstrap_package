@@ -180,7 +180,7 @@
                 </data>
             </T3FlexForms>]]>
         </pi_flexform>
-        <tx_bootstrappackage_timeline_item>2</tx_bootstrappackage_timeline_item>
+        <tx_bootstrappackage_timeline_item>1</tx_bootstrappackage_timeline_item>
         <background_color_class>primary</background_color_class>
         <background_image>1</background_image>
         <background_image_options>
@@ -977,7 +977,6 @@
         <sectionIndex>1</sectionIndex>
         <linkToTop>1</linkToTop>
     </tt_content>
-
     <tt_content>
         <uid>20</uid>
         <pid>1</pid>
@@ -1074,37 +1073,13 @@
         <pid>1</pid>
         <sorting>1</sorting>
         <tt_content>4</tt_content>
-        <date>1234567890</date>
+        <date>2022-03-10 12:00:00</date>
         <header>Header</header>
-        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
-        </bodytext>
-        <icon_file>0</icon_file>
-        <image>0</image>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
         <icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</icon_set>
         <icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg</icon_identifier>
-    </tx_bootstrappackage_timeline_item>
-    <tx_bootstrappackage_timeline_item>
-        <uid>2</uid>
-        <pid>1</pid>
-        <sorting>1</sorting>
-        <tt_content>4</tt_content>
-        <date>1234567890</date>
-        <header>Header</header>
-        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
-        </bodytext>
-        <icon_file>0</icon_file>
         <image>1</image>
-    </tx_bootstrappackage_timeline_item>
-    <tx_bootstrappackage_timeline_item>
-        <uid>3</uid>
-        <pid>1</pid>
-        <sorting>1</sorting>
-        <tt_content>4</tt_content>
-        <date>1234567890</date>
-        <header>Header</header>
-        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
-        </bodytext>
-        <icon_file>1</icon_file>
+        <icon_file>0</icon_file>
     </tx_bootstrappackage_timeline_item>
 
     <tx_bootstrappackage_card_group_item>
@@ -1114,8 +1089,7 @@
         <tt_content>11</tt_content>
         <header>Header</header>
         <subheader>Subheader</subheader>
-        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
-        </bodytext>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
         <link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</link>
         <link_title>LinkTitle</link_title>
         <link_class>info</link_class>
@@ -1605,20 +1579,9 @@
         <uid>7</uid>
         <pid>1</pid>
         <uid_local>1</uid_local>
-        <uid_foreign>2</uid_foreign>
+        <uid_foreign>1</uid_foreign>
         <tablenames>tx_bootstrappackage_timeline_item</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
-    </sys_file_reference>
-
-    <!-- TimelineItem Icon File -->
-    <sys_file_reference>
-        <uid>8</uid>
-        <pid>1</pid>
-        <uid_local>1</uid_local>
-        <uid_foreign>3</uid_foreign>
-        <tablenames>tx_bootstrappackage_timeline_item</tablenames>
-        <fieldname>icon_file</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
 
