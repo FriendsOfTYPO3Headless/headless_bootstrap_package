@@ -13,9 +13,9 @@ namespace FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Tests\Functional\Conte
 
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
-class MenuCardDirElementTest extends BaseContentTypeTest
+class MenuThumbnailDirElementTest extends BaseContentTypeTest
 {
-    public function testMenuCardDirContentElement(): void
+    public function testMenuThumbnailDirContentElement(): void
     {
         $response = $this->executeFrontendSubRequest(
             new InternalRequest('https://website.local/')
@@ -25,17 +25,16 @@ class MenuCardDirElementTest extends BaseContentTypeTest
 
         $fullTree = json_decode((string)$response->getBody(), true);
 
-        $contentElement = $fullTree['content']['colPos0'][11];
+        $contentElement = $fullTree['content']['colPos0'][15];
 
         // content element specific tests
-        self::assertEquals('Read more', $contentElement['content']['readmoreLabel']);
         self::assertEquals(1, $contentElement['accessibility']['bypass']);
         self::assertEquals('Skip navigation', $contentElement['accessibility']['bypassText']);
         $this->checkFlexform($contentElement);
         $this->checkItems($contentElement);
 
         // general tests
-        $this->checkDefaultContentFields($contentElement, 12, 1, 'menu_card_dir', 0, 'SysCategory1Title,SysCategory2Title');
+        $this->checkDefaultContentFields($contentElement, 16, 1, 'menu_thumbnail_dir', 0, 'SysCategory1Title,SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
         $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 'center');
         $this->checkBackgroundImageField($contentElement);
@@ -55,7 +54,7 @@ class MenuCardDirElementTest extends BaseContentTypeTest
         self::assertCount(5, $contentElement['content']['items']);
 
         foreach ($contentElement['content']['items'] as $page) {
-            self::assertCount(9, $page);
+            self::assertCount(8, $page);
             self::assertArrayHasKey('title', $page);
             self::assertArrayHasKey('link', $page);
             self::assertArrayHasKey('target', $page);
@@ -64,7 +63,6 @@ class MenuCardDirElementTest extends BaseContentTypeTest
             self::assertArrayHasKey('spacer', $page);
             self::assertArrayHasKey('hasSubpages', $page);
             self::assertArrayHasKey('media', $page);
-            self::assertArrayHasKey('icon', $page);
         }
     }
 }
