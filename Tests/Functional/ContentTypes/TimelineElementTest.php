@@ -77,7 +77,7 @@ class TimelineElementTest extends BaseContentTypeTest
                 'image' => 0,
                 'icon_file' => 0,
                 'icon_set' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/',
-                'icon_identifier' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/android-note.svg',
+                'icon_identifier' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg',
             ],
             [
                 'image' => 1,

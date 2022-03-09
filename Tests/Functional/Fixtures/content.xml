@@ -947,6 +947,71 @@
         <icon_file>1</icon_file>
         <icon_color>#FFFFFF</icon_color>
         <icon_background>#333333</icon_background>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+
+    <tt_content>
+        <uid>20</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>icon_group</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <tx_bootstrappackage_icon_group_item>1</tx_bootstrappackage_icon_group_item>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="align">
+                                <value index="vDEF">left</value>
+                            </field>
+                            <field index="columns">
+                                <value index="vDEF">3</value>
+                            </field>
+                            <field index="icon_position">
+                                <value index="vDEF">left-center</value>
+                            </field>
+
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
 
         <layout>1</layout>
         <frame_class>Frame</frame_class>
@@ -1016,7 +1081,7 @@
         <icon_file>0</icon_file>
         <image>0</image>
         <icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</icon_set>
-        <icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/android-note.svg</icon_identifier>
+        <icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg</icon_identifier>
     </tx_bootstrappackage_timeline_item>
     <tx_bootstrappackage_timeline_item>
         <uid>2</uid>
@@ -1055,7 +1120,7 @@
         <link_title>LinkTitle</link_title>
         <link_class>info</link_class>
         <link_icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</link_icon_set>
-        <link_icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/android-note.svg</link_icon_identifier>
+        <link_icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg</link_icon_identifier>
     </tx_bootstrappackage_card_group_item>
 
     <tx_bootstrappackage_card_group_item>
@@ -1098,6 +1163,19 @@
         <imagecols>2</imagecols>
         <image_zoom>1</image_zoom>
     </tx_bootstrappackage_tab_item>
+
+    <tx_bootstrappackage_icon_group_item>
+        <uid>1</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>20</tt_content>
+        <header>Header</header>
+        <subheader>Subheader</subheader>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</link>
+        <icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</icon_set>
+        <icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/beaker.svg</icon_identifier>
+    </tx_bootstrappackage_icon_group_item>
 
     <sys_category>
         <uid>1</uid>
@@ -1365,6 +1443,20 @@
     <sys_category_record_mm>
         <tablenames>tt_content</tablenames>
         <uid_foreign>19</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- IconGroup Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>20</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>20</uid_foreign>
         <uid_local>2</uid_local>
         <fieldname>categories</fieldname>
     </sys_category_record_mm>
@@ -1750,7 +1842,7 @@
         <autoplay>1</autoplay>
     </sys_file_reference>
 
-    <!-- TextIcpn Icon Image -->
+    <!-- TextIcon Icon Image -->
     <sys_file_reference>
         <uid>29</uid>
         <pid>1</pid>
@@ -1758,6 +1850,17 @@
         <uid_foreign>19</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>icon_file</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- TextIcon Icon Image -->
+    <sys_file_reference>
+        <uid>30</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>20</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
 </dataset>
