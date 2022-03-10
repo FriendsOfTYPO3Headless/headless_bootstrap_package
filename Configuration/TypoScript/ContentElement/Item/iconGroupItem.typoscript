@@ -1,0 +1,31 @@
+lib.iconGroupItem {
+  header = TEXT
+  header.field = header
+
+  subheader = TEXT
+  subheader.field = subheader
+
+  bodytext = TEXT
+  bodytext {
+    field = bodytext
+    parseFunc =< lib.parseFunc_links
+  }
+
+  link = TEXT
+  link {
+    htmlSpecialChars = 1
+    typolink {
+      parameter {
+        field = link
+      }
+
+      returnLast = result
+    }
+  }
+
+  iconSet = TEXT
+  iconSet.field = icon_set
+
+  iconIdentifier = TEXT
+  iconIdentifier.field = icon_identifier
+}

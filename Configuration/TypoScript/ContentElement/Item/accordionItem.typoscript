@@ -1,0 +1,19 @@
+lib.accordionItem {
+  header = TEXT
+  header.field = header
+
+  bodytext = TEXT
+  bodytext {
+    field = bodytext
+    parseFunc =< lib.parseFunc_links
+  }
+
+  mediaorient = TEXT
+  mediaorient.field = mediaorient
+
+  imagecols = TEXT
+  imagecols.field = imagecols
+
+  imageZoom = TEXT
+  imageZoom.field = image_zoom
+}

@@ -27,6 +27,8 @@ tt_content.accordion {
                 wrap = tt_content=|
               }
 
+              fields < lib.accordionItem
+
               orderBy = sorting
               as = accordion_item
               dataProcessing {

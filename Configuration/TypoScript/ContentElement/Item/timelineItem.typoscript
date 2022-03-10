@@ -1,0 +1,13 @@
+lib.timelineItem {
+  date = TEXT
+  date.field = date
+
+  header = TEXT
+  header.field = header
+
+  bodytext = TEXT
+  bodytext {
+    field = bodytext
+    parseFunc =< lib.parseFunc_links
+  }
+}

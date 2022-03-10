@@ -11,6 +11,7 @@ tt_content.panel {
         bodytext = TEXT
         bodytext {
           field = bodytext
+          parseFunc =< lib.parseFunc_links
         }
 
         subheader >

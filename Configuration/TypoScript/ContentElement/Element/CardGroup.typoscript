@@ -27,19 +27,7 @@ tt_content.card_group {
                 wrap = tt_content=|
               }
 
-              overrideFields {
-                link = TEXT
-                link {
-                  htmlSpecialChars = 1
-                  typolink {
-                    parameter {
-                      field = link
-                    }
-
-                    returnLast = result
-                  }
-                }
-              }
+              fields < lib.cardGroupItem
 
               orderBy = sorting
               as = group_item

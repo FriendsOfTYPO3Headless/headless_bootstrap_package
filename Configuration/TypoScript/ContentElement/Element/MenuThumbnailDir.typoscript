@@ -11,6 +11,20 @@ tt_content.menu_thumbnail_dir {
       }
     }
 
+    accessibility {
+      fields {
+        bypass = TEXT
+        bypass {
+          field = accessibility_bypass
+        }
+
+        bypassText = TEXT
+        bypassText {
+          field = accessibility_bypass_text
+        }
+      }
+    }
+
     content {
       fields {
         items = TEXT

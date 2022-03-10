@@ -49,10 +49,10 @@ class AccordionElementTest extends BaseContentTypeTest
 
         foreach ($contentElement['content']['items'] as $item) {
             self::assertEquals('Header', $item['header'], 'accordion item: header mismatch');
-            self::assertStringContainsString('<a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999', $item['bodytext']);
+            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
             self::assertEquals('left', $item['mediaorient'], 'accordion item: mediaorient mismatch');
             self::assertEquals(2, $item['imagecols'], 'accordion item: imagecols mismatch');
-            self::assertEquals(0, $item['image_zoom'], 'accordion item: heaimage_zoomder mismatch');
+            self::assertEquals(0, $item['imageZoom'], 'accordion item: imageZoom mismatch');
 
             $this->checkFileReferencesField($item, 'media');
         }

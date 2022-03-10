@@ -8,7 +8,7 @@
         <colPos>0</colPos>
         <header>Header</header>
         <header_layout>1</header_layout>
-        <bodytext>Lorem ipsum dolor sit amet</bodytext>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
         <panel_class>secondary</panel_class>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
@@ -180,7 +180,7 @@
                 </data>
             </T3FlexForms>]]>
         </pi_flexform>
-        <tx_bootstrappackage_timeline_item>2</tx_bootstrappackage_timeline_item>
+        <tx_bootstrappackage_timeline_item>1</tx_bootstrappackage_timeline_item>
         <background_color_class>primary</background_color_class>
         <background_image>1</background_image>
         <background_image_options>
@@ -469,74 +469,685 @@
         <sectionIndex>1</sectionIndex>
         <linkToTop>1</linkToTop>
     </tt_content>
-
-    <tx_bootstrappackage_accordion_item>
-        <uid>1</uid>
+    <tt_content>
+        <uid>11</uid>
         <pid>1</pid>
         <sorting>1</sorting>
-        <tt_content>2</tt_content>
+        <CType>card_group</CType>
+        <colPos>0</colPos>
         <header>Header</header>
-        <bodytext>
-            <![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
-        <media>1</media>
-        <mediaorient>left</mediaorient>
-        <imagecols>2</imagecols>
-        <image_zoom>0</image_zoom>
-    </tx_bootstrappackage_accordion_item>
-    <tx_bootstrappackage_accordion_item>
-        <uid>2</uid>
-        <pid>1</pid>
-        <sorting>1</sorting>
-        <tt_content>2</tt_content>
-        <header>Header</header>
-        <bodytext>
-            <![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
-        <media>1</media>
-        <mediaorient>left</mediaorient>
-        <imagecols>2</imagecols>
-        <image_zoom>0</image_zoom>
-    </tx_bootstrappackage_accordion_item>
-
-    <tx_bootstrappackage_timeline_item>
-        <uid>1</uid>
-        <pid>1</pid>
-        <sorting>1</sorting>
-        <tt_content>4</tt_content>
+        <subheader>Subheader</subheader>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
         <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <tx_bootstrappackage_card_group_item>3</tx_bootstrappackage_card_group_item>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="align">
+                                <value index="vDEF">left</value>
+                            </field>
+                            <field index="columns">
+                                <value index="vDEF">3</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">blur</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>12</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>menu_card_dir</CType>
+        <colPos>0</colPos>
         <header>Header</header>
-        <bodytext>
-            <![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <pages>1</pages>
+        <readmore_label>Read more</readmore_label>
+        <accessibility_bypass>1</accessibility_bypass>
+        <accessibility_bypass_text>Skip navigation</accessibility_bypass_text>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="align">
+                                <value index="vDEF">left</value>
+                            </field>
+                            <field index="columns">
+                                <value index="vDEF">2</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>13</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>menu_thumbnail_list</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <pages>2,3,4</pages>
+        <accessibility_bypass>1</accessibility_bypass>
+        <accessibility_bypass_text>Skip navigation</accessibility_bypass_text>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="align">
+                                <value index="vDEF">left</value>
+                            </field>
+                            <field index="columns">
+                                <value index="vDEF">2</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>14</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>menu_card_list</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <pages>2,3,4</pages>
+        <accessibility_bypass>1</accessibility_bypass>
+        <accessibility_bypass_text>Skip navigation</accessibility_bypass_text>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="align">
+                                <value index="vDEF">left</value>
+                            </field>
+                            <field index="columns">
+                                <value index="vDEF">2</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>15</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>tab</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <tx_bootstrappackage_tab_item>2</tx_bootstrappackage_tab_item>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="default_tab">
+                                <value index="vDEF">1</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>16</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>menu_thumbnail_dir</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <pages>1</pages>
+        <accessibility_bypass>1</accessibility_bypass>
+        <accessibility_bypass_text>Skip navigation</accessibility_bypass_text>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="align">
+                                <value index="vDEF">left</value>
+                            </field>
+                            <field index="columns">
+                                <value index="vDEF">2</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>17</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>listgroup</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <bodytext><![CDATA[Item 0
+            Item 1
+            Item 2
+            Item 3]]>
         </bodytext>
-        <icon_file>0</icon_file>
-        <image>0</image>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>18</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>external_media</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <external_media_source>https://www.an-external-source.com/path/to/that/source</external_media_source>
+        <external_media_ratio>4by3</external_media_ratio>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>19</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>texticon</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
         <icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</icon_set>
-        <icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/android-note.svg</icon_identifier>
-    </tx_bootstrappackage_timeline_item>
-    <tx_bootstrappackage_timeline_item>
+        <icon>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/beaker.svg"</icon>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <icon_position>left</icon_position>
+        <icon_type>square</icon_type>
+        <icon_size>medium</icon_size>
+        <icon_file>1</icon_file>
+        <icon_color>#FFFFFF</icon_color>
+        <icon_background>#333333</icon_background>
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+    <tt_content>
+        <uid>20</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>icon_group</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <tx_bootstrappackage_icon_group_item>1</tx_bootstrappackage_icon_group_item>
+        <pi_flexform>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="align">
+                                <value index="vDEF">left</value>
+                            </field>
+                            <field index="columns">
+                                <value index="vDEF">3</value>
+                            </field>
+                            <field index="icon_position">
+                                <value index="vDEF">left-center</value>
+                            </field>
+
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </pi_flexform>
+
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
+
+    <tx_bootstrappackage_accordion_item>
+        <uid>1</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>2</tt_content>
+        <header>Header</header>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <media>1</media>
+        <mediaorient>left</mediaorient>
+        <imagecols>2</imagecols>
+        <image_zoom>0</image_zoom>
+    </tx_bootstrappackage_accordion_item>
+    <tx_bootstrappackage_accordion_item>
         <uid>2</uid>
         <pid>1</pid>
         <sorting>1</sorting>
-        <tt_content>4</tt_content>
-        <date>1234567890</date>
+        <tt_content>2</tt_content>
         <header>Header</header>
-        <bodytext>
-            <![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
-        </bodytext>
-        <icon_file>0</icon_file>
-        <image>1</image>
-    </tx_bootstrappackage_timeline_item>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <media>1</media>
+        <mediaorient>left</mediaorient>
+        <imagecols>2</imagecols>
+        <image_zoom>0</image_zoom>
+    </tx_bootstrappackage_accordion_item>
+
     <tx_bootstrappackage_timeline_item>
+        <uid>1</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>4</tt_content>
+        <date>2022-03-10 12:00:00</date>
+        <header>Header</header>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</icon_set>
+        <icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg</icon_identifier>
+        <image>1</image>
+        <icon_file>0</icon_file>
+    </tx_bootstrappackage_timeline_item>
+
+    <tx_bootstrappackage_card_group_item>
+        <uid>1</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>11</tt_content>
+        <header>Header</header>
+        <subheader>Subheader</subheader>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</link>
+        <link_title>LinkTitle</link_title>
+        <link_class>info</link_class>
+        <link_icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</link_icon_set>
+        <link_icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg</link_icon_identifier>
+    </tx_bootstrappackage_card_group_item>
+
+    <tx_bootstrappackage_card_group_item>
+        <uid>2</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>11</tt_content>
+        <header>Header</header>
+        <subheader>Subheader</subheader>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</link>
+        <link_title>LinkTitle</link_title>
+        <link_class>info</link_class>
+        <image>1</image>
+    </tx_bootstrappackage_card_group_item>
+    <tx_bootstrappackage_card_group_item>
         <uid>3</uid>
         <pid>1</pid>
         <sorting>1</sorting>
-        <tt_content>4</tt_content>
-        <date>1234567890</date>
+        <tt_content>11</tt_content>
         <header>Header</header>
-        <bodytext>
-            <![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
-        </bodytext>
-        <icon_file>1</icon_file>
-    </tx_bootstrappackage_timeline_item>
+        <subheader>Subheader</subheader>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</link>
+        <link_title>LinkTitle</link_title>
+        <link_class>info</link_class>
+    </tx_bootstrappackage_card_group_item>
+
+    <tx_bootstrappackage_tab_item>
+        <uid>1</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>15</tt_content>
+        <header>Header</header>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <media>1</media>
+        <mediaorient>left</mediaorient>
+        <imagecols>2</imagecols>
+        <image_zoom>1</image_zoom>
+    </tx_bootstrappackage_tab_item>
+
+    <tx_bootstrappackage_icon_group_item>
+        <uid>1</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <tt_content>20</tt_content>
+        <header>Header</header>
+        <subheader>Subheader</subheader>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
+        <link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</link>
+        <icon_set>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/</icon_set>
+        <icon_identifier>EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/beaker.svg</icon_identifier>
+    </tx_bootstrappackage_icon_group_item>
 
     <sys_category>
         <uid>1</uid>
@@ -678,6 +1289,146 @@
     <sys_category_record_mm>
         <tablenames>tt_content</tablenames>
         <uid_foreign>10</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- CardGroup Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>11</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>11</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- MenuCardDir Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>12</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>12</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- MenuThumbnailList Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>13</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>13</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- MenuCardList Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>14</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>14</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- Tab Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>15</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>15</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- MenuThumbnailDir Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>16</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>16</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- ListGroup Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>17</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>17</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- ExternalMedia Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>18</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>18</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- Texticon Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>19</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>19</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- IconGroup Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>20</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>20</uid_foreign>
         <uid_local>2</uid_local>
         <fieldname>categories</fieldname>
     </sys_category_record_mm>
@@ -826,20 +1577,9 @@
         <uid>7</uid>
         <pid>1</pid>
         <uid_local>1</uid_local>
-        <uid_foreign>2</uid_foreign>
+        <uid_foreign>1</uid_foreign>
         <tablenames>tx_bootstrappackage_timeline_item</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
-    </sys_file_reference>
-
-    <!-- TimelineItem Icon File -->
-    <sys_file_reference>
-        <uid>8</uid>
-        <pid>1</pid>
-        <uid_local>1</uid_local>
-        <uid_foreign>3</uid_foreign>
-        <tablenames>tx_bootstrappackage_timeline_item</tablenames>
-        <fieldname>icon_file</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
 
@@ -926,6 +1666,160 @@
         <pid>1</pid>
         <uid_local>1</uid_local>
         <uid_foreign>10</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- CardGroup Background Image -->
+    <sys_file_reference>
+        <uid>17</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>11</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- CardGroupItem2 Image -->
+    <sys_file_reference>
+        <uid>18</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>2</uid_foreign>
+        <tablenames>tx_bootstrappackage_card_group_item</tablenames>
+        <fieldname>image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- CardGroupItem3 icon_file -->
+    <sys_file_reference>
+        <uid>19</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>3</uid_foreign>
+        <tablenames>tx_bootstrappackage_card_group_item</tablenames>
+        <fieldname>link_icon</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- MenuCardDir backgroundimage -->
+    <sys_file_reference>
+        <uid>20</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>12</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- MenuThumbnailList backgroundimage -->
+    <sys_file_reference>
+        <uid>21</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>13</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- MenuCardList backgroundimage -->
+    <sys_file_reference>
+        <uid>22</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>14</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Tab backgroundimage -->
+    <sys_file_reference>
+        <uid>23</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>15</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- TabItem media -->
+    <sys_file_reference>
+        <uid>24</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>1</uid_foreign>
+        <tablenames>tx_bootstrappackage_tab_item</tablenames>
+        <fieldname>media</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- MenuThumbnailDir backgroundimage -->
+    <sys_file_reference>
+        <uid>25</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>16</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Listgroup backgroundimage -->
+    <sys_file_reference>
+        <uid>26</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>17</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- ExternalMedia backgroundimage -->
+    <sys_file_reference>
+        <uid>27</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>18</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- TextIcpn backgroundimage -->
+    <sys_file_reference>
+        <uid>28</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>19</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- TextIcon Icon Image -->
+    <sys_file_reference>
+        <uid>29</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>19</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>icon_file</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- TextIcon Icon Image -->
+    <sys_file_reference>
+        <uid>30</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>20</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
         <autoplay>1</autoplay>

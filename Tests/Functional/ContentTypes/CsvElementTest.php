@@ -78,17 +78,17 @@ test40;test41;test42;test43;test44',
         self::assertCount(5, $contentElement['content']['media'][0]['table']);
 
         /**
-         * @var int $key
+         * @var int $rowKey
          * @var string[] $row
          */
-        foreach ($contentElement['content']['media'][0]['table'] as $key => $row) {
+        foreach ($contentElement['content']['media'][0]['table'] as $rowKey => $row) {
             self::assertCount(5, $row);
             /**
-             * @var int $rowKey
+             * @var int $colKey
              * @var string $value
              */
-            foreach ($row as $rowKey => $value) {
-                self::assertEquals(sprintf('test%d%d', $key, $rowKey), $value);
+            foreach ($row as $colKey => $value) {
+                self::assertEquals(sprintf('test%d%d', $rowKey, $colKey), $value);
             }
         }
     }

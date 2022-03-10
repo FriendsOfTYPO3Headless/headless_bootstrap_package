@@ -125,11 +125,12 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($height, $fileElement['properties']['cropDimensions']['height'], 'properties cropDimensions height mismatch');
     }
 
-    public function checkFileReferencesField($contentElement, $fieldname): void
+    public function checkFileReferencesField($contentElement, $fieldname, $numberOfExpectedFiles = 1): void
     {
         $fileReferenceData = $contentElement[$fieldname];
 
         self::assertIsArray($fileReferenceData);
+        self::assertEquals($numberOfExpectedFiles, count($fileReferenceData));
 
         foreach ($fileReferenceData as $data) {
             $this->checkGalleryFile($data, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
@@ -156,7 +157,7 @@ abstract class BaseContentTypeTest extends BaseTest
     public function checkTypoLinkField(array $typolinkConfig): void
     {
         self::assertEquals('/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42', $typolinkConfig['href'], 'typolink href mismatch');
-        //self::assertEquals('Page 1', $typolinkConfig['linkText'], 'typolink href mismatch');
+//        self::assertEquals('Page 1', $typolinkConfig['linkText'], 'typolink href mismatch');
         self::assertEquals('LinkTitle', $typolinkConfig['title'], 'typolink title mismatch');
         self::assertEquals('LinkClass', $typolinkConfig['class'], 'typolink class mismatch');
         self::assertEquals('_blank', $typolinkConfig['target'], 'typolink target mismatch');

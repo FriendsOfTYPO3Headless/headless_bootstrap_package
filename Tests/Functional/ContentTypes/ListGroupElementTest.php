@@ -13,9 +13,9 @@ namespace FriendsOfTYPO3Headless\HeadlessBootstrapPackage\Tests\Functional\Conte
 
 use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
-class PanelElementTest extends BaseContentTypeTest
+class ListGroupElementTest extends BaseContentTypeTest
 {
-    public function testPanelContentElement(): void
+    public function testListGroupContentElement(): void
     {
         $response = $this->executeFrontendSubRequest(
             new InternalRequest('https://website.local/')
@@ -25,25 +25,28 @@ class PanelElementTest extends BaseContentTypeTest
 
         $fullTree = json_decode((string)$response->getBody(), true);
 
-        $contentElement = $fullTree['content']['colPos0'][0];
+        $contentElement = $fullTree['content']['colPos0'][16];
 
         // content element specific tests
-        self::assertEquals('secondary', $contentElement['content']['panelClass'], 'panelClass mismatch');
-        self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $contentElement['content']['bodytext'], 'bodytext mismatch');
-        $this->checkDisabledFields($contentElement);
+        self::assertArrayNotHasKey('flexform', $contentElement);
+
+        $this->checkBodytext($contentElement);
 
         // general tests
-        $this->checkDefaultContentFields($contentElement, 1, 1, 'panel', 0, 'SysCategory1Title,SysCategory2Title');
+        $this->checkDefaultContentFields($contentElement, 17, 1, 'listgroup', 0, 'SysCategory1Title,SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
-        $this->checkHeaderFields($contentElement, 'Header', '', 1, '');
+        $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 'center');
+        $this->checkTypoLinkField($contentElement['content']['headerLink']);
         $this->checkBackgroundImageField($contentElement);
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
-    private function checkDisabledFields($contentElement): void
+    private function checkBodytext(array $contentElement): void
     {
-        self::assertArrayNotHasKey('subheader', $contentElement['content']);
-        self::assertArrayNotHasKey('headerPosition', $contentElement['content']);
-        self::assertArrayNotHasKey('headerLink', $contentElement['content']);
+        self::assertIsArray($contentElement['content']['bodytext']);
+        self::assertCount(4, $contentElement['content']['bodytext']);
+        foreach ($contentElement['content']['bodytext'] as $key => $item) {
+            self::assertEquals(sprintf('Item %s', $key), $item);
+        }
     }
 }

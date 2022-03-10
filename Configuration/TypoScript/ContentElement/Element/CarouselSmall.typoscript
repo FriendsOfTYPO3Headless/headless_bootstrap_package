@@ -27,7 +27,11 @@ tt_content.carousel_small {
                 wrap = tt_content=|
               }
 
+              fields < lib.carouselItem
+
               orderBy = sorting
+              as = items
+
               dataProcessing {
                 10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
                 10 {
@@ -43,7 +47,8 @@ tt_content.carousel_small {
 
                 1532633187 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
                 1532633187 {
-                  fieldName = background_image_options
+                  fieldName = backgroundImageOptions
+                  as = backgroundImageOptions
                 }
               }
             }

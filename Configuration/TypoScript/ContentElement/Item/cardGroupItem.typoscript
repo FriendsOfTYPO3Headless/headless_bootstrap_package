@@ -1,0 +1,31 @@
+lib.cardGroupItem {
+  header = TEXT
+  header.field = header
+
+  subheader = TEXT
+  subheader.field = subheader
+
+  bodytext = TEXT
+  bodytext {
+    field = bodytext
+    parseFunc =< lib.parseFunc_links
+  }
+
+  link = TEXT
+  link {
+    htmlSpecialChars = 1
+    typolink {
+      parameter {
+        field = link
+      }
+
+      returnLast = result
+    }
+  }
+
+  linkTitle = TEXT
+  linkTitle.field = link_title
+
+  linkClass = TEXT
+  linkClass.field = link_class
+}
