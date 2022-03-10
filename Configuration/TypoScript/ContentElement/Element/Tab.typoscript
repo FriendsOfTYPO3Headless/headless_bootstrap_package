@@ -27,6 +27,8 @@ tt_content.tab {
                 wrap = tt_content=|
               }
 
+              fields < lib.tabItem
+
               orderBy = sorting
               as = accordion_item
 

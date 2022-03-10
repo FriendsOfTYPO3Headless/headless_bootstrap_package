@@ -46,12 +46,12 @@ class TabElementTest extends BaseContentTypeTest
         self::assertIsArray($contentElement['content']['items']);
         self::assertEquals(1, count($contentElement['content']['items']));
 
-        foreach ($contentElement['content']['items'] as $key => $item) {
+        foreach ($contentElement['content']['items'] as $item) {
             self::assertEquals('Header', $item['header'], 'accordion item: header mismatch');
-            self::assertEquals('<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>', $item['bodytext']);
+            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
             self::assertEquals('left', $item['mediaorient']);
             self::assertEquals(2, $item['imagecols']);
-            self::assertEquals(0, $item['imageZoom']);
+            self::assertEquals(1, $item['imageZoom']);
 
             $this->checkFileReferencesField($item, 'media');
         }

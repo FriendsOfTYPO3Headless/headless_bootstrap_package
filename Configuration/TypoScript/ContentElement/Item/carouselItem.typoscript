@@ -1,0 +1,55 @@
+lib.carouselItem {
+  itemType = TEXT
+  itemType.field = item_type
+
+  layout = TEXT
+  layout.field = layout
+
+  header = TEXT
+  header.field = header
+
+  headerLayout = TEXT
+  headerLayout.field = header_layout
+
+  headerClass = TEXT
+  headerClass.field = header_class
+
+  subheader = TEXT
+  subheader.field = subheader
+
+  subheaderLayout = TEXT
+  subheaderLayout.field = subheader_layout
+
+  subheaderClass = TEXT
+  subheaderClass.field = subheader_class
+
+  headerPosition = TEXT
+  headerPosition.field = header_position
+
+  navTitle = TEXT
+  navTitle.field = nav_title
+
+  backgroundImageOptions = TEXT
+  backgroundImageOptions.field = background_image_options
+
+  link = TEXT
+  link {
+    htmlSpecialChars = 1
+    typolink {
+      parameter {
+        field = link
+      }
+
+      returnLast = result
+    }
+  }
+
+  bodytext = TEXT
+  bodytext {
+    field = bodytext
+    parseFunc =< lib.parseFunc_links
+  }
+
+  buttonText = TEXT
+  buttonText.field = button_text
+}

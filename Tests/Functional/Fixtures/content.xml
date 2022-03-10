@@ -1104,8 +1104,7 @@
         <tt_content>11</tt_content>
         <header>Header</header>
         <subheader>Subheader</subheader>
-        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
-        </bodytext>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
         <link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</link>
         <link_title>LinkTitle</link_title>
         <link_class>info</link_class>
@@ -1118,8 +1117,7 @@
         <tt_content>11</tt_content>
         <header>Header</header>
         <subheader>Subheader</subheader>
-        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]>
-        </bodytext>
+        <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
         <link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</link>
         <link_title>LinkTitle</link_title>
         <link_class>info</link_class>

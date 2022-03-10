@@ -59,14 +59,11 @@ class CardGroupElementTest extends BaseContentTypeTest
             self::assertEquals('Subheader', $item['subheader'], 'icon_set mismatch');
             self::assertArrayNotHasKey('headerLayout', $item);
             self::assertArrayNotHasKey('headerPosition', $item);
-
-            self::assertStringContainsString('<a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999', $item['bodytext']);
+            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
 
             $assertConfig = $itemTestConfig[$key];
-            self::assertEquals($assertConfig['link_icon_set'], $item['link_icon_set'], 'icon_set mismatch');
-            self::assertEquals($assertConfig['link_icon_identifier'], $item['link_icon_identifier'], 'icon_identifier mismatch');
 
-            if ($assertConfig['link_icon']) {
+            if ($assertConfig['linkIcon']) {
                 self::assertEquals('ext_icon.gif', $item['linkIcon']['name'], 'name mismatch');
                 self::assertEquals('/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', $item['linkIcon']['previewImage'], 'previewImage mismatch');
                 self::assertEquals(16, $item['linkIcon']['height'], 'height mismatch');
@@ -84,21 +81,21 @@ class CardGroupElementTest extends BaseContentTypeTest
         return [
             [
                 'image' => 0,
-                'link_icon' => 0,
-                'link_icon_set' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/',
-                'link_icon_identifier' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg',
+                'linkIcon' => 0,
+                'linkIconSet' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/',
+                'linkIconIdentifier' => 'EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/breaker.svg',
             ],
             [
                 'image' => 1,
-                'link_icon' => 0,
-                'link_icon_set' => '',
-                'link_icon_identifier' => '',
+                'linkIcon' => 0,
+                'linkIconSet' => '',
+                'linkIconIdentifier' => '',
             ],
             [
                 'image' => 0,
-                'link_icon' => 1,
-                'link_icon_set' => '',
-                'link_icon_identifier' => '',
+                'linkIcon' => 1,
+                'linkIconSet' => '',
+                'linkIconIdentifier' => '',
             ],
         ];
     }

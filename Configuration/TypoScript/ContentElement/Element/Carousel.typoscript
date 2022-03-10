@@ -27,39 +27,28 @@ tt_content.carousel {
                 wrap = tt_content=|
               }
 
-              overrideFields {
-                link = TEXT
-                link {
-                  htmlSpecialChars = 1
-                  typolink {
-                    parameter {
-                      field = link
-                    }
-
-                    returnLast = result
-                  }
-                }
-              }
+              fields < lib.carouselItem
 
               orderBy = sorting
-              as = records
+              as = items
 
               dataProcessing {
                 30 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
                 30 {
                   references.fieldName = background_image
-                  as = background_image
+                  as = backgroundImage
                 }
 
                 40 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
                 40 {
                   references.fieldName = image
-                  as = images
+                  as = image
                 }
 
                 1532633187 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
                 1532633187 {
-                  fieldName = background_image_options
+                  fieldName = backgroundImageOptions
+                  as = backgroundImageOptions
                 }
               }
             }
