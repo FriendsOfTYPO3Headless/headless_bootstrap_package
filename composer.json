@@ -16,7 +16,8 @@
     },
     {
       "name": "Sven Petersen",
-      "role": "Developer"
+      "role": "Developer",
+      "email": "sven@hardanders.de"
     }
   ],
   "license": [

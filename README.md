@@ -1,7 +1,5 @@
 ![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2.svg)
 
-*EXPERIMENTAL* This extension is currently still in development and not yet stable. It is likely to change, or even change drastically.
-
 [![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
 [![TYPO3 11](https://img.shields.io/badge/TYPO3-11-orange.svg)](https://get.typo3.org/version/11)
 [![CI Status](https://github.com/FriendsOfTYPO3Headless/headless_bootstrap_package/workflows/CI/badge.svg)](https://github.com/FriendsOfTYPO3Headless/headless_bootstrap_package/actions)
@@ -14,10 +12,13 @@
 # TYPO3 Extension "headless_bootstrap_package" - Provides TypoScript definitions for proper JSON output from EXT:bootstrap_package content elements
 This extension provides integration to headless extension with "[EXT:bootstrap_package](https://github.com/benjaminkott/bootstrap_package)" extension.
 
-It provides TypoScript rendering definitions to output the bootstrap_packages ContentElements as proper JSON.
+It provides TypoScript rendering definitions for all of EXT:bootstrap_packages ContentElements to output them as proper JSON.
 
-This extension adds a "bootstrapPackage" key to every JSON page reponse containing the EXT:bootstrap_package constants/config.
-It also merges the page.meta constants into the page.meta JSON array.
+This extension adds a "bootstrapPackage" key to every JSON page reponse containing the EXT:bootstrap_package constants/config:
+![BootstrapPackageConstants](./Documentation/assets/bootstrapPackageConstants.png)
+
+It also merges the page.meta constants into the page.meta JSON array:
+![pageMetaData](./Documentation/assets/pageMetaData.png)
 
 ## Requirements
 This Extension requires:
@@ -31,7 +32,7 @@ Install extension using composer\
 
 and then, include TypoScript template, and you are ready to go.
 
-**Important**: Do **NOT** include the Setup/Constants provided by EXT:bootstrap_package since they would interfere with the EXT:headless page config.
+**Important**: Do **NOT** include the Setup/Constants provided by EXT:bootstrap_package since they would interfere with the EXT:headless page config. <br><br>
 Instead please include the provided "Headless Boostrap Package: Boostrap Package Constants" TypoScript config in order to gain access to the EXT:bootstrap_package constants.
 
 ## Credits
