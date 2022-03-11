@@ -10,7 +10,7 @@
 [![PHP Version Require](http://poser.pugx.org/friendsoftypo3headless/headless-bootstrap-package/require/php)](https://packagist.org/packages/friendsoftypo3headless/headless-bootstrap-package)
 
 # TYPO3 Extension "headless_bootstrap_package" - Provides TypoScript definitions for proper JSON output from EXT:bootstrap_package content elements and configuration
-This extension provides integration for [EXT:headless(https://github.com/TYPO3-Headless/headless)] with "[EXT:bootstrap_package](https://github.com/benjaminkott/bootstrap_package)".
+This extension provides integration for [EXT:headless](https://github.com/TYPO3-Headless/headless) with [EXT:bootstrap_package](https://github.com/benjaminkott/bootstrap_package).
 
 It provides TypoScript rendering definitions for all of EXT:bootstrap_packages ContentElements to output them as proper JSON.
 
