@@ -1241,6 +1241,51 @@
         <sectionIndex>1</sectionIndex>
         <linkToTop>1</linkToTop>
     </tt_content>
+    <tt_content>
+        <uid>24</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>media</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+        <filelink_sorting>extension</filelink_sorting>
+        <imagecols>1</imagecols>
+
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
 
     <tx_bootstrappackage_accordion_item>
         <uid>1</uid>
@@ -1795,6 +1840,20 @@
         <fieldname>categories</fieldname>
     </sys_category_record_mm>
 
+    <!-- Media Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>24</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>24</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
     <sys_file>
         <uid>1</uid>
         <pid>0</pid>
@@ -1868,6 +1927,31 @@
         <title>MetadataTitle</title>
         <width>0</width>
         <height>0</height>
+    </sys_file_metadata>
+
+    <sys_file>
+        <uid>4</uid>
+        <pid>0</pid>
+        <storage>0</storage>
+        <type>3</type>
+        <identifier>/typo3conf/ext/headless_bootstrap_package/Tests/Functional/Fixtures/TYPO3_-_Channel_Intro.youtube</identifier>
+        <identifier_hash>d9afdb9178e8899fd294a41648bd85bf3910d453</identifier_hash>
+        <folder_hash>19669f1e02c2f16705ec7587044c66443be70725</folder_hash>
+        <extension>youtube</extension>
+        <mime_type>video/youtube</mime_type>
+        <name>TYPO3_-_Channel_Intro.youtube</name>
+        <sha1>287bd1181b6c08269bb31a7bf1a25fa4d2bb42f2</sha1>
+        <size>11</size>
+        <creation_date>1646994925</creation_date>
+        <modification_date>1646994925</modification_date>
+    </sys_file>
+    <sys_file_metadata>
+        <uid>4</uid>
+        <pid>0</pid>
+        <file>4</file>
+        <title>TYPO3 - Channel Intro</title>
+        <width>200</width>
+        <height>113</height>
     </sys_file_metadata>
 
     <!-- Panel Background Image -->
@@ -2278,6 +2362,37 @@
         <uid_foreign>3</uid_foreign>
         <tablenames>tx_bootstrappackage_carousel_item</tablenames>
         <fieldname>image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Media assets (YouTube Video) -->
+    <sys_file_reference>
+        <uid>40</uid>
+        <pid>1</pid>
+        <uid_local>4</uid_local>
+        <uid_foreign>24</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>assets</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+    <sys_file_reference>
+        <uid>41</uid>
+        <pid>1</pid>
+        <uid_local>4</uid_local>
+        <uid_foreign>24</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>assets</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Media backgroundimage -->
+    <sys_file_reference>
+        <uid>42</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>24</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
 </dataset>
