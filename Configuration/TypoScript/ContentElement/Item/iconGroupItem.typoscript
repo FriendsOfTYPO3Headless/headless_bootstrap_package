@@ -25,10 +25,4 @@ lib.iconGroupItem {
       returnLast = result
     }
   }
-
-  iconSet = TEXT
-  iconSet.field = icon_set
-
-  iconIdentifier = TEXT
-  iconIdentifier.field = icon_identifier
 }

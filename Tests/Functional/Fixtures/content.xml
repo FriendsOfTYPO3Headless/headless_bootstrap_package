@@ -1143,7 +1143,6 @@
                 </data>
             </T3FlexForms>]]>
         </pi_flexform>
-
         <layout>1</layout>
         <frame_class>Frame</frame_class>
         <space_before_class>SpaceBefore</space_before_class>
@@ -1286,7 +1285,6 @@
         <sectionIndex>1</sectionIndex>
         <linkToTop>1</linkToTop>
     </tt_content>
-
     <tt_content>
         <uid>25</uid>
         <pid>1</pid>
