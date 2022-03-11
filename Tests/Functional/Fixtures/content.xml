@@ -49,7 +49,7 @@
         <colPos>0</colPos>
         <header>Header</header>
         <header_layout>1</header_layout>
-        <header_position>1</header_position>
+        <header_position>center</header_position>
         <date>1234567890</date>
         <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
         <subheader>Subheader</subheader>

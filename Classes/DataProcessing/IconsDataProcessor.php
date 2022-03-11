@@ -19,7 +19,17 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class IconsDataProcessor extends BaseIconsDataProcessor
 {
-    public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
+    /**
+     * @param ContentObjectRenderer $cObj
+     * @param mixed[] $contentObjectConfiguration
+     * @param mixed[] $processorConfiguration
+     * @param mixed[] $processedData
+     *
+     * @return mixed[]
+     *
+     * @throws \TYPO3\CMS\Core\Resource\Exception\InvalidFileException
+     */
+    public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData): array
     {
         $processedData = parent::process($cObj, $contentObjectConfiguration, $processorConfiguration, $processedData);
 

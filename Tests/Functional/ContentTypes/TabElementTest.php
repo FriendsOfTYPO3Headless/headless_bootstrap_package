@@ -40,6 +40,9 @@ class TabElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkItems(array $contentElement): void
     {
         self::assertTrue(isset($contentElement['content']['items']), 'items not set');
@@ -58,6 +61,9 @@ class TabElementTest extends BaseContentTypeTest
         }
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkFlexform(array $contentElement): void
     {
         self::assertCount(1, $contentElement['flexform']);

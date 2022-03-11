@@ -41,14 +41,20 @@ class MenuThumbnailDirElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
-    private function checkFlexform($contentElement): void
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    private function checkFlexform(array $contentElement): void
     {
         self::assertCount(2, $contentElement['flexform']);
         self::assertEquals('left', $contentElement['flexform']['align']);
         self::assertEquals('2', $contentElement['flexform']['columns']);
     }
 
-    private function checkItems($contentElement): void
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    private function checkItems(array $contentElement): void
     {
         self::assertIsArray($contentElement['content']['items']);
         self::assertCount(5, $contentElement['content']['items']);

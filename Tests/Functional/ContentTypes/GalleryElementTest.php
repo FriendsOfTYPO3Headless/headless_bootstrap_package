@@ -44,6 +44,9 @@ class GalleryElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkItems(array $contentElement): void
     {
         self::assertTrue(isset($contentElement['content']['items']), 'items not set');

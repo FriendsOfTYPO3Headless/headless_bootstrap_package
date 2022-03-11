@@ -41,6 +41,9 @@ class MediaElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkItems(array $contentElement): void
     {
         self::assertCount(2, $contentElement['content']['items']);

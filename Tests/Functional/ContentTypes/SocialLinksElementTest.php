@@ -39,7 +39,10 @@ class SocialLinksElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'blur');
     }
 
-    private function checkChannels(array $contentElement)
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    private function checkChannels(array $contentElement): void
     {
         $channels = $contentElement['content']['items']['channels'];
 

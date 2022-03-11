@@ -35,6 +35,9 @@ class BootstrapPackageConstantsInResponseTest extends BaseTest
         $this->checkTrackingData($config);
     }
 
+    /**
+     * @param array<string, mixed> $config
+     */
     private function checkLogoData(array $config): void
     {
         self::assertCount(6, $config['logo']);
@@ -46,12 +49,18 @@ class BootstrapPackageConstantsInResponseTest extends BaseTest
         self::assertArrayhasKey('linktitle', $config['logo']);
     }
 
+    /**
+     * @param array<string, mixed> $config
+     */
     private function checkFaviconData(array $config): void
     {
         self::assertCount(1, $config['favicon']);
         self::assertArrayHasKey('file', $config['favicon']);
     }
 
+    /**
+     * @param array<string, mixed> $config
+     */
     private function checkThemeData(array $config): void
     {
         self::assertArrayHasKey('googleFont', $config['theme']);
@@ -113,6 +122,9 @@ class BootstrapPackageConstantsInResponseTest extends BaseTest
         self::assertArrayHasKey('text', $config['theme']['copyright']);
     }
 
+    /**
+     * @param array<string, mixed> $config
+     */
     public function checkTrackingData(array $config): void
     {
         self::assertCount(1, $config['tracking']);

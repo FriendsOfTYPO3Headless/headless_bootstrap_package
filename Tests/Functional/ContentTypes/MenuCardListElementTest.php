@@ -41,6 +41,9 @@ class MenuCardListElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkFlexform($contentElement): void
     {
         self::assertCount(2, $contentElement['flexform']);
@@ -48,6 +51,9 @@ class MenuCardListElementTest extends BaseContentTypeTest
         self::assertEquals('2', $contentElement['flexform']['columns']);
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkItems($contentElement): void
     {
         self::assertIsArray($contentElement['content']['items']);

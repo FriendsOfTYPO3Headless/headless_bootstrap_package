@@ -39,6 +39,9 @@ class AudioElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'blur');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkAssets(array $contentElement): void
     {
         self::assertCount(1, $contentElement['content']['items']);

@@ -41,13 +41,19 @@ class MenuThumbnailListElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
-    private function checkFlexform($contentElement): void
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    private function checkFlexform(array $contentElement): void
     {
         self::assertCount(2, $contentElement['flexform']);
         self::assertEquals('left', $contentElement['flexform']['align']);
         self::assertEquals('2', $contentElement['flexform']['columns']);
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkItems($contentElement): void
     {
         self::assertIsArray($contentElement['content']['items']);

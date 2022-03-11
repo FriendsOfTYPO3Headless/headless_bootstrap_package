@@ -17,7 +17,7 @@ use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 abstract class BaseTest extends FunctionalTestCase
 {
     protected $coreExtensionsToLoad = [
-        'install'
+        'install',
     ];
 
     protected $testExtensionsToLoad = [
@@ -47,7 +47,7 @@ abstract class BaseTest extends FunctionalTestCase
                 'setup' => [
                     'EXT:headless/Configuration/TypoScript/setup.typoscript',
                     'EXT:headless_bootstrap_package/Configuration/TypoScript/setup.typoscript',
-                ]
+                ],
             ]
         );
 
@@ -58,7 +58,10 @@ abstract class BaseTest extends FunctionalTestCase
         file_put_contents($siteConfigDir . '/config.yaml', "rootPageId: 1\nbase: /\nbaseVariants: { }\nlanguages: { }\nroutes: { }\n");
     }
 
-    protected function checkDefaultContentFields($contentElement, $id, $pid, $type, $colPos = 0, $categories = '')
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    protected function checkDefaultContentFields(array $contentElement, int $id, int $pid, string $type, int $colPos = 0, string $categories = ''): void
     {
         self::assertEquals($id, $contentElement['id'], 'id mismatch');
         self::assertEquals($pid, $contentElement['pid'], 'pid mismatch');
@@ -67,16 +70,19 @@ abstract class BaseTest extends FunctionalTestCase
         self::assertEquals($categories, $contentElement['categories'], 'categories mismatch');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     protected function checkAppearanceFields(
-        $contentElement,
-        $layout = 'default',
-        $frameClass = 'default',
-        $spaceBefore = '',
-        $spaceAfter = '',
-        $frameLayout = '',
-        $backgroundColor = '',
-        $sectionIndex = '',
-        $linkToTop = ''
+        array $contentElement,
+        string $layout = 'default',
+        string $frameClass = 'default',
+        string $spaceBefore = '',
+        string $spaceAfter = '',
+        string $frameLayout = '',
+        string $backgroundColor = '',
+        string $sectionIndex = '',
+        string $linkToTop = ''
     ): void {
         $contentElementAppearance = $contentElement['appearance'];
 
@@ -90,7 +96,10 @@ abstract class BaseTest extends FunctionalTestCase
         self::assertEquals($linkToTop, $contentElementAppearance['linkToTop'], 'linkToTop mismatch');
     }
 
-    protected function checkHeaderFields($contentElement, $header = '', $subheader = '', $headerLayout = 0, $headerPosition = '')
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    protected function checkHeaderFields(array $contentElement, string $header = '', string $subheader = '', int $headerLayout = 0, string $headerPosition = ''): void
     {
         $contentElementContent = $contentElement['content'];
 
@@ -101,7 +110,11 @@ abstract class BaseTest extends FunctionalTestCase
         self::assertTrue(isset($contentElementContent['headerLink']), 'headerLink not set');
     }
 
-    protected function checkHeaderFieldsLink($contentElement, $link, $urlPrefix, $target)
+    /**
+     * @param array<string, mixed> $contentElement
+     * @param array<string, mixed> $link
+     */
+    protected function checkHeaderFieldsLink(array $contentElement, array $link, string $urlPrefix, string $target): void
     {
         $contentElementHeaderFieldsLink = $contentElement['content']['headerLink'];
 

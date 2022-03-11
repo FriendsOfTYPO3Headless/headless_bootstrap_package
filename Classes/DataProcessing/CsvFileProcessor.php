@@ -18,7 +18,14 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 class CsvFileProcessor extends BaseCsvFileProcessor
 {
-    public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData)
+    /**
+     * @param ContentObjectRenderer $cObj
+     * @param mixed[] $contentObjectConfiguration
+     * @param mixed[] $processorConfiguration
+     * @param mixed[] $processedData
+     * @return mixed[]
+     */
+    public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData): array
     {
         $processedData = parent::process($cObj, $contentObjectConfiguration, $processorConfiguration, $processedData);
 

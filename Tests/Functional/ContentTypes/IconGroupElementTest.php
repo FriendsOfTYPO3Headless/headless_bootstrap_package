@@ -41,6 +41,9 @@ class IconGroupElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkFlexform(array $contentElement): void
     {
         self::assertIsArray($contentElement['flexform']);
@@ -50,6 +53,9 @@ class IconGroupElementTest extends BaseContentTypeTest
         self::assertEquals('left-center', $contentElement['flexform']['icon_position'], 'flexform icon_position mismatch');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkItems(array $contentElement): void
     {
         self::assertCount(1, $contentElement['content']['items']);

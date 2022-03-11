@@ -25,7 +25,10 @@ abstract class BaseContentTypeTest extends BaseTest
         $this->importDataSet(__DIR__ . '/../Fixtures/content.xml');
     }
 
-    protected function checkDefaultContentFields($contentElement, $id, $pid, $type, $colPos = 0, $categories = ''): void
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    protected function checkDefaultContentFields(array $contentElement, int $id, int $pid, string $type, int $colPos = 0, string $categories = ''): void
     {
         self::assertEquals($id, $contentElement['id'], 'id mismatch');
         self::assertEquals($type, $contentElement['type'], 'type mismatch');
@@ -33,16 +36,19 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($categories, $contentElement['categories'], 'categories mismatch');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     protected function checkAppearanceFields(
-        $contentElement,
-        $layout = 'default',
-        $frameClass = 'default',
-        $spaceBefore = '',
-        $spaceAfter = '',
-        $frameLayout = '',
-        $backgroundColor = '',
-        $sectionIndex = '',
-        $linkToTop = ''
+        array $contentElement,
+        string $layout = 'default',
+        string $frameClass = 'default',
+        string $spaceBefore = '',
+        string $spaceAfter = '',
+        string $frameLayout = '',
+        string $backgroundColor = '',
+        string $sectionIndex = '',
+        string $linkToTop = ''
     ): void {
         $contentElementAppearance = $contentElement['appearance'];
 
@@ -56,7 +62,10 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($linkToTop, $contentElementAppearance['linkToTop'], 'linkToTop mismatch');
     }
 
-    protected function checkHeaderFields($contentElement, $header = '', $subheader = '', $headerLayout = 0, $headerPosition = ''): void
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    protected function checkHeaderFields(array $contentElement, string $header = '', string $subheader = '', int $headerLayout = 0, string $headerPosition = ''): void
     {
         $contentElementContent = $contentElement['content'];
 
@@ -67,7 +76,11 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($headerPosition, $contentElementContent['headerPosition'], 'headerPosition mismatch');
     }
 
-    protected function checkHeaderFieldsLink($contentElement, $link, $urlPrefix, $target): void
+    /**
+     * @param array<string, mixed> $contentElement
+     * @param array<string, mixed> $link
+     */
+    protected function checkHeaderFieldsLink(array $contentElement, array $link, string $urlPrefix, string $target): void
     {
         $contentElementHeaderFieldsLink = $contentElement['content']['headerLink'];
 
@@ -77,7 +90,10 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($target, $contentElementHeaderFieldsLink['target'], 'target mismatch');
     }
 
-    protected function checkGalleryContentFields($contentElement): void
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    protected function checkGalleryContentFields(array $contentElement): void
     {
         self::assertEquals(600, $contentElement['content']['gallery']['width'], 'width mismatch');
         self::assertEquals(10, $contentElement['content']['gallery']['columnSpacing'], 'columnSpacing mismatch');
@@ -106,7 +122,10 @@ abstract class BaseContentTypeTest extends BaseTest
         $this->checkGalleryFile($contentElement['content']['gallery']['rows'][1]['columns'][1], '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
     }
 
-    protected function checkGalleryFile($fileElement, $originalUrl, $mimeType, $title, $width, $height, $autoplay): void
+    /**
+     * @param array<string, mixed> $fileElement
+     */
+    protected function checkGalleryFile(array $fileElement, string $originalUrl, string $mimeType, string $title, int $width, int $height, int $autoplay): void
     {
         self::assertTrue(isset($fileElement['publicUrl']), 'publicUrl not set');
 
@@ -125,7 +144,10 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($height, $fileElement['properties']['cropDimensions']['height'], 'properties cropDimensions height mismatch');
     }
 
-    public function checkFileReferencesField($contentElement, $fieldname, $numberOfExpectedFiles = 1): void
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    public function checkFileReferencesField(array $contentElement, string $fieldname, int $numberOfExpectedFiles = 1): void
     {
         $fileReferenceData = $contentElement[$fieldname];
 
@@ -137,13 +159,19 @@ abstract class BaseContentTypeTest extends BaseTest
         }
     }
 
-    public function checkBackgroundImageField($contentElement): void
+    /**
+     * @param array<string, mixed> $contentElement
+     */
+    public function checkBackgroundImageField(array $contentElement): void
     {
         $backgroundImage = $contentElement['appearance']['backgroundImage'][0];
 
         $this->checkGalleryFile($backgroundImage, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     public function checkBackgroundImageOptions(array $contentElement, string $parallax, string $fade, string $filter): void
     {
         $options = $contentElement['appearance']['backgroundImageOptions'];
@@ -154,10 +182,12 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($filter, $options['filter'], 'property filter mismatch');
     }
 
+    /**
+     * @param array<string, mixed> $typolinkConfig
+     */
     public function checkTypoLinkField(array $typolinkConfig): void
     {
         self::assertEquals('/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42', $typolinkConfig['href'], 'typolink href mismatch');
-//        self::assertEquals('Page 1', $typolinkConfig['linkText'], 'typolink href mismatch');
         self::assertEquals('LinkTitle', $typolinkConfig['title'], 'typolink title mismatch');
         self::assertEquals('LinkClass', $typolinkConfig['class'], 'typolink class mismatch');
         self::assertEquals('_blank', $typolinkConfig['target'], 'typolink target mismatch');

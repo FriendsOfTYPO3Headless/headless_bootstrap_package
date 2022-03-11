@@ -41,6 +41,9 @@ class ListGroupElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkBodytext(array $contentElement): void
     {
         self::assertIsArray($contentElement['content']['bodytext']);

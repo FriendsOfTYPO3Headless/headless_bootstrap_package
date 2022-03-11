@@ -47,6 +47,9 @@ class CsvElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'blur');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkMedia(array $contentElement): void
     {
         self::assertCount(1, $contentElement['content']['media']);

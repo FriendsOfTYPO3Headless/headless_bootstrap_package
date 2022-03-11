@@ -35,6 +35,12 @@ and then, include TypoScript template, and you are ready to go.
 **Important**: Do **NOT** include the Setup/Constants provided by EXT:bootstrap_package since they would interfere with the EXT:headless page config. <br><br>
 Instead please include the provided "Headless Boostrap Package: Boostrap Package Constants" TypoScript config in order to gain access to the EXT:bootstrap_package constants.
 
+## TESTING
+This Extension comes with a phpunit testsuite with functional tests for all content elements.<br>
+To run the tests simply use the provided composer script:
+
+```composer ci:test```
+
 ## Credits
 A special thanks goes to [TRIXIE Heimtierbedarf GmbH & Co. KG](https://www.trixie.de), which is sponsoring development of this extension.
 

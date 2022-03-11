@@ -40,6 +40,9 @@ class PanelElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkDisabledFields($contentElement): void
     {
         self::assertArrayNotHasKey('subheader', $contentElement['content']);

@@ -41,6 +41,9 @@ class QuoteElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkDisabledFields($contentElement): void
     {
         self::assertArrayNotHasKey('header', $contentElement['content']);

@@ -38,6 +38,9 @@ class CardGroupElementTest extends BaseContentTypeTest
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'blur');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkFlexform(array $contentElement): void
     {
         self::assertIsArray($contentElement['flexform']);
@@ -46,6 +49,9 @@ class CardGroupElementTest extends BaseContentTypeTest
         self::assertEquals(3, $contentElement['flexform']['columns'], 'flexform sorting mismatch');
     }
 
+    /**
+     * @param array<string, mixed> $contentElement
+     */
     private function checkItems(array $contentElement): void
     {
         self::assertTrue(isset($contentElement['content']['items']), 'items not set');
@@ -72,11 +78,14 @@ class CardGroupElementTest extends BaseContentTypeTest
             }
 
             if ($assertConfig['image']) {
-                $this->checkFileReferencesField($item, 'image', $assertConfig['image']);
+                $this->checkFileReferencesField($item, 'image', (int)$assertConfig['image']);
             }
         }
     }
 
+    /**
+     * @return array<int, array<string, int|string>>
+     */
     private function getItemsTestConfig(): array
     {
         return [

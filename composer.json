@@ -1,7 +1,10 @@
 {
   "name": "friendsoftypo3headless/headless-bootstrap-package",
-  "type": "typo3-cms-extension",
   "description": "This extension provides integration with bootstrap_package to output content from TYPO3 in JSON format.",
+  "license": [
+    "GPL-2.0-or-later"
+  ],
+  "type": "typo3-cms-extension",
   "keywords": [
     "TYPO3",
     "headless",
@@ -16,20 +19,18 @@
     },
     {
       "name": "Sven Petersen",
-      "role": "Developer",
-      "email": "sven@hardanders.de"
+      "email": "sven@hardanders.de",
+      "role": "Developer"
     }
-  ],
-  "license": [
-    "GPL-2.0-or-later"
   ],
   "require": {
     "php": "^7.4 || ^8.0",
-    "typo3/cms-core": "^11.5",
+    "bk2k/bootstrap-package": "^12.0.4",
     "friendsoftypo3/headless": "^3.0.3",
-    "bk2k/bootstrap-package": "^12.0.4"
+    "typo3/cms-core": "^11.5"
   },
   "require-dev": {
+    "ext-json": "*",
     "ergebnis/composer-normalize": "^2.15.0",
     "friendsofphp/php-cs-fixer": "^3.1",
     "helmich/typo3-typoscript-lint": "^2.1",
@@ -39,10 +40,12 @@
     "phpstan/phpstan": "^0.12.99",
     "phpunit/phpcov": "^8.2",
     "saschaegerer/phpstan-typo3": "^0.13.3",
-    "seld/jsonlint": "^1.8",
-    "symfony/yaml": "^5.3",
-    "typo3/testing-framework": "^6",
-    "ext-json": "*"
+    "typo3/coding-standards": "^0.5.0",
+    "typo3/testing-framework": "^6"
+  },
+  "suggest": {
+    "friendsoftypo3headless/headless-backendlayouts": "^1.0",
+    "friendsoftypo3headless/headless-navigations": "^1.0"
   },
   "autoload": {
     "psr-4": {
@@ -54,22 +57,18 @@
       "FriendsOfTYPO3Headless\\HeadlessBootstrapPackage\\Tests\\": "Tests"
     }
   },
-  "suggest": {
-    "friendsoftypo3headless/headless-navigations": "^1.0",
-    "friendsoftypo3headless/headless-backendlayouts": "^1.0"
-  },
   "config": {
-    "preferred-install": {
-      "*": "dist"
-    },
-    "sort-packages": true,
-    "vendor-dir": ".Build/vendor",
     "allow-plugins": {
       "typo3/class-alias-loader": true,
       "typo3/cms-composer-installers": true,
       "ergebnis/composer-normalize": true,
       "phpstan/extension-installer": true
-    }
+    },
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true,
+    "vendor-dir": ".Build/vendor"
   },
   "extra": {
     "typo3/cms": {
@@ -83,33 +82,28 @@
       "TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
     ],
     "ci:composer:normalize": "@composer normalize --dry-run",
-    "ci:coverage" : [
+    "ci:coverage": [
       "@ci:coverage:functional"
     ],
-    "ci:coverage:functional": ".Build/vendor/bin/phpunit -c Tests/Functional/phpunit.xml -d memory_limit=-1 --coverage-php=coverage/functional.cov Tests/Functional",
-    "ci:coverage:merge": ".Build/vendor/bin/phpcov merge --clover=./coverage/clover.xml coverage/",
-    "ci:coverage:unit": ".Build/vendor/bin/phpunit -c Tests/Unit/phpunit.xml -d memory_limit=-1 --coverage-php=coverage/unit.cov Tests/Unit",
-    "ci:php:cs-fixer": [
-      "php-cs-fixer fix -v --dry-run --using-cache no --diff"
-    ],
+    "ci:coverage:functional": "phpunit -c Tests/Functional/phpunit.xml -d memory_limit=-1 --coverage-php=coverage/functional.cov Tests/Functional",
+    "ci:coverage:merge": "phpcov merge --clover=./coverage/clover.xml coverage/",
+    "ci:coverage:unit": "phpunit -c Tests/Unit/phpunit.xml -d memory_limit=-1 --coverage-php=coverage/unit.cov Tests/Unit",
+    "ci:php:cs-fixer": "php-cs-fixer fix -v --dry-run --using-cache no --diff",
     "ci:php:lint": "find *.php Classes Configuration Tests -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
     "ci:php:stan": "phpstan --no-progress",
     "ci:test": [
       "@ci:php:cs-fixer",
+	  "@ci:php:stan",
       "@ci:test:functional"
-    ],
+	],
     "ci:test:functional": [
-      ".Build/vendor/bin/phpunit -c Tests/Functional/phpunit.xml -d memory_limit=-1"
+      "phpunit -c Tests/Functional/phpunit.xml -d memory_limit=-1"
     ],
     "ci:test:unit": [
-      ".Build/vendor/bin/phpunit -c Tests/Unit/phpunit.xml -d memory_limit=-1"
+      "phpunit -c Tests/Unit/phpunit.xml -d memory_limit=-1"
     ],
-    "ci:ts:lint": [
-      ".Build/vendor/bin/typoscript-lint -c Configuration/TsLint.yml --ansi -n --fail-on-warnings -vvv Configuration/TypoScript"
-    ],
-    "ci:yaml:lint": "find . ! -path '*.Build/*' -name '*.yml' | xargs php ./.Build/vendor/bin/yaml-lint",
-    "docs:generate": [
-      "docker run --rm t3docs/render-documentation show-shell-commands > tempfile.sh; echo 'dockrun_t3rd makehtml' >> tempfile.sh; bash tempfile.sh; rm tempfile.sh"
+    "ci:lint:typoscript": [
+      "typoscript-lint --ansi -n --fail-on-warnings -vvv Configuration/TypoScript"
     ],
     "fix:php:cs-fixer": [
       "php-cs-fixer fix -v --using-cache no"
