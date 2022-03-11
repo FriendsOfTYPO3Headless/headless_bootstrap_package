@@ -1,4 +1,7 @@
 lib.carouselItem {
+  id = TEXT
+  id.field = uid
+
   itemType = TEXT
   itemType.field = item_type
 
