@@ -1,4 +1,7 @@
 lib.iconGroupItem {
+  id = TEXT
+  id.field = uid
+
   header = TEXT
   header.field = header
 

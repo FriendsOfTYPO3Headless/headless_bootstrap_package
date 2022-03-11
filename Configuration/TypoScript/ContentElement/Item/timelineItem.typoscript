@@ -1,4 +1,7 @@
 lib.timelineItem {
+  id = TEXT
+  id.field = uid
+
   date = TEXT
   date.field = date
 

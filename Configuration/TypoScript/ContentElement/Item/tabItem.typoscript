@@ -1,4 +1,7 @@
 lib.tabItem {
+  id = TEXT
+  id.field = uid
+
   header = TEXT
   header.field = header
 

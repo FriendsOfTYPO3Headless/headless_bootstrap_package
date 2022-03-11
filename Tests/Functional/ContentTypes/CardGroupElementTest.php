@@ -64,6 +64,7 @@ class CardGroupElementTest extends BaseContentTypeTest
             $assertConfig = $itemTestConfig[$key];
 
             if ($assertConfig['linkIcon']) {
+                self::assertArrayHasKey('id', $item);
                 self::assertEquals('ext_icon.gif', $item['linkIcon']['name'], 'name mismatch');
                 self::assertEquals('/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', $item['linkIcon']['previewImage'], 'previewImage mismatch');
                 self::assertEquals(16, $item['linkIcon']['height'], 'height mismatch');

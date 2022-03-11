@@ -1,1 +1,14 @@
-tt_content.textcolumn =< tt_content.text
+tt_content.textcolumn =< lib.contentElementWithHeader
+tt_content.textcolumn {
+  fields {
+    content {
+      fields {
+        bodytext = TEXT
+        bodytext {
+          field = bodytext
+          parseFunc =< lib.parseFunc_links
+        }
+      }
+    }
+  }
+}
