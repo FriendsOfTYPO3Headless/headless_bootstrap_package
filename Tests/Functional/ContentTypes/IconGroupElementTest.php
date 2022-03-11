@@ -27,9 +27,12 @@ class IconGroupElementTest extends BaseContentTypeTest
 
         $contentElement = $fullTree['content']['colPos0'][19];
 
+        // content element specific tests
+        self::assertEquals('1234567890', $contentElement['content']['date'], 'date mismatch');
         $this->checkFlexform($contentElement);
         $this->checkItems($contentElement);
 
+        // general tests
         $this->checkDefaultContentFields($contentElement, 20, 1, 'icon_group', 0, 'SysCategory1Title,SysCategory2Title');
         $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
         $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 'center');
@@ -44,7 +47,7 @@ class IconGroupElementTest extends BaseContentTypeTest
         self::assertEquals(3, count($contentElement['flexform']));
         self::assertEquals('left', $contentElement['flexform']['align'], 'flexform sorting mismatch');
         self::assertEquals(3, $contentElement['flexform']['columns'], 'flexform sorting mismatch');
-        self::assertEquals('left-center', $contentElement['flexform']['icon_position'], 'flexform iconPosition mismatch');
+        self::assertEquals('left-center', $contentElement['flexform']['icon_position'], 'flexform icon_position mismatch');
     }
 
     private function checkItems(array $contentElement): void
@@ -52,19 +55,16 @@ class IconGroupElementTest extends BaseContentTypeTest
         self::assertCount(1, $contentElement['content']['items']);
 
         foreach ($contentElement['content']['items'] as $item) {
-            self::assertArrayHasKey('id', $item);
+            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
             self::assertEquals('Header', $item['header']);
             self::assertEquals('Subheader', $item['subheader']);
-            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
+
             $this->checkTypoLinkField($item['link']);
 
-            self::assertEquals('EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/', $item['iconSet']);
-            self::assertEquals('EXT:bootstrap_package/Resources/Public/Images/Icons/Ionicons/beaker.svg', $item['iconIdentifier']);
-            self::assertCount(4, $item['icon']);
-            self::assertEquals('typo3conf/ext/bootstrap_package/Resources/Public/Images/Icons/Ionicons/beaker.svg', $item['icon']['previewImage']);
-            self::assertEquals('beaker', $item['icon']['name']);
-            self::assertEquals(16, $item['icon']['height']);
-            self::assertEquals(16, $item['icon']['width']);
+            self::assertEquals('typo3conf/ext/bootstrap_package/Resources/Public/Images/Icons/Ionicons/beaker.svg', $item['icon']['previewImage'], 'name mismatch');
+            self::assertEquals('beaker', $item['icon']['name'], 'name mismatch');
+            self::assertEquals(16, $item['icon']['height'], 'height mismatch');
+            self::assertEquals(16, $item['icon']['width'], 'width mismatch');
         }
     }
 }

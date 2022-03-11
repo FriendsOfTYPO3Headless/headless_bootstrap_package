@@ -24,8 +24,13 @@ tt_content.gallery {
         }
 
         imageZoom = TEXT
-        image_zoom {
+        imageZoom {
           field = image_zoom
+        }
+
+        filelinkSorting = TEXT
+        filelinkSorting {
+          field = filelink_sorting
         }
 
         items = TEXT
