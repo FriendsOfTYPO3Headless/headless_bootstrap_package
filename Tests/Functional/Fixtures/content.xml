@@ -1344,7 +1344,7 @@
         <tt_content>2</tt_content>
         <header>Header</header>
         <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
-        <media>1</media>
+        <media>2</media>
         <mediaorient>left</mediaorient>
         <imagecols>2</imagecols>
         <image_zoom>0</image_zoom>
@@ -2052,6 +2052,24 @@
     </sys_file_reference>
     <sys_file_reference>
         <uid>4</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>2</uid_foreign>
+        <tablenames>tx_bootstrappackage_accordion_item</tablenames>
+        <fieldname>media</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+    <sys_file_reference>
+        <uid>46</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>1</uid_foreign>
+        <tablenames>tx_bootstrappackage_accordion_item</tablenames>
+        <fieldname>media</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+    <sys_file_reference>
+        <uid>47</uid>
         <pid>1</pid>
         <uid_local>1</uid_local>
         <uid_foreign>2</uid_foreign>

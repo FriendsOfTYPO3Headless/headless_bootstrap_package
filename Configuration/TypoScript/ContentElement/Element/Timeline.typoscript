@@ -42,7 +42,7 @@ tt_content.timeline {
               as = timeline_item
 
               dataProcessing {
-                20 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                20 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 20 {
                   references.fieldName = image
                   as = image

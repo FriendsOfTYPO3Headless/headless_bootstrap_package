@@ -3,3 +3,7 @@ parameters:
   paths:
     - Classes
     - Tests
+# todo: Remove as soon as PR https://github.com/TYPO3-Headless/headless/pull/417 is merged and released.
+  excludePaths:
+    analyseAndScan:
+      - Classes/DataProcessing/FilesProcessor.php

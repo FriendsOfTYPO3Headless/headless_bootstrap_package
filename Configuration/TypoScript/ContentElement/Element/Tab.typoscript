@@ -33,7 +33,7 @@ tt_content.tab {
               as = accordion_item
 
               dataProcessing {
-                10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 10 {
                   references.fieldName = media
                 }
