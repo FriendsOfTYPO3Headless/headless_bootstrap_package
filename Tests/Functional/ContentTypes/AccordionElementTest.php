@@ -58,7 +58,7 @@ class AccordionElementTest extends BaseContentTypeTest
             self::assertEquals(2, $item['imagecols'], 'accordion item: imagecols mismatch');
             self::assertEquals(0, $item['imageZoom'], 'accordion item: imageZoom mismatch');
 
-            $this->checkFileReferencesField($item, 'media');
+            $this->checkFileReferencesField($item, 'media', 2);
         }
     }
 }

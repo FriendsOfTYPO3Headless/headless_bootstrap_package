@@ -50,7 +50,7 @@ tt_content.texticon {
             file = JSON
             file {
               dataProcessing {
-                20 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                20 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 20 {
                   references.fieldName = icon_file
                   as = file

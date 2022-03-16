@@ -1,6 +1,6 @@
 lib.navigations.fields.navigation1.dataProcessing.10 {
   dataProcessing {
-    10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+    10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
     10 {
       references.fieldName = nav_icon
       as = nav_icon
@@ -10,7 +10,7 @@ lib.navigations.fields.navigation1.dataProcessing.10 {
 
 lib.navigations.fields.navigation2.dataProcessing.10 {
   dataProcessing {
-    10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+    10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
     10 {
       references.fieldName = nav_icon
       as = nav_icon
@@ -20,7 +20,7 @@ lib.navigations.fields.navigation2.dataProcessing.10 {
 
 lib.navigations.fields.navigation3.dataProcessing.10 {
   dataProcessing {
-    10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+    10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
     10 {
       references.fieldName = nav_icon
       as = nav_icon

@@ -33,13 +33,13 @@ tt_content.carousel {
               as = items
 
               dataProcessing {
-                30 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                30 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 30 {
                   references.fieldName = background_image
                   as = backgroundImage
                 }
 
-                40 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                40 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 40 {
                   references.fieldName = image
                   as = image

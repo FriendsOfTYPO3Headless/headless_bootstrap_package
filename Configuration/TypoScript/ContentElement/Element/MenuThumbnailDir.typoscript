@@ -38,7 +38,7 @@ tt_content.menu_thumbnail_dir {
               as = menuItem
 
               dataProcessing {
-                10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 10 {
                   references.fieldName = thumbnail
                 }
