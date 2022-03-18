@@ -33,6 +33,7 @@ class BootstrapPackageConstantsInResponseTest extends BaseTest
         $this->checkFaviconData($config);
         $this->checkThemeData($config);
         $this->checkTrackingData($config);
+        $this->checkMetaData($fullTree['meta']);
     }
 
     /**
@@ -131,5 +132,17 @@ class BootstrapPackageConstantsInResponseTest extends BaseTest
         self::assertArrayHasKey('google', $config['tracking']);
         self::assertCount(1, $config['tracking']['google']);
         self::assertArrayHasKey('trackingID', $config['tracking']['google']);
+    }
+
+    /**
+     * @param array<string, mixed> $metaData
+     */
+    public function checkMetaData(array $metaData): void
+    {
+        self::assertEquals('width=device-width, initial-scale=1, minimum-scale=1', $metaData['viewport']);
+        self::assertEquals('index,follow', $metaData['robots']);
+        self::assertEquals('no', $metaData['appleMobileWebAppCapable']);
+        self::assertEquals('IE=edge', $metaData['compatible']);
+        self::assertEquals('testSiteVerificationData', $metaData['googleSiteVerification']);
     }
 }

@@ -16,7 +16,7 @@ lib.meta {
     google = TEXT
     google.value = {$page.meta.google}
 
-    googlSiteVerification = TEXT
-    googlSiteVerification.value = {$page.meta.google-site-verification}
+    googleSiteVerification = TEXT
+    googleSiteVerification.value = {$page.meta.google-site-verification}
   }
 }

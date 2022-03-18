@@ -1,4 +1,9 @@
-page.theme.socialmedia.channels {
+page {
+  meta {
+    google-site-verification = testSiteVerificationData
+  }
+
+  theme.socialmedia.channels {
     facebook.url = https://www.facebook.com/myaccount
     twitter.url = https://www.twitter.com/myaccount
     instagram.url = https://www.instagram.com/myaccount
@@ -10,4 +15,5 @@ page.theme.socialmedia.channels {
     vk.url = https://www.vk.com/myaccount
     vimeo.url = https://www.vimeo.com/myaccount
     rss.url = https://www.rss.com/feed.xml
+  }
 }
