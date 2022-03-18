@@ -10,11 +10,6 @@ lib.contentElementWithHeader {
             value = 0
           }
         }
-
-        _localizedUid = TEXT
-        _localizedUid {
-          field = _LOCALIZED_UID
-        }
       }
     }
   }
