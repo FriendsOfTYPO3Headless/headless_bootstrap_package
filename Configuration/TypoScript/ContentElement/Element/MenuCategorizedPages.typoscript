@@ -1,15 +1,5 @@
-tt_content.menu_thumbnail_list =< lib.contentElementWithHeader
-tt_content.menu_thumbnail_list {
+tt_content.menu_categorized_pages {
   fields {
-    flexform = TEXT
-    flexform {
-      dataProcessing {
-        10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
-        10 {
-          as = flexform
-        }
-      }
-    }
 
     accessibility {
       fields {
@@ -24,20 +14,24 @@ tt_content.menu_thumbnail_list {
         }
       }
     }
-
     content {
       fields {
+        menu >
         items = TEXT
         items {
           dataProcessing {
             10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
             20 = FriendsOfTYPO3\Headless\DataProcessing\MenuProcessor
             20 {
-              special = list
-              special.value.field = pages
-              includeNotInMenu = 1
-              as = menu_item
-
+              appendData = 1
+              special = categories
+              special {
+                value.field = selected_categories
+                relation.field = category_field
+                sorting = title
+                order = asc
+              }
+              as = menuItem
               dataProcessing {
                 10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 10 {
@@ -60,13 +54,11 @@ tt_content.menu_thumbnail_list {
                 }
               }
             }
-
             90 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
             90 {
               if {
                 isTrue.field = accessibility_bypass
               }
-
               table = tt_content
               pidInList = this
               orderBy = sorting
@@ -74,7 +66,6 @@ tt_content.menu_thumbnail_list {
               where {
                 dataWrap = colPos = {field:colPos} AND sorting > {field:sorting}
               }
-
               as = nextContentElement
             }
           }

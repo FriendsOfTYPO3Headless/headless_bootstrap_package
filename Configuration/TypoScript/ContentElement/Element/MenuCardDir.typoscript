@@ -30,6 +30,9 @@ tt_content.menu_card_dir {
         readmoreLabel = TEXT
         readmoreLabel {
           field = readmore_label
+          dataWrap = {LLL:EXT:bootstrap_package/Resources/Private/Language/locallang.xlf:readmore}
+          dataWrap.if.isFalse.field = readmore_label
+          insertData = 1
         }
 
         items = TEXT

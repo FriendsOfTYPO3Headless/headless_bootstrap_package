@@ -41,6 +41,21 @@ tt_content.menu_thumbnail_dir {
                 10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 10 {
                   references.fieldName = thumbnail
+                  if {
+                    isTrue = {$plugin.bootstrap_package_contentelements.menu_card.thumbnail.enable}
+                  }
+                  as = thumbnail
+                }
+                1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
+                1628754217 {
+                  iconSet.field = nav_icon_set
+                  iconIdentifier.field = nav_icon_identifier
+                  iconFileFieldName = nav_icon
+                  as = nav_icon
+
+                  if {
+                    isTrue = {$plugin.bootstrap_package_contentelements.menu_card.icon.enable}
+                  }
                 }
               }
             }

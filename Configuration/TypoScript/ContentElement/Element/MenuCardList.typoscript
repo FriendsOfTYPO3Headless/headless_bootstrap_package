@@ -1,15 +1,6 @@
 tt_content.menu_card_list =< lib.contentElementWithHeader
 tt_content.menu_card_list {
   fields {
-    flexform = TEXT
-    flexform {
-      dataProcessing {
-        10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
-        10 {
-          as = flexform
-        }
-      }
-    }
 
     accessibility {
       fields {
@@ -27,10 +18,15 @@ tt_content.menu_card_list {
 
     content {
       fields {
+
         readmoreLabel = TEXT
         readmoreLabel {
           field = readmore_label
+          dataWrap = {LLL:EXT:bootstrap_package/Resources/Private/Language/locallang.xlf:readmore}
+          dataWrap.if.isFalse.field = readmore_label
+          insertData = 1
         }
+
 
         items = TEXT
         items {
@@ -52,6 +48,12 @@ tt_content.menu_card_list {
                   }
                   as = thumbnail
                 }
+                30  = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
+                30 {
+
+
+                }
+
                 1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
                 1628754217 {
                   iconSet.field = nav_icon_set
