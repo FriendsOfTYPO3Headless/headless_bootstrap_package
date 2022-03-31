@@ -1,6 +1,15 @@
 tt_content.menu_card_list =< lib.contentElementWithHeader
 tt_content.menu_card_list {
   fields {
+    flexform = TEXT
+    flexform {
+      dataProcessing {
+        10 = FriendsOfTYPO3\Headless\DataProcessing\FlexFormProcessor
+        10 {
+          as = flexform
+        }
+      }
+    }
 
     accessibility {
       fields {
@@ -27,7 +36,6 @@ tt_content.menu_card_list {
           insertData = 1
         }
 
-
         items = TEXT
         items {
           dataProcessing {
@@ -47,11 +55,6 @@ tt_content.menu_card_list {
                     isTrue = {$plugin.bootstrap_package_contentelements.menu_card.thumbnail.enable}
                   }
                   as = thumbnail
-                }
-                30  = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
-                30 {
-
-
                 }
 
                 1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
