@@ -47,6 +47,23 @@ tt_content.menu_thumbnail_list {
                   }
                   as = thumbnail
                 }
+
+                30 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor
+                30 {
+                  fieldName = subtitle
+                }
+
+                40 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor
+                40 {
+                  fieldName = description
+                }
+
+                50 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor
+                50 {
+                  fieldName = nav_title
+                  as =
+                }
+
                 1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
                 1628754217 {
                   iconSet.field = nav_icon_set

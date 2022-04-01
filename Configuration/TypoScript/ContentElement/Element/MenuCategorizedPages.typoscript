@@ -14,6 +14,7 @@ tt_content.menu_categorized_pages {
         }
       }
     }
+
     content {
       fields {
         menu >
@@ -31,6 +32,7 @@ tt_content.menu_categorized_pages {
                 sorting = title
                 order = asc
               }
+
               as = menuItem
               dataProcessing {
                 10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
@@ -41,6 +43,22 @@ tt_content.menu_categorized_pages {
                   }
                   as = thumbnail
                 }
+
+                30 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor
+                30 {
+                  fieldName = subtitle
+                }
+
+                40 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor
+                40 {
+                  fieldName = description
+                }
+
+                50 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor
+                50 {
+                  fieldName = nav_title
+                }
+
                 1628754217 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor
                 1628754217 {
                   iconSet.field = nav_icon_set
@@ -54,11 +72,13 @@ tt_content.menu_categorized_pages {
                 }
               }
             }
+
             90 = FriendsOfTYPO3\Headless\DataProcessing\DatabaseQueryProcessor
             90 {
               if {
                 isTrue.field = accessibility_bypass
               }
+
               table = tt_content
               pidInList = this
               orderBy = sorting
@@ -66,6 +86,7 @@ tt_content.menu_categorized_pages {
               where {
                 dataWrap = colPos = {field:colPos} AND sorting > {field:sorting}
               }
+
               as = nextContentElement
             }
           }

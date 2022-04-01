@@ -68,7 +68,12 @@ class MenuThumbnailDirElementTest extends BaseContentTypeTest
             self::assertArrayHasKey('current', $page);
             self::assertArrayHasKey('spacer', $page);
             self::assertArrayHasKey('hasSubpages', $page);
-            self::assertArrayHasKey('media', $page);
+            self::assertArrayHasKey('thumbnail', $page);
+            self::assertIsArray($page['thumbnail']);
+            self::assertArrayHasKey('subtitle', $page);
+            self::assertArrayHasKey('description', $page);
+            self::assertArrayHasKey('nav_title', $page);
+            self::assertArrayHasKey('nav_icon', $page);
         }
     }
 }
