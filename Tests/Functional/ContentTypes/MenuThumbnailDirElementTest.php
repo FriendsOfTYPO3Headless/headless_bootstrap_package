@@ -60,7 +60,7 @@ class MenuThumbnailDirElementTest extends BaseContentTypeTest
         self::assertCount(5, $contentElement['content']['items']);
 
         foreach ($contentElement['content']['items'] as $page) {
-            self::assertCount(8, $page);
+            self::assertCount(13, $page);
             self::assertArrayHasKey('title', $page);
             self::assertArrayHasKey('link', $page);
             self::assertArrayHasKey('target', $page);
