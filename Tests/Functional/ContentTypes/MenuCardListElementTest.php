@@ -60,7 +60,7 @@ class MenuCardListElementTest extends BaseContentTypeTest
         self::assertCount(3, $contentElement['content']['items']);
 
         foreach ($contentElement['content']['items'] as $page) {
-            self::assertCount(13, $page);
+            self::assertCount(12, $page);
             self::assertArrayHasKey('title', $page);
             self::assertArrayHasKey('link', $page);
             self::assertArrayHasKey('target', $page);
