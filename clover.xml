@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1647607115">
-  <project timestamp="1647607115">
+<coverage generated="1648812267">
+  <project timestamp="1648812267">
+    <file name="/home/runner/work/headless_bootstrap_package/headless_bootstrap_package/Classes/DataProcessing/AdditionalMenuFieldsDataProcessor.php">
+      <class name="FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor" namespace="global">
+        <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="7" coveredelements="5"/>
+      </class>
+      <line num="26" type="method" name="process" visibility="public" complexity="2" crap="2.02" count="25"/>
+      <line num="33" type="stmt" count="25"/>
+      <line num="34" type="stmt" count="25"/>
+      <line num="35" type="stmt" count="0"/>
+      <line num="38" type="stmt" count="25"/>
+      <line num="40" type="stmt" count="25"/>
+      <line num="42" type="stmt" count="25"/>
+      <metrics loc="45" ncloc="31" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="7" coveredelements="5"/>
+    </file>
     <file name="/home/runner/work/headless_bootstrap_package/headless_bootstrap_package/Classes/DataProcessing/CsvFileProcessor.php">
       <class name="FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\CsvFileProcessor" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
@@ -48,6 +61,6 @@
       <line num="67" type="stmt" count="25"/>
       <metrics loc="70" ncloc="54" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="21" coveredelements="21"/>
     </file>
-    <metrics files="3" loc="375" ncloc="293" classes="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="27" coveredstatements="27" elements="29" coveredelements="29"/>
+    <metrics files="4" loc="420" ncloc="324" classes="3" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="33" coveredstatements="32" elements="36" coveredelements="34"/>
   </project>
 </coverage>
