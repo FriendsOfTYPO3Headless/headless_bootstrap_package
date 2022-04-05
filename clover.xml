@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1648812267">
-  <project timestamp="1648812267">
+<coverage generated="1649160320">
+  <project timestamp="1649160320">
     <file name="/home/runner/work/headless_bootstrap_package/headless_bootstrap_package/Classes/DataProcessing/AdditionalMenuFieldsDataProcessor.php">
       <class name="FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="7" coveredelements="5"/>
