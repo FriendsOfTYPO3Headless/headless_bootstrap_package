@@ -32,8 +32,9 @@ tt_content.menu_categorized_pages {
                 sorting = title
                 order = asc
               }
-
+              includeNotInMenu = {$plugin.headless_bootstrap_package_contentelements.menu_categories.includeNotInMenu.pages}
               as = menuItem
+
               dataProcessing {
                 10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 10 {

@@ -1,0 +1,34 @@
+########################
+### CONTENT ELEMENTS ###
+########################
+# customsubcategory=100_headless_contentelement=Menu Thumbnail
+# customsubcategory=110_headless_contentelement=Menu Card
+# customsubcategory=120_headless_contentelement=Menu Categories
+plugin.headless_bootstrap_package_contentelements {
+  menu_thumbnail {
+    includeNotInMenu {
+      # cat=headless bootstrap package: content elements/100_headless_contentelement/001_includeNotInMenu; type=boolean; label=list: pages includeNotInMenu
+      list = 1
+      # cat=headless bootstrap package: content elements/100_headless_contentelement/002_includeNotInMenu; type=boolean; label=dir: pages includeNotInMenu
+      dir = 0
+    }
+  }
+
+  menu_card {
+    includeNotInMenu {
+      # cat=headless bootstrap package: content elements/110_headless_contentelement/001_includeNotInMenu; type=boolean; label=List: pages includeNotInMenu
+      list = 1
+
+      # cat=headless bootstrap package: content elements/110_headless_contentelement/002_includeNotInMenu; type=boolean; label=Dir: pages includeNotInMenu
+      dir = 0
+
+    }
+  }
+
+  menu_categories {
+    includeNotInMenu {
+      # cat=headless bootstrap package: content elements/120_headless_contentelement/001_includeNotInMenu; type=boolean; label=pages: includeNotInMenu
+      pages = 0
+    }
+  }
+}

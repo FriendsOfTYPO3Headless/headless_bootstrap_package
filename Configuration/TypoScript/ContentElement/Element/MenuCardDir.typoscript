@@ -45,6 +45,8 @@ tt_content.menu_card_dir {
               special.value.field = pages
               as = menuItem
 
+              includeNotInMenu = {$plugin.headless_bootstrap_package_contentelements.menu_card.includeNotInMenu.dir}
+
               dataProcessing {
                 10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
                 10 {

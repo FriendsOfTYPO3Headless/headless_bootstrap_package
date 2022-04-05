@@ -36,6 +36,7 @@ tt_content.menu_thumbnail_dir {
               special = directory
               special.value.field = pages
               as = menuItem
+              includeNotInMenu = {$plugin.headless_bootstrap_package_contentelements.menu_thumbnail.includeNotInMenu.dir}
 
               dataProcessing {
                 10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor

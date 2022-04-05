@@ -44,7 +44,7 @@ tt_content.menu_card_list {
             20 {
               special = list
               special.value.field = pages
-              includeNotInMenu = 1
+              includeNotInMenu = {$plugin.headless_bootstrap_package_contentelements.menu_card.includeNotInMenu.list}
               as = menuItem
 
               dataProcessing {

@@ -35,8 +35,8 @@ tt_content.menu_thumbnail_list {
             20 {
               special = list
               special.value.field = pages
-              includeNotInMenu = 1
               as = menu_item
+              includeNotInMenu = {$plugin.headless_bootstrap_package_contentelements.menu_thumbnail.includeNotInMenu.list}
 
               dataProcessing {
                 10 = FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor
