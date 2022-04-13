@@ -5,6 +5,7 @@ lib.contentElementWithHeader {
         date = TEXT
         date {
           field = date
+          strftime = %Y-%m-%d
           if {
             isGreaterThan.field = date
             value = 0
