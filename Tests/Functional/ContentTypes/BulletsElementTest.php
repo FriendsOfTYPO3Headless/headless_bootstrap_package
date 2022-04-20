@@ -29,7 +29,7 @@ class BulletsElementTest extends BaseContentTypeTest
 
         // content element specific tests
         self::assertEquals(1, $contentElement['content']['bulletsType'], 'bulletsType mismatch');
-        self::assertEquals('1234567890', $contentElement['content']['date'], 'date mismatch');
+        self::assertEquals('2009-02-13', $contentElement['content']['date'], 'date mismatch');
         self::assertCount(4, $contentElement['content']['bodytext']);
 
         // general tests

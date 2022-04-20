@@ -29,7 +29,7 @@ class AccordionElementTest extends BaseContentTypeTest
 
         // content element specific tests
         self::assertEquals(1, $contentElement['flexform']['default_element'], 'flexform default_element mismatch');
-        self::assertEquals('1234567890', $contentElement['content']['date'], 'date mismatch');
+        self::assertEquals('2009-02-13', $contentElement['content']['date'], 'date mismatch');
         $this->checkItems($contentElement);
 
         // general tests
