@@ -24,6 +24,13 @@ use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
   */
 class AdditionalMenuFieldsDataProcessor implements DataProcessorInterface
 {
+    /**
+     * @param ContentObjectRenderer $cObj
+     * @param mixed[] $contentObjectConfiguration
+     * @param mixed[] $processorConfiguration
+     * @param mixed[] $processedData
+     * @return mixed[]
+     */
     public function process(
         ContentObjectRenderer $cObj,
         array $contentObjectConfiguration,
