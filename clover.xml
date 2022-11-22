@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1650453617">
-  <project timestamp="1650453617">
+<coverage generated="1669123808">
+  <project timestamp="1669123808">
     <file name="/home/runner/work/headless_bootstrap_package/headless_bootstrap_package/Classes/DataProcessing/AdditionalMenuFieldsDataProcessor.php">
       <class name="FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\AdditionalMenuFieldsDataProcessor" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="7" coveredelements="5"/>
       </class>
-      <line num="34" type="method" name="process" visibility="public" complexity="2" crap="2.02" count="25"/>
-      <line num="40" type="stmt" count="25"/>
-      <line num="41" type="stmt" count="25"/>
+      <line num="34" type="method" name="process" visibility="public" complexity="2" crap="2.02" count="26"/>
+      <line num="40" type="stmt" count="26"/>
+      <line num="41" type="stmt" count="26"/>
       <line num="42" type="stmt" count="0"/>
-      <line num="45" type="stmt" count="25"/>
-      <line num="47" type="stmt" count="25"/>
-      <line num="49" type="stmt" count="25"/>
+      <line num="45" type="stmt" count="26"/>
+      <line num="47" type="stmt" count="26"/>
+      <line num="49" type="stmt" count="26"/>
       <metrics loc="52" ncloc="31" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="7" coveredelements="5"/>
     </file>
     <file name="/home/runner/work/headless_bootstrap_package/headless_bootstrap_package/Classes/DataProcessing/CsvFileProcessor.php">
       <class name="FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\CsvFileProcessor" namespace="global">
-        <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+        <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
       </class>
-      <line num="28" type="method" name="process" visibility="public" complexity="2" crap="2" count="25"/>
-      <line num="30" type="stmt" count="25"/>
-      <line num="32" type="stmt" count="25"/>
-      <line num="34" type="stmt" count="25"/>
-      <line num="42" type="stmt" count="25"/>
-      <line num="45" type="stmt" count="25"/>
-      <line num="46" type="stmt" count="25"/>
-      <line num="49" type="stmt" count="25"/>
-      <metrics loc="52" ncloc="39" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="7" coveredstatements="7" elements="8" coveredelements="8"/>
+      <line num="28" type="method" name="process" visibility="public" complexity="2" crap="2" count="26"/>
+      <line num="30" type="stmt" count="26"/>
+      <line num="32" type="stmt" count="26"/>
+      <line num="34" type="stmt" count="26"/>
+      <line num="45" type="stmt" count="26"/>
+      <line num="46" type="stmt" count="26"/>
+      <line num="49" type="stmt" count="26"/>
+      <metrics loc="52" ncloc="39" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
     </file>
     <file name="/home/runner/work/headless_bootstrap_package/headless_bootstrap_package/Classes/DataProcessing/FilesProcessor.php">
       <class name="FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\FilesProcessor" namespace="global">
@@ -38,29 +37,29 @@
       <class name="FriendsOfTYPO3Headless\HeadlessBootstrapPackage\DataProcessing\IconsDataProcessor" namespace="global">
         <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="21" coveredelements="21"/>
       </class>
-      <line num="32" type="method" name="process" visibility="public" complexity="4" crap="4" count="25"/>
-      <line num="34" type="stmt" count="25"/>
-      <line num="36" type="stmt" count="25"/>
-      <line num="38" type="stmt" count="25"/>
-      <line num="40" type="stmt" count="25"/>
-      <line num="41" type="stmt" count="25"/>
-      <line num="44" type="stmt" count="25"/>
-      <line num="46" type="stmt" count="25"/>
-      <line num="47" type="stmt" count="25"/>
-      <line num="48" type="stmt" count="25"/>
-      <line num="49" type="stmt" count="25"/>
-      <line num="50" type="stmt" count="25"/>
-      <line num="53" type="stmt" count="25"/>
-      <line num="55" type="stmt" count="25"/>
-      <line num="56" type="stmt" count="25"/>
-      <line num="57" type="stmt" count="25"/>
-      <line num="58" type="stmt" count="25"/>
-      <line num="59" type="stmt" count="25"/>
-      <line num="62" type="stmt" count="25"/>
-      <line num="65" type="stmt" count="25"/>
-      <line num="67" type="stmt" count="25"/>
+      <line num="32" type="method" name="process" visibility="public" complexity="4" crap="4" count="26"/>
+      <line num="34" type="stmt" count="26"/>
+      <line num="36" type="stmt" count="26"/>
+      <line num="38" type="stmt" count="26"/>
+      <line num="40" type="stmt" count="26"/>
+      <line num="41" type="stmt" count="26"/>
+      <line num="44" type="stmt" count="26"/>
+      <line num="46" type="stmt" count="26"/>
+      <line num="47" type="stmt" count="26"/>
+      <line num="48" type="stmt" count="26"/>
+      <line num="49" type="stmt" count="26"/>
+      <line num="50" type="stmt" count="26"/>
+      <line num="53" type="stmt" count="26"/>
+      <line num="55" type="stmt" count="26"/>
+      <line num="56" type="stmt" count="26"/>
+      <line num="57" type="stmt" count="26"/>
+      <line num="58" type="stmt" count="26"/>
+      <line num="59" type="stmt" count="26"/>
+      <line num="62" type="stmt" count="26"/>
+      <line num="65" type="stmt" count="26"/>
+      <line num="67" type="stmt" count="26"/>
       <metrics loc="70" ncloc="54" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="20" elements="21" coveredelements="21"/>
     </file>
-    <metrics files="4" loc="427" ncloc="324" classes="3" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="33" coveredstatements="32" elements="36" coveredelements="34"/>
+    <metrics files="4" loc="427" ncloc="324" classes="3" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="31" elements="35" coveredelements="33"/>
   </project>
 </coverage>
