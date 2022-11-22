@@ -15,7 +15,7 @@ use TYPO3\TestingFramework\Core\Functional\Framework\Frontend\InternalRequest;
 
 class GalleryElementTest extends BaseContentTypeTest
 {
-    public function testTimelineContentElement(): void
+    public function testGalleryElement(): void
     {
         $response = $this->executeFrontendSubRequest(
             new InternalRequest('https://website.local/')
@@ -34,6 +34,7 @@ class GalleryElementTest extends BaseContentTypeTest
         self::assertEquals('1', $contentElement['content']['imageZoom'], 'imageZoom mismatch');
         self::assertEquals('10', $contentElement['content']['itemsPerPage'], 'itemsPerPage mismatch');
         self::assertEquals('extension', $contentElement['content']['filelinkSorting'], 'filelinkSorting mismatch');
+        $this->checkItems($contentElement);
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 25, 1, 'gallery', 0, 'SysCategory1Title,SysCategory2Title');
@@ -52,9 +53,5 @@ class GalleryElementTest extends BaseContentTypeTest
         self::assertTrue(isset($contentElement['content']['items']), 'items not set');
         self::assertIsArray($contentElement['content']['items']);
         self::assertEquals(2, count($contentElement['content']['items']));
-
-        foreach ($contentElement['content']['items'] as $item) {
-            $this->checkFileReferencesField($item, 'image');
-        }
     }
 }
