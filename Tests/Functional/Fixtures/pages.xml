@@ -89,7 +89,7 @@
         <perms_everybody>15</perms_everybody>
         <keywords>test</keywords>
     </pages>
-    
+
     <sys_category_record_mm>
         <tablenames>pages</tablenames>
         <uid_foreign>1</uid_foreign>
