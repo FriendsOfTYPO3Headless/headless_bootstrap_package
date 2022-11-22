@@ -49,7 +49,7 @@ class MediaElementTest extends BaseContentTypeTest
         self::assertCount(2, $contentElement['content']['items']);
 
         foreach ($contentElement['content']['items'] as $item) {
-            self::assertEquals('https://www.youtube-nocookie.com/embed/zpOVYePk6mM?autohide=1&amp;controls=&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwebsite.local', $item['publicUrl']);
+            self::assertEquals('https://www.youtube-nocookie.com/embed/zpOVYePk6mM?autohide=1&amp;controls=1&amp;autoplay=1&amp;mute=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fwebsite.local', $item['publicUrl']);
             self::assertEquals('video/youtube', $item['properties']['mimeType']);
             self::assertEquals('TYPO3_-_Channel_Intro.youtube', $item['properties']['filename']);
             self::assertEquals('https://www.youtube.com/watch?v=zpOVYePk6mM', $item['properties']['originalUrl']);
