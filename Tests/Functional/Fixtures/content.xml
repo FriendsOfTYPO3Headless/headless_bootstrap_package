@@ -1336,6 +1336,63 @@
         <sectionIndex>1</sectionIndex>
         <linkToTop>1</linkToTop>
     </tt_content>
+    <tt_content>
+        <uid>26</uid>
+        <pid>1</pid>
+        <sorting>1</sorting>
+        <CType>menu_categorized_pages</CType>
+        <colPos>0</colPos>
+        <header>Header</header>
+        <header_layout>1</header_layout>
+        <header_position>center</header_position>
+        <date>1234567890</date>
+        <header_link>t3://page?uid=2 _blank LinkClass LinkTitle parameter=999</header_link>
+        <subheader>Subheader</subheader>
+
+        <selected_categories>1,2</selected_categories>
+        <category_field>categories</category_field>
+
+        <accessibility_bypass>1</accessibility_bypass>
+        <accessibility_bypass_text>Skip navigation</accessibility_bypass_text>
+
+        <imageorient>25</imageorient>
+        <imagecols>2</imagecols>
+        <aspect_ratio>1.3333333333333</aspect_ratio>
+        <items_per_page>10</items_per_page>
+        <image_zoom>1</image_zoom>
+        <image>1</image>
+        <filelink_sorting>extension</filelink_sorting>
+
+        <layout>1</layout>
+        <frame_class>Frame</frame_class>
+        <space_before_class>SpaceBefore</space_before_class>
+        <space_after_class>SpaceAfter</space_after_class>
+        <frame_layout>embedded</frame_layout>
+        <background_color_class>primary</background_color_class>
+        <background_image>1</background_image>
+        <background_image_options>
+            <![CDATA[<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+            <T3FlexForms>
+                <data>
+                    <sheet index="sDEF">
+                        <language index="lDEF">
+                            <field index="parallax">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="fade">
+                                <value index="vDEF">1</value>
+                            </field>
+                            <field index="filter">
+                                <value index="vDEF">grayscale</value>
+                            </field>
+                        </language>
+                    </sheet>
+                </data>
+            </T3FlexForms>]]>
+        </background_image_options>
+        <sectionIndex>1</sectionIndex>
+        <linkToTop>1</linkToTop>
+    </tt_content>
 
     <tx_bootstrappackage_accordion_item>
         <uid>1</uid>
@@ -1914,6 +1971,20 @@
     <sys_category_record_mm>
         <tablenames>tt_content</tablenames>
         <uid_foreign>25</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+
+    <!-- Menu_categorized_pages Categories -->
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>26</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>tt_content</tablenames>
+        <uid_foreign>26</uid_foreign>
         <uid_local>2</uid_local>
         <fieldname>categories</fieldname>
     </sys_category_record_mm>
@@ -2507,6 +2578,17 @@
         <uid_foreign>25</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>image</fieldname>
+        <autoplay>1</autoplay>
+    </sys_file_reference>
+
+    <!-- Textteaser Background Image -->
+    <sys_file_reference>
+        <uid>48</uid>
+        <pid>1</pid>
+        <uid_local>1</uid_local>
+        <uid_foreign>26</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>background_image</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
 </dataset>

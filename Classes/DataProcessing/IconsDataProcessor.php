@@ -37,7 +37,7 @@ class IconsDataProcessor extends BaseIconsDataProcessor
 
         $icon = $processedData[$targetVariableName];
 
-        if (null === $icon) {
+        if ($icon === null) {
             return $processedData;
         }
 
