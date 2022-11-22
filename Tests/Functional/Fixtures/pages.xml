@@ -8,6 +8,7 @@
         <deleted>0</deleted>
         <perms_everybody>15</perms_everybody>
         <keywords>test</keywords>
+        <categories>1</categories>
     </pages>
     <pages>
         <uid>2</uid>
@@ -16,6 +17,7 @@
         <slug>/page1</slug>
         <deleted>0</deleted>
         <perms_everybody>15</perms_everybody>
+        <categories>1</categories>
     </pages>
     <pages>
         <uid>3</uid>
@@ -24,6 +26,7 @@
         <slug>/page1/page1_1</slug>
         <deleted>0</deleted>
         <perms_everybody>15</perms_everybody>
+        <categories>1</categories>
     </pages>
     <pages>
         <uid>4</uid>
@@ -86,4 +89,23 @@
         <perms_everybody>15</perms_everybody>
         <keywords>test</keywords>
     </pages>
+
+    <sys_category_record_mm>
+        <tablenames>pages</tablenames>
+        <uid_foreign>1</uid_foreign>
+        <uid_local>1</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>pages</tablenames>
+        <uid_foreign>2</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
+    <sys_category_record_mm>
+        <tablenames>pages</tablenames>
+        <uid_foreign>3</uid_foreign>
+        <uid_local>2</uid_local>
+        <fieldname>categories</fieldname>
+    </sys_category_record_mm>
 </dataset>
