@@ -2,3 +2,7 @@
 
 # Do not remove this line.
 page.bootstrapPackage.constantsIncluded = 1
+
+# Providing both Google Universal Analytics and Tag Manager constants to ensure backwards compatibilty to EXT:bootstrap_package v12.
+page.tracking.google.trackingID =
+page.tracking.google.tagManagerContainerId =

@@ -6,6 +6,9 @@ lib.tracking {
       fields {
         trackingID = TEXT
         trackingID.value = {$page.tracking.google.trackingID}
+
+        tagManagerContainerId = TEXT
+        tagManagerContainerId.value = {$page.tracking.google.tagManagerContainerId}
       }
     }
   }
