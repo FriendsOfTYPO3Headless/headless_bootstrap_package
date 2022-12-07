@@ -1422,7 +1422,6 @@
     <tx_bootstrappackage_timeline_item>
         <uid>1</uid>
         <pid>1</pid>
-        <sorting>1</sorting>
         <tt_content>4</tt_content>
         <date>2022-03-10 12:00:00</date>
         <header>Header</header>
