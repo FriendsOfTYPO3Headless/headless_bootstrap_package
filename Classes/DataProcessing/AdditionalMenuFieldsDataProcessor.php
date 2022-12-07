@@ -37,7 +37,7 @@ class AdditionalMenuFieldsDataProcessor implements DataProcessorInterface
         array $processorConfiguration,
         array $processedData
     ): array {
-        $fieldName = $cObj->stdWrapValue('fieldName', $processorConfiguration ?? []);
+        $fieldName = $cObj->stdWrapValue('fieldName', $processorConfiguration);
         if ($fieldName === '') {
             return $processedData;
         }
