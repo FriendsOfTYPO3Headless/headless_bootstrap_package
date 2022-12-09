@@ -36,7 +36,7 @@ class MenuCardDirElementTest extends BaseContentTypeTest
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 12, 1, 'menu_card_dir', 0, 'SysCategory1Title,SysCategory2Title');
-        $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
+        $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1', 'ruler-before,ruler-after');
         $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 'center');
         $this->checkBackgroundImageField($contentElement);
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');

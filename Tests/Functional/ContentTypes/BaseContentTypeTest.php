@@ -48,7 +48,8 @@ abstract class BaseContentTypeTest extends BaseTest
         string $frameLayout = '',
         string $backgroundColor = '',
         string $sectionIndex = '',
-        string $linkToTop = ''
+        string $linkToTop = '',
+        string $frameOptions = ''
     ): void {
         $contentElementAppearance = $contentElement['appearance'];
 
@@ -60,6 +61,7 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($backgroundColor, $contentElementAppearance['backgroundColor'], 'backgroundColor mismatch');
         self::assertEquals($sectionIndex, $contentElementAppearance['sectionIndex'], 'sectionIndex mismatch');
         self::assertEquals($linkToTop, $contentElementAppearance['linkToTop'], 'linkToTop mismatch');
+        self::assertEquals($frameOptions, $contentElementAppearance['frameOptions'], 'frameOptions mismatch');
     }
 
     /**

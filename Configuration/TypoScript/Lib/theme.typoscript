@@ -28,8 +28,10 @@ lib.theme {
           fields {
             enable = TEXT
             enable.value = {$page.theme.navigation.icon.enable}
+
             width = TEXT
             width.value = {$page.theme.navigation.icon.width}
+
             height = TEXT
             height.value = {$page.theme.navigation.icon.height}
           }
@@ -114,6 +116,88 @@ lib.theme {
 
         includeNotInMenu = TEXT
         includeNotInMenu.value = {$page.theme.meta.includeNotInMenu}
+      }
+    }
+
+    contact = JSON
+    contact {
+      fields {
+        enable = TEXT
+        enable.value = {$page.theme.contact.enable}
+
+        label = TEXT
+        label.value = {$page.theme.contact.label}
+
+        data = JSON
+        data {
+          fields {
+            title = TEXT
+            title.value = {$page.theme.contact.data.title}
+
+            addressLine1 = TEXT
+            addressLine1.value = {$page.theme.contact.data.addressLine1}
+
+            addressLine2 = TEXT
+            addressLine2.value = {$page.theme.contact.data.addressLine2}
+
+            addressLine3 = TEXT
+            addressLine3.value = {$page.theme.contact.data.addressLine3}
+
+            country = TEXT
+            country.value = {$page.theme.contact.data.country}
+
+            phone = TEXT
+            phone.value = {$page.theme.contact.data.phone}
+
+            fax = TEXT
+            fax.value = {$page.theme.contact.data.fax}
+
+            email = TEXT
+            email.value = {$page.theme.contact.data.email}
+
+            www = TEXT
+            www.value = {$page.theme.contact.data.www}
+          }
+        }
+
+        button = JSON
+        button {
+          fields {
+            colorClass = TEXT
+            colorClass.value = {$page.theme.contact.button.colorClass}
+
+            label = TEXT
+            label.value = {$page.theme.contact.button.label}
+
+            pageUid = TEXT
+            pageUid.value = {$page.theme.contact.button.pageUid}
+          }
+        }
+      }
+    }
+
+    footernavigation = JSON
+    footernavigation {
+      fields {
+        enable = TEXT
+        enable.value = {$page.theme.footernavigation.enable}
+
+        navigationType = TEXT
+        navigationType.value = {$page.theme.footernavigation.navigationType}
+
+        icon = JSON
+        icon {
+          fields {
+            enable = TEXT
+            enable.value = {$page.theme.footernavigation.icon.enable}
+
+            width = TEXT
+            width.value = {$page.theme.footernavigation.icon.width}
+
+            height = TEXT
+            height.value = {$page.theme.footernavigation.icon.height}
+          }
+        }
       }
     }
 
@@ -270,7 +354,6 @@ lib.theme {
 
         text = TEXT
         text.value = {$page.theme.copyright.text}
-
       }
     }
   }

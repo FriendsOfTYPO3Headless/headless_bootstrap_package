@@ -12,6 +12,7 @@
         <panel_class>secondary</panel_class>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -70,6 +71,7 @@
         <tx_bootstrappackage_accordion_item>2</tx_bootstrappackage_accordion_item>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -120,6 +122,7 @@
         </bodytext>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -163,6 +166,7 @@
         <subheader>Subheader</subheader>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -218,6 +222,7 @@
         <bodytext>Lorem ipsum dolor sit amet</bodytext>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -261,6 +266,7 @@
         <assets>1</assets>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -311,6 +317,7 @@
 
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -354,6 +361,7 @@
         <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -398,6 +406,7 @@
         <bodytext><![CDATA[<p><a href="t3://page?uid=2 _blank LinkClass LinkTitle parameter=999">Link</a></p>]]></bodytext>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -441,6 +450,7 @@
 
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -484,6 +494,7 @@
         <tx_bootstrappackage_card_group_item>3</tx_bootstrappackage_card_group_item>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -564,6 +575,7 @@
         </pi_flexform>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -626,6 +638,7 @@
         </pi_flexform>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -688,6 +701,7 @@
         </pi_flexform>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -745,6 +759,7 @@
         </pi_flexform>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -807,6 +822,7 @@
         </pi_flexform>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -854,6 +870,7 @@
         </bodytext>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -898,6 +915,7 @@
         <external_media_ratio>4by3</external_media_ratio>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -949,6 +967,7 @@
         <icon_background>#333333</icon_background>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -1012,6 +1031,7 @@
         </pi_flexform>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -1079,6 +1099,7 @@
 
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -1145,6 +1166,7 @@
         </pi_flexform>
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -1212,6 +1234,7 @@
 
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -1257,6 +1280,7 @@
 
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -1308,6 +1332,7 @@
 
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>
@@ -1365,6 +1390,7 @@
 
         <layout>1</layout>
         <frame_class>Frame</frame_class>
+        <frame_options>ruler-before,ruler-after</frame_options>
         <space_before_class>SpaceBefore</space_before_class>
         <space_after_class>SpaceAfter</space_after_class>
         <frame_layout>embedded</frame_layout>

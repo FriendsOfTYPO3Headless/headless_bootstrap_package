@@ -5,6 +5,11 @@ lib.appearance {
       field = frame_layout
     }
 
+    frameOptions = TEXT
+    frameOptions {
+      field = frame_options
+    }
+
     backgroundColor = TEXT
     backgroundColor {
       field = background_color_class
