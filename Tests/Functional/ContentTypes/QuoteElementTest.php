@@ -36,7 +36,7 @@ class QuoteElementTest extends BaseContentTypeTest
 
         // general tests
         $this->checkDefaultContentFields($contentElement, 5, 1, 'quote', 0, 'SysCategory1Title,SysCategory2Title');
-        $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
+        $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1', 'ruler-before,ruler-after');
         $this->checkBackgroundImageField($contentElement);
         $this->checkBackgroundImageOptions($contentElement, '1', '1', 'grayscale');
     }

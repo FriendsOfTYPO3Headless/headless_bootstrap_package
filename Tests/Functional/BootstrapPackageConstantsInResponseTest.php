@@ -103,6 +103,26 @@ class BootstrapPackageConstantsInResponseTest extends BaseTest
         self::assertArrayHasKey('navigationType', $config['theme']['meta']);
         self::assertArrayHasKey('includeNotInMenu', $config['theme']['meta']);
 
+        self::assertArrayHasKey('contact', $config['theme']);
+        self::assertArrayHasKey('enable', $config['theme']['contact']);
+        self::assertArrayHasKey('label', $config['theme']['contact']);
+
+        self::assertArrayHasKey('data', $config['theme']['contact']);
+        self::assertArrayHasKey('title', $config['theme']['contact']['data']);
+        self::assertArrayHasKey('addressLine1', $config['theme']['contact']['data']);
+        self::assertArrayHasKey('addressLine2', $config['theme']['contact']['data']);
+        self::assertArrayHasKey('addressLine3', $config['theme']['contact']['data']);
+        self::assertArrayHasKey('country', $config['theme']['contact']['data']);
+        self::assertArrayHasKey('phone', $config['theme']['contact']['data']);
+        self::assertArrayHasKey('fax', $config['theme']['contact']['data']);
+        self::assertArrayHasKey('email', $config['theme']['contact']['data']);
+        self::assertArrayHasKey('www', $config['theme']['contact']['data']);
+
+        self::assertArrayHasKey('button', $config['theme']['contact']);
+        self::assertArrayHasKey('colorClass', $config['theme']['contact']['button']);
+        self::assertArrayHasKey('label', $config['theme']['contact']['button']);
+        self::assertArrayHasKey('pageUid', $config['theme']['contact']['button']);
+
         self::assertArrayHasKey('language', $config['theme']);
         self::assertArrayHasKey('enable', $config['theme']['language']);
         self::assertArrayHasKey('languageValue', $config['theme']['language']);
@@ -131,7 +151,7 @@ class BootstrapPackageConstantsInResponseTest extends BaseTest
         self::assertCount(1, $config['tracking']);
         self::assertArrayHasKey('google', $config['tracking']);
         self::assertCount(1, $config['tracking']['google']);
-        self::assertArrayHasKey('trackingID', $config['tracking']['google']);
+        self::assertArrayHasKey('tagManagerContainerId', $config['tracking']['google']);
     }
 
     /**

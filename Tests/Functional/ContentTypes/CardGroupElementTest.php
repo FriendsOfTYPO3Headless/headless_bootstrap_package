@@ -31,7 +31,7 @@ class CardGroupElementTest extends BaseContentTypeTest
         $this->checkItems($contentElement);
 
         $this->checkDefaultContentFields($contentElement, 11, 1, 'card_group', 0, 'SysCategory1Title,SysCategory2Title');
-        $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1');
+        $this->checkAppearanceFields($contentElement, 'layout-1', 'Frame', 'SpaceBefore', 'SpaceAfter', 'embedded', 'primary', '1', '1', 'ruler-before,ruler-after');
         $this->checkHeaderFields($contentElement, 'Header', 'Subheader', 1, 'center');
         $this->checkTypoLinkField($contentElement['content']['headerLink']);
         $this->checkBackgroundImageField($contentElement);
