@@ -55,6 +55,6 @@ jobs:
       fail-fast: false
       matrix:
         php-version:
-          - 8.0
+          - 8.1
         typo3-version:
-          - ^11.5
+          - ^12.4
