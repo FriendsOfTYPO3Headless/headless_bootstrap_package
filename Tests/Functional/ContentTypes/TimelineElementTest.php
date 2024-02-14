@@ -53,7 +53,7 @@ class TimelineElementTest extends BaseContentTypeTest
             self::assertArrayHasKey('id', $item);
             self::assertEquals('2022-03-10 12:00:00', $item['date']);
             self::assertEquals('Header', $item['header'], 'accordion item: header mismatch');
-            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
+            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" target="_blank" title="LinkTitle" class="LinkClass">Link</a></p>', $item['bodytext']);
 
             $this->checkFileReferencesField($item, 'image');
         }
