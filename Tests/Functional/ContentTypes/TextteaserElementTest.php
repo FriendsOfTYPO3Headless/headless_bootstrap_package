@@ -28,7 +28,7 @@ class TextteaserElementTest extends BaseContentTypeTest
         $contentElement = $fullTree['content']['colPos0'][8];
 
         // content element specific tests
-        self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $contentElement['content']['bodytext']);
+        self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" target="_blank" title="LinkTitle" class="LinkClass">Link</a></p>', $contentElement['content']['bodytext']);
         self::assertEquals('Some teaser text', $contentElement['content']['teaser']);
 
         // general tests

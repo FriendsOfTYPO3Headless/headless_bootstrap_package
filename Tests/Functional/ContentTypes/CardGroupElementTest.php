@@ -65,7 +65,7 @@ class CardGroupElementTest extends BaseContentTypeTest
             self::assertEquals('Subheader', $item['subheader'], 'icon_set mismatch');
             self::assertArrayNotHasKey('headerLayout', $item);
             self::assertArrayNotHasKey('headerPosition', $item);
-            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" title="LinkTitle" target="_blank" class="LinkClass">Link</a></p>', $item['bodytext']);
+            self::assertEquals('<p><a href="/page1?parameter=999&amp;cHash=bfd4c1935d34c545ca918205373b0a42" target="_blank" title="LinkTitle" class="LinkClass">Link</a></p>', $item['bodytext']);
 
             $assertConfig = $itemTestConfig[$key];
 

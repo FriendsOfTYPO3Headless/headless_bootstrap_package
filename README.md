@@ -1,7 +1,6 @@
-![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2.svg)
-
 [![StandWithUkraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://github.com/vshymanskyy/StandWithUkraine/blob/main/docs/README.md)
 [![TYPO3 11](https://img.shields.io/badge/TYPO3-11-orange.svg)](https://get.typo3.org/version/11)
+[![TYPO3 12](https://img.shields.io/badge/TYPO3-12-orange.svg)](https://get.typo3.org/version/11)
 [![CI Status](https://github.com/FriendsOfTYPO3Headless/headless_bootstrap_package/workflows/CI/badge.svg)](https://github.com/FriendsOfTYPO3Headless/headless_bootstrap_package/actions)
 [![Code Coverage Badge](https://github.com/FriendsOfTYPO3Headless/headless_bootstrap_package/blob/code-coverage-badge/badge.svg)](https://github.com/FriendsOfTYPO3Headless/headless_bootstrap_package/blob/code-coverage-badge/clover.xml)
 [![Total Downloads](http://poser.pugx.org/friendsoftypo3headless/headless-bootstrap-package/downloads)](https://packagist.org/packages/friendsoftypo3headless/headless-bootstrap-package)
@@ -28,14 +27,6 @@ This Extension requires:
 - [EXT:bk2k/bootstrap-package](https://github.com/benjaminkott/bootstrap_package)
   in version at least 12.0
 
-## Compatibility
-
-The following table shows the compatibilty of this extension to the respective EXT:bootstrap_package versions.
-
-|      | BP 13.x | BP 12.x |
-|------|---------|---------|
-| v2.x | ✔️      | ️      |
-| v1.x |         | ✔️      |
 
 ## TYPO3 Installation
 
