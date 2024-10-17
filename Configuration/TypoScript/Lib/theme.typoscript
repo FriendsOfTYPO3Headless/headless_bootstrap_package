@@ -243,6 +243,28 @@ lib.theme {
               }
             }
 
+            threads = JSON
+            threads {
+              fields {
+                label = TEXT
+                label.value = {$page.theme.socialmedia.channels.threads.label}
+
+                url = TEXT
+                url.value = {$page.theme.socialmedia.channels.threads.url}
+              }
+            }
+
+             telegram = JSON
+             telegram {
+               fields {
+                 label = TEXT
+                 label.value = {$page.theme.socialmedia.channels.telegram.label}
+
+                 url = TEXT
+                 url.value = {$page.theme.socialmedia.channels.telegram.url}
+              }
+            }
+
             instagram = JSON
             instagram {
               fields {
