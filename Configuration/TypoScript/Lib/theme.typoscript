@@ -232,14 +232,14 @@ lib.theme {
               }
             }
 
-            twitter = JSON
-            twitter {
+            x = JSON
+            x {
               fields {
                 label = TEXT
-                label.value = {$page.theme.socialmedia.channels.twitter.label}
+                label.value = {$page.theme.socialmedia.channels.x.label}
 
                 url = TEXT
-                url.value = {$page.theme.socialmedia.channels.twitter.url}
+                url.value = {$page.theme.socialmedia.channels.x.url}
               }
             }
 
