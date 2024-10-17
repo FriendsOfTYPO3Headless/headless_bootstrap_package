@@ -8,7 +8,6 @@ page {
     twitter.url = https://www.twitter.com/myaccount
     instagram.url = https://www.instagram.com/myaccount
     github.url = https://www.github.com/myaccount
-    googleplus.url = https://www.googleplus.com/myaccount
     linkedin.url = https://www.linkedin.com/myaccount
     xing.url = https://www.xing.com/myaccount
     youtube.url = https://www.youtube.com/myaccount

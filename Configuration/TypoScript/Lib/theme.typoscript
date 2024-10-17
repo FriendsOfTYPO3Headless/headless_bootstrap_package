@@ -265,17 +265,6 @@ lib.theme {
               }
             }
 
-            googleplus = JSON
-            googleplus {
-              fields {
-                label = TEXT
-                label.value = {$page.theme.socialmedia.channels.googleplus.label}
-
-                url = TEXT
-                url.value = {$page.theme.socialmedia.channels.googleplus.url}
-              }
-            }
-
             linkedin = JSON
             linkedin {
               fields {

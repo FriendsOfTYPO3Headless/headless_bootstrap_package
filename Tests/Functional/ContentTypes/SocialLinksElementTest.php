@@ -51,7 +51,6 @@ class SocialLinksElementTest extends BaseContentTypeTest
         self::assertEquals('https://www.twitter.com/myaccount', $channels['twitter']['url']);
         self::assertEquals('https://www.instagram.com/myaccount', $channels['instagram']['url']);
         self::assertEquals('https://www.github.com/myaccount', $channels['github']['url']);
-        self::assertEquals('https://www.googleplus.com/myaccount', $channels['googleplus']['url']);
         self::assertEquals('https://www.linkedin.com/myaccount', $channels['linkedin']['url']);
         self::assertEquals('https://www.xing.com/myaccount', $channels['xing']['url']);
         self::assertEquals('https://www.youtube.com/myaccount', $channels['youtube']['url']);
