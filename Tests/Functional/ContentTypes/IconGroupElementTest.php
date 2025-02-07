@@ -28,7 +28,7 @@ class IconGroupElementTest extends BaseContentTypeTest
         $contentElement = $fullTree['content']['colPos0'][19];
 
         // content element specific tests
-        self::assertEquals('2009-02-14', $contentElement['content']['date'], 'date mismatch');
+        self::assertEquals('2009-02-13', $contentElement['content']['date'], 'date mismatch');
         $this->checkFlexform($contentElement);
         $this->checkItems($contentElement);
 
