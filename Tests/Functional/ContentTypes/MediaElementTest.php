@@ -30,7 +30,7 @@ class MediaElementTest extends BaseContentTypeTest
         // content element specific tests
         self::assertEquals('extension', $contentElement['content']['filelinkSorting'], 'filelinkSorting mismatch');
         self::assertEquals('1', $contentElement['content']['imagecols'], 'imagecols mismatch');
-        self::assertEquals('2009-02-13', $contentElement['content']['date'], 'date mismatch');
+        self::assertEquals('2009-02-14', $contentElement['content']['date'], 'date mismatch');
         $this->checkItems($contentElement);
 
         // general tests

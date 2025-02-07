@@ -28,7 +28,7 @@ class CsvElementTest extends BaseContentTypeTest
         $contentElement = $fullTree['content']['colPos0'][6];
 
         // content element specific tests
-        self::assertEquals('2009-02-13', $contentElement['content']['date'], 'date mismatch');
+        self::assertEquals('2009-02-14', $contentElement['content']['date'], 'date mismatch');
         self::assertEquals(59, $contentElement['content']['tableDelimiter'], 'tableDelimiter mismatch');
         self::assertEquals(0, $contentElement['content']['tableEnclosure'], 'tableEnclosure mismatch');
         self::assertEquals(0, $contentElement['content']['tableLayout']['cols'], 'cols mismatch');

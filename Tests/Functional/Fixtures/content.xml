@@ -2193,7 +2193,6 @@
         <uid_foreign>4</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- TimelineItem Image -->
@@ -2204,7 +2203,6 @@
         <uid_foreign>1</uid_foreign>
         <tablenames>tx_bootstrappackage_timeline_item</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Quote Background Image -->
@@ -2215,7 +2213,6 @@
         <uid_foreign>5</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Audio Background Image -->
@@ -2226,7 +2223,6 @@
         <uid_foreign>6</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Audio Background Image -->
@@ -2237,7 +2233,6 @@
         <uid_foreign>7</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Audio Assets  -->
@@ -2259,7 +2254,6 @@
         <uid_foreign>7</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>media</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Textcolumn Background Image -->
@@ -2270,7 +2264,6 @@
         <uid_foreign>8</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Textteaser Background Image -->
@@ -2281,7 +2274,6 @@
         <uid_foreign>9</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Textteaser Background Image -->
@@ -2292,7 +2284,6 @@
         <uid_foreign>10</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- CardGroup Background Image -->
@@ -2303,7 +2294,7 @@
         <uid_foreign>11</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
+
     </sys_file_reference>
 
     <!-- CardGroupItem2 Image -->
@@ -2314,7 +2305,7 @@
         <uid_foreign>2</uid_foreign>
         <tablenames>tx_bootstrappackage_card_group_item</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
+
     </sys_file_reference>
 
     <!-- CardGroupItem3 icon_file -->
@@ -2325,7 +2316,6 @@
         <uid_foreign>3</uid_foreign>
         <tablenames>tx_bootstrappackage_card_group_item</tablenames>
         <fieldname>link_icon</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- MenuCardDir backgroundimage -->
@@ -2336,7 +2326,6 @@
         <uid_foreign>12</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- MenuThumbnailList backgroundimage -->
@@ -2347,7 +2336,6 @@
         <uid_foreign>13</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- MenuCardList backgroundimage -->
@@ -2358,7 +2346,6 @@
         <uid_foreign>14</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Tab backgroundimage -->
@@ -2369,7 +2356,6 @@
         <uid_foreign>15</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- TabItem media -->
@@ -2380,7 +2366,6 @@
         <uid_foreign>1</uid_foreign>
         <tablenames>tx_bootstrappackage_tab_item</tablenames>
         <fieldname>media</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- MenuThumbnailDir backgroundimage -->
@@ -2391,7 +2376,6 @@
         <uid_foreign>16</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Listgroup backgroundimage -->
@@ -2402,7 +2386,6 @@
         <uid_foreign>17</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- ExternalMedia backgroundimage -->
@@ -2413,7 +2396,6 @@
         <uid_foreign>18</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- TextIcpn backgroundimage -->
@@ -2424,7 +2406,6 @@
         <uid_foreign>19</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- TextIcon Icon Image -->
@@ -2435,7 +2416,6 @@
         <uid_foreign>19</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>icon_file</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- TextIcon Icon Image -->
@@ -2446,7 +2426,6 @@
         <uid_foreign>20</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Carousel Background Image -->
@@ -2457,7 +2436,6 @@
         <uid_foreign>21</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
     <!-- Carousel Small Background Image -->
     <sys_file_reference>
@@ -2467,8 +2445,8 @@
         <uid_foreign>22</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
+
     <!-- Carousel Fullscreen Background Image -->
     <sys_file_reference>
         <uid>35</uid>
@@ -2477,7 +2455,6 @@
         <uid_foreign>23</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- CarouselItem Carousel background_image -->
@@ -2488,8 +2465,8 @@
         <uid_foreign>1</uid_foreign>
         <tablenames>tx_bootstrappackage_carousel_item</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
+
     <!-- CarouselItem Carousel Image -->
     <sys_file_reference>
         <uid>33</uid>
@@ -2498,7 +2475,6 @@
         <uid_foreign>1</uid_foreign>
         <tablenames>tx_bootstrappackage_carousel_item</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- CarouselItem Small BackgroundImage -->
@@ -2509,8 +2485,8 @@
         <uid_foreign>2</uid_foreign>
         <tablenames>tx_bootstrappackage_carousel_item</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
+
     <!-- CarouselItem Small Image -->
     <sys_file_reference>
         <uid>37</uid>
@@ -2519,7 +2495,6 @@
         <uid_foreign>2</uid_foreign>
         <tablenames>tx_bootstrappackage_carousel_item</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- CarouselItem Fullscreen background_image -->
@@ -2530,8 +2505,8 @@
         <uid_foreign>3</uid_foreign>
         <tablenames>tx_bootstrappackage_carousel_item</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
+
     <!-- CarouselItem Fullscreen Image -->
     <sys_file_reference>
         <uid>39</uid>
@@ -2540,7 +2515,6 @@
         <uid_foreign>3</uid_foreign>
         <tablenames>tx_bootstrappackage_carousel_item</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Media assets (YouTube Video) -->
@@ -2553,6 +2527,7 @@
         <fieldname>assets</fieldname>
         <autoplay>1</autoplay>
     </sys_file_reference>
+
     <sys_file_reference>
         <uid>41</uid>
         <pid>1</pid>
@@ -2571,7 +2546,6 @@
         <uid_foreign>24</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Gallery backgroundimage -->
@@ -2582,7 +2556,6 @@
         <uid_foreign>25</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Gallery Image 1 -->
@@ -2593,8 +2566,8 @@
         <uid_foreign>25</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
+
     <!-- Gallery Image 2 -->
     <sys_file_reference>
         <uid>45</uid>
@@ -2603,7 +2576,6 @@
         <uid_foreign>25</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 
     <!-- Textteaser Background Image -->
@@ -2614,6 +2586,5 @@
         <uid_foreign>26</uid_foreign>
         <tablenames>tt_content</tablenames>
         <fieldname>background_image</fieldname>
-        <autoplay>1</autoplay>
     </sys_file_reference>
 </dataset>

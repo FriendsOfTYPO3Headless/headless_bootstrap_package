@@ -130,7 +130,7 @@ class BootstrapPackageConstantsInResponseTest extends BaseTest
         self::assertArrayHasKey('socialmedia', $config['theme']);
         self::assertArrayHasKey('enable', $config['theme']['socialmedia']);
         self::assertArrayHasKey('channels', $config['theme']['socialmedia']);
-        self::assertCount(11, $config['theme']['socialmedia']['channels']);
+        self::assertCount(12, $config['theme']['socialmedia']['channels']);
 
         foreach ($config['theme']['socialmedia']['channels'] as $channel) {
             self::assertArrayHasKey('label', $channel);

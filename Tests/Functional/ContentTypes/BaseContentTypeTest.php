@@ -121,13 +121,13 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertIsArray($contentElement['content']['gallery']['rows'][1]['columns'], 'rows.columns not set');
         self::assertCount(1, $contentElement['content']['gallery']['rows'][1]['columns'], 'rows.columns count mismatch');
 
-        $this->checkGalleryFile($contentElement['content']['gallery']['rows'][1]['columns'][1], '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
+        $this->checkGalleryFile($contentElement['content']['gallery']['rows'][1]['columns'][1], '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16);
     }
 
     /**
      * @param array<string, mixed> $fileElement
      */
-    protected function checkGalleryFile(array $fileElement, string $originalUrl, string $mimeType, string $title, int $width, int $height, int $autoplay): void
+    protected function checkGalleryFile(array $fileElement, string $originalUrl, string $mimeType, string $title, int $width, int $height): void
     {
         self::assertTrue(isset($fileElement['publicUrl']), 'publicUrl not set');
 
@@ -135,7 +135,6 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($originalUrl, $fileElement['properties']['originalUrl'], 'properties originalUrl mismatch');
         self::assertEquals($title, $fileElement['properties']['title'], 'properties title mismatch');
         self::assertEquals($mimeType, $fileElement['properties']['mimeType'], 'properties mimeType mismatch');
-        self::assertEquals($autoplay, $fileElement['properties']['autoplay'], 'properties autoplay mismatch');
 
         self::assertIsArray($fileElement['properties']['dimensions'], 'properties dimensions not set');
         self::assertEquals($width, $fileElement['properties']['dimensions']['width'], 'properties dimensions width mismatch');
@@ -157,7 +156,7 @@ abstract class BaseContentTypeTest extends BaseTest
         self::assertEquals($numberOfExpectedFiles, count($fileReferenceData));
 
         foreach ($fileReferenceData as $data) {
-            $this->checkGalleryFile($data, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
+            $this->checkGalleryFile($data, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16);
         }
     }
 
@@ -168,7 +167,7 @@ abstract class BaseContentTypeTest extends BaseTest
     {
         $backgroundImage = $contentElement['appearance']['backgroundImage'][0];
 
-        $this->checkGalleryFile($backgroundImage, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16, 1);
+        $this->checkGalleryFile($backgroundImage, '/typo3conf/ext/headless_bootstrap_package/ext_icon.gif', 'image/gif', 'MetadataTitle', 18, 16);
     }
 
     /**
