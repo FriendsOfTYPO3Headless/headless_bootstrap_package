@@ -63,7 +63,7 @@ jobs:
         php-version:
           - 8.1
           - 8.2
-          - 8.2
+          - 8.3
   tests:
     runs-on: ubuntu-latest
     strategy:
@@ -72,6 +72,7 @@ jobs:
         php-versions: [8.1, 8.2, 8.3]
         typo3-versions:
           - {typo3: 12, testing: 7}
+          - {typo3: 13, testing: 7}
 
     name: "Run tests with PHP ${{ matrix.php-versions }}
           using TYPO3 ${{ matrix.typo3-versions.typo3 }}

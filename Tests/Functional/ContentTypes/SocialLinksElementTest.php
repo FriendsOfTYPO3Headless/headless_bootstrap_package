@@ -46,9 +46,11 @@ class SocialLinksElementTest extends BaseContentTypeTest
     {
         $channels = $contentElement['content']['items']['channels'];
 
-        self::assertCount(11, $channels);
+        self::assertCount(12, $channels);
         self::assertEquals('https://www.facebook.com/myaccount', $channels['facebook']['url']);
-        self::assertEquals('https://www.twitter.com/myaccount', $channels['twitter']['url']);
+        self::assertEquals('https://www.x.com/myaccount', $channels['x']['url']);
+        self::assertEquals('https://www.threads.com/myaccount', $channels['threads']['url']);
+        self::assertEquals('https://www.telegram.com/myaccount', $channels['telegram']['url']);
         self::assertEquals('https://www.instagram.com/myaccount', $channels['instagram']['url']);
         self::assertEquals('https://www.github.com/myaccount', $channels['github']['url']);
         self::assertEquals('https://www.linkedin.com/myaccount', $channels['linkedin']['url']);
